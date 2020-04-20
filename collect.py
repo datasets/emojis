@@ -39,7 +39,10 @@ def run(download, reset):
         show_default=True,
         err=False,
     ):
-        download_all_data()
+        if download:
+            download_all_data()
+        else:
+            print("Skip downloading data. Run with `-d` to force download.")
 
 
 if __name__ == "__main__":

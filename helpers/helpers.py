@@ -92,9 +92,6 @@ def download_data(filename: str, url: str) -> None:
 def execute_on_all(iterable: list, func) -> None:
     """Take an `iterable` and do `func` on all items in `iterable`."""
     if func is download_data:
-        if not SETTINGS["download"]:
-            print("Skip downloading data. Run with `-d` to force download.")
-            return
         func_arg = DATA["url"]
         click.secho("Downloading data", fg="green", bold=True)
     for item in iterable:

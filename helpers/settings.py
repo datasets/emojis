@@ -2,7 +2,7 @@
 Quick settings to modify, if needed.
 """
 SETTINGS = {
-    "download": True,  # set to false to prevent automatic downloading
+    "download": False,  # set to false to prevent automatic downloading
 }
 
 DATA = {
