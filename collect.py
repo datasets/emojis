@@ -13,10 +13,10 @@ from helpers.helpers import (
 )
 
 
-@do_maintenance
 @click.command()
 @click.option("-d", "--download", is_flag=True, help="Only download data.")
 @click.option("-r", "--reset", is_flag=True, help="Reset to clean slate.")
+@do_maintenance
 def run(download, reset):
     """Retrieve and process Emojis data."""
     if reset:
@@ -32,12 +32,12 @@ def run(download, reset):
         bold=True,
     )
     if click.confirm(
-            "Are you sure you want to continue?",
-            default=False,
-            abort=True,
-            prompt_suffix=": ",
-            show_default=True,
-            err=False,
+        "Are you sure you want to continue?",
+        default=False,
+        abort=True,
+        prompt_suffix=": ",
+        show_default=True,
+        err=False,
     ):
         download_all_data()
 
