@@ -25,12 +25,12 @@ def _start_from_scratch() -> None:
         "temp",
     ]
     if click.confirm(
-            "Do you want to delete all data and start from scratch?",
-            default=False,
-            abort=True,
-            prompt_suffix=": ",
-            show_default=True,
-            err=False,
+        "Do you want to delete all data and start from scratch?",
+        default=False,
+        abort=True,
+        prompt_suffix=": ",
+        show_default=True,
+        err=False,
     ):
         for directory in to_clean:
             shutil.rmtree(directory, ignore_errors=True)
@@ -38,10 +38,10 @@ def _start_from_scratch() -> None:
     sys.exit(0)
 
 
-def do_maintenance(func):
+def do_maintenance(func, *args, **kwargs):
     """Decorator to run the script while performing some cleanup operations."""
 
-    def cleaner_wrapper():
+    def cleaner_wrapper(*args, **kwargs):
         """Take care of creation and deletion of directories."""
         to_create = [
             "data",
@@ -55,7 +55,8 @@ def do_maintenance(func):
             if not os.path.isdir(directory):
                 os.mkdir(directory)
 
-        func()  # main script happening here
+        func(*args, **kwargs)  # main script happening here
+
         shutil.rmtree("temp", ignore_errors=True)
 
     return cleaner_wrapper
@@ -63,10 +64,7 @@ def do_maintenance(func):
 
 def download_all_data() -> None:
     """Download all sources of data defined in `DATA["sources"]`."""
-    execute_on_all(
-        DATA["sources"],
-        download_data
-    )
+    execute_on_all(DATA["sources"], download_data)
 
 
 def download_data(filename: str, url: str) -> None:
