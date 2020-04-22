@@ -1,9 +1,3 @@
-# Custom
-original_data/
-processed_data/
-data/
-temp/
-
 ### Python
 # Byte-compiled / optimized / DLL files
 __pycache__/
