@@ -40,7 +40,7 @@ def _parse_line(line: str, regex_dict: dict) -> tuple:
     return None, None  # no matches found
 
 
-def write_row(group: dict, writer):
+def write_row(group: dict, writer) -> None:
     """Take a dict and append a row to a CSV file from a CSV `writer`."""
     for group_name, subgroup in group.items():
         for subgroup_name, emojis in subgroup.items():
@@ -57,7 +57,7 @@ def write_row(group: dict, writer):
                 writer.writerow(emoji_dict)
 
 
-def sort_data(out_path: str, csv_columns: list):
+def sort_data(out_path: str, csv_columns: list) -> None:
     """Take a `str` as filepath to a CSV and sort the data
     based on the first column in `csv_columns`."""
     with open(out_path) as csvfile:
@@ -91,7 +91,7 @@ def dict_to_csv(
     os.replace(process_path, out_path)
 
 
-def download_data(source, in_path):
+def download_data(source: str, in_path: str) -> None:
     """Download data and store it in .cache/ folder. Overwrite file if it
     already exists."""
     http = urllib3.PoolManager()
@@ -119,7 +119,7 @@ def get_regex_dict() -> dict:
     return rx_dict
 
 
-def clean_data(field, field_type=None):
+def clean_data(field: str, field_type: str = None) -> str:
     """Take `field` as input and based on its `field_type`, reformat it
     appropriately for a CSV file."""
     result = ""
@@ -147,7 +147,7 @@ def clean_data(field, field_type=None):
     return result.strip()
 
 
-def add_emoji(match, group, group_dict, subgroup):
+def add_emoji(match, group: str, group_dict: dict, subgroup: str) -> None:
     """Append emoji to the list in the current subgroup."""
     emoji = {
         "code_point": clean_data(
@@ -163,7 +163,7 @@ def add_emoji(match, group, group_dict, subgroup):
     group_dict[group][subgroup].append(emoji)
 
 
-def parse_file(in_path, regex_dict):
+def parse_file(in_path: str, regex_dict: dict) -> list:
     """Return a list of useful lines for file `in_path`.
     Remove headers, empty lines and lines that are not useful for this
     script.
@@ -259,8 +259,8 @@ def parse_file(in_path, regex_dict):
     return data
 
 
-def run():
-    """Download, parse, sort and validate data."""
+def run() -> None:
+    """Download, parse and sort data."""
     download_data(DATA_SOURCE, IN_PATH)
     regex_dict = get_regex_dict()
     data = parse_file(IN_PATH, regex_dict)
