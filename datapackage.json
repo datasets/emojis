@@ -1,0 +1,74 @@
+{
+  "name": "data",
+  "title": "UTS #51 Unicode Emoji",
+  "sources": [
+    {
+      "name": "Unicode Emoji",
+      "path": "https://unicode.org/Public/emoji/13.0/emoji-test.txt",
+      "title": "UTS #51 Unicode Emoji"
+    }
+  ],
+  "resources": [
+    {
+      "path": "data/emojis.csv",
+      "pathType": "local",
+      "name": "emojis",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "|"
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Subgroup",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "CodePoint",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Status",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Representation",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "Section",
+            "type": "string",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ],
+  "licenses": [
+    {
+      "name": "ODC-PDDL",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License"
+    }
+  ]
+}
