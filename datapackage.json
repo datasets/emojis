@@ -18,7 +18,7 @@
       "encoding": "UTF-8",
       "dialect": {
         "delimiter": ",",
-        "quoteChar": "|"
+        "quoteChar": "\""
       },
       "schema": {
         "fields": [
