@@ -1,8 +1,9 @@
-TODO
+List of emojis available from the Unicode Consortium. More information can be found in the [Unicode® Technical Standard #51](https://unicode.org/reports/tr51/).
 
 # Data
 
-TODO
+The data comes from [this directory at Unicode.org](https://unicode.org/Public/emoji/latest/) as a set of plain text files.
+
 
 # Sources
 
@@ -10,18 +11,14 @@ TODO
 
 # Preparation
 
-TODO
-
-You first need to install the dependencies:
-
-    pip install -r scripts/requirements.txt
-
-Then run the script:
+Only Python 3.6+ is required. Run the script from this directory in the following way:
 
     python scripts/process.py
 
 
 # License
+
+This Data Package is licensed by its maintainers under the Public Domain Dedication and License (PDDL).
 
 > Copyright © 1991-2017 Unicode, Inc. All rights reserved.
 > Distributed under the Terms of Use in http://www.unicode.org/copyright.html.
