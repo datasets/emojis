@@ -130,16 +130,10 @@ def clean_data(field: str, field_type: str = None) -> str:
             if char in string.digits + string.ascii_letters + "-":
                 result += char
 
-    if field_type == "code_point":
+    if field_type in ["code_point", "name"]:
         for char in field:
             if char in string.digits + string.ascii_letters + " " + "-":
                 result += char
-
-    if field_type == "name":
-        for char in field:
-            if char in string.digits + string.ascii_letters + " " + "-":
-                result += char
-        result = f"|{result}|"
 
     if field_type == "representation":
         result = field
