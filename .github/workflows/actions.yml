@@ -40,7 +40,7 @@ jobs:
         node-version: '8.x'
     - run: npm install -g data-cli
     - run: data --version
-    - run: data push
+    - run: data push --name=unicode-emojis
       env:
         id: ${{secrets.dhid}}
         username: ${{secrets.dhusername}}
