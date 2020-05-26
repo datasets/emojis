@@ -11,7 +11,7 @@ The data comes from [this directory at Unicode.org](https://unicode.org/Public/e
 
 # Preparation
 
-Python 3.6+ is required. First, install dependencies (only `urllib3`) with the following command:
+Python 3.6+ is required. First, install dependencies with the following command:
 
     pip install -r scripts/requirements.txt
 

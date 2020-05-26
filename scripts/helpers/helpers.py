@@ -12,6 +12,13 @@ import sys
 # Third-party library imports
 import urllib3
 
+from dataflows import (
+    Flow,
+    validate,
+)
+from dataflows import add_metadata, dump_to_path, load
+
+
 # Source of data
 DATA_SOURCE = "https://unicode.org/Public/emoji/latest/emoji-test.txt"
 
@@ -76,7 +83,7 @@ def sort_data(out_path: str, csv_columns: list) -> None:
 
 
 def dict_to_csv(
-        data: list, csv_columns: list, process_path: str, out_path: str
+    data: list, csv_columns: list, process_path: str, out_path: str
 ) -> None:
     """Convert Python dict to CSV format and write content to file."""
     try:
@@ -258,9 +265,42 @@ def parse_file(in_path: str, regex_dict: dict) -> list:
     return data
 
 
+def generate_package():
+    package_flow = Flow(
+        add_metadata(
+            name="unicode-emojis",
+            title="UTS #51 Unicode Emoji",
+            descriptor=(
+                "List of emojis available from the Unicode Consortium. "
+                "More information can be found in the Unicode® Technical Standard #51."
+            ),
+            sources=[
+                {
+                    "name": "unicode-emoji",
+                    "path": "https://unicode.org/Public/emoji/latest/emoji-test.txt",
+                    "title": "UTS #51 Unicode Emoji",
+                },
+            ],
+            licenses=[
+                {
+                    "name": "ODC-PDDL-1.0",
+                    "path": "http://opendatacommons.org/licenses/pddl/",
+                    "title": "Open Data Commons Public Domain Dedication and License v1.0",
+                }
+            ],
+            keywords=["unicode", "emojis", "emoji", "51", "standard", "uts"],
+        ),
+        load(load_source="data/emojis.csv", format="csv",),
+        validate(),
+        dump_to_path(),
+    )
+    package_flow.process()
+
+
 def run() -> None:
     """Download, parse and sort data."""
     download_data(DATA_SOURCE, IN_PATH)
     regex_dict = get_regex_dict()
     data = parse_file(IN_PATH, regex_dict)
     dict_to_csv(data, CSV_COLUMNS, PROCESS_PATH, OUT_PATH)
+    generate_package()
