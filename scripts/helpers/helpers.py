@@ -15,7 +15,7 @@ DATA_SOURCE = "https://unicode.org/Public/emoji/latest/emoji-test.txt"
 
 # Paths to write data
 IN_PATH = "original_data/emojis.txt"
-OUT_PATH = "../data/emojis.csv"
+OUT_PATH = "data/emojis.csv"
 PROCESS_PATH = "original_data/emojis-parsed.csv"  # temporary file
 
 # Name of columns in CSV
@@ -94,6 +94,9 @@ def dict_to_csv(
 def download_data(source: str, in_path: str) -> None:
     """Download data and store it in .cache/ folder. Overwrite file if it
     already exists."""
+    base_dir = os.path.dirname(in_path)
+    if not os.path.exists(base_dir):
+        os.mkdir(base_dir)
     http = urllib3.PoolManager()
     resp = http.request("GET", source, preload_content=False)
     with open(in_path, "wb") as out:
