@@ -11,7 +11,12 @@ The data comes from [this directory at Unicode.org](https://unicode.org/Public/e
 
 # Preparation
 
-Only Python 3.6+ is required. Run the script from this directory in the following way:
+Python 3.6+ is required. First, install dependencies (only `urllib3`) with the following command:
+
+    pip install -r scripts/requirements.txt
+
+
+Then, run the script from this directory in the following way:
 
     python scripts/process.py
 
