@@ -1,61 +1,79 @@
 {
-  "name": "data",
-  "title": "UTS #51 Unicode Emoji",
-  "sources": [
+  "bytes": 399353,
+  "count_of_rows": 4168,
+  "descriptor": "List of emojis available from the Unicode Consortium. More information can be found in the Unicode® Technical Standard #51.",
+  "hash": "790557ce6a7e3e4824049f3029b2095c",
+  "keywords": [
+    "unicode",
+    "emojis",
+    "emoji",
+    "51",
+    "standard",
+    "uts"
+  ],
+  "licenses": [
     {
-      "name": "Unicode Emoji",
-      "path": "https://unicode.org/Public/emoji/13.0/emoji-test.txt",
-      "title": "UTS #51 Unicode Emoji"
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
   ],
+  "name": "unicode-emojis",
+  "profile": "data-package",
   "resources": [
     {
-      "path": "data/emojis.csv",
-      "pathType": "local",
-      "name": "emojis",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "UTF-8",
+      "bytes": 399353,
       "dialect": {
+        "caseSensitiveHeader": false,
         "delimiter": ",",
-        "quoteChar": "\""
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
       },
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "e8428ef57de754ee02001928562de7b7",
+      "name": "emojis",
+      "path": "emojis.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
+            "format": "default",
             "name": "Group",
-            "type": "string",
-            "format": "default"
+            "type": "string"
           },
           {
+            "format": "default",
             "name": "Subgroup",
-            "type": "string",
-            "format": "default"
+            "type": "string"
           },
           {
+            "format": "default",
             "name": "CodePoint",
-            "type": "string",
-            "format": "default"
+            "type": "string"
           },
           {
+            "format": "default",
             "name": "Status",
-            "type": "string",
-            "format": "default"
+            "type": "string"
           },
           {
+            "format": "default",
             "name": "Representation",
-            "type": "string",
-            "format": "default"
+            "type": "string"
           },
           {
+            "format": "default",
             "name": "Name",
-            "type": "string",
-            "format": "default"
+            "type": "string"
           },
           {
+            "format": "default",
             "name": "Section",
-            "type": "string",
-            "format": "default"
+            "type": "string"
           }
         ],
         "missingValues": [
@@ -64,11 +82,12 @@
       }
     }
   ],
-  "licenses": [
+  "sources": [
     {
-      "name": "ODC-PDDL",
-      "path": "http://opendatacommons.org/licenses/pddl/",
-      "title": "Open Data Commons Public Domain Dedication and License"
+      "name": "unicode-emoji",
+      "path": "https://unicode.org/Public/emoji/latest/emoji-test.txt",
+      "title": "UTS #51 Unicode Emoji"
     }
-  ]
+  ],
+  "title": "UTS #51 Unicode Emoji"
 }
