@@ -1,3 +1,5 @@
+<a href="https://datahub.io/core/emojis"><img src="https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25)" alt="badge" /></a>
+
 List of emojis available from the Unicode Consortium. More information can be found in the [Unicode® Technical Standard #51](https://unicode.org/reports/tr51/).
 
 # Data
