@@ -60,10 +60,10 @@ Activities,sport,1F94C,fully-qualified,🥌,curling stone,E5.0
 Activities,game,1F3AF,fully-qualified,🎯,bullseye,E0.6
 Activities,game,1FA80,fully-qualified,🪀,yo-yo,E12.0
 Activities,game,1FA81,fully-qualified,🪁,kite,E12.0
+Activities,game,1F52B,fully-qualified,🔫,water pistol,E0.6
 Activities,game,1F3B1,fully-qualified,🎱,pool 8 ball,E0.6
 Activities,game,1F52E,fully-qualified,🔮,crystal ball,E0.6
 Activities,game,1FA84,fully-qualified,🪄,magic wand,E13.0
-Activities,game,1F9FF,fully-qualified,🧿,nazar amulet,E11.0
 Activities,game,1F3AE,fully-qualified,🎮,video game,E0.6
 Activities,game,1F579 FE0F,fully-qualified,🕹️,joystick,E0.7
 Activities,game,1F579,unqualified,🕹,joystick,E0.7
@@ -72,6 +72,7 @@ Activities,game,1F3B2,fully-qualified,🎲,game die,E0.6
 Activities,game,1F9E9,fully-qualified,🧩,puzzle piece,E11.0
 Activities,game,1F9F8,fully-qualified,🧸,teddy bear,E11.0
 Activities,game,1FA85,fully-qualified,🪅,piata,E13.0
+Activities,game,1FAA9,fully-qualified,🪩,mirror ball,E14.0
 Activities,game,1FA86,fully-qualified,🪆,nesting dolls,E13.0
 Activities,game,2660 FE0F,fully-qualified,♠️,spade suit,E0.6
 Activities,game,2660,unqualified,♠,spade suit,E0.6
@@ -114,6 +115,8 @@ Animals-Nature,animal-mammal,1F42F,fully-qualified,🐯,tiger face,E0.6
 Animals-Nature,animal-mammal,1F405,fully-qualified,🐅,tiger,E1.0
 Animals-Nature,animal-mammal,1F406,fully-qualified,🐆,leopard,E1.0
 Animals-Nature,animal-mammal,1F434,fully-qualified,🐴,horse face,E0.6
+Animals-Nature,animal-mammal,1FACE,fully-qualified,🫎,moose,E15.0
+Animals-Nature,animal-mammal,1FACF,fully-qualified,🫏,donkey,E15.0
 Animals-Nature,animal-mammal,1F40E,fully-qualified,🐎,horse,E0.6
 Animals-Nature,animal-mammal,1F984,fully-qualified,🦄,unicorn,E1.0
 Animals-Nature,animal-mammal,1F993,fully-qualified,🦓,zebra,E5.0
@@ -179,6 +182,10 @@ Animals-Nature,animal-bird,1FAB6,fully-qualified,🪶,feather,E13.0
 Animals-Nature,animal-bird,1F9A9,fully-qualified,🦩,flamingo,E12.0
 Animals-Nature,animal-bird,1F99A,fully-qualified,🦚,peacock,E11.0
 Animals-Nature,animal-bird,1F99C,fully-qualified,🦜,parrot,E11.0
+Animals-Nature,animal-bird,1FABD,fully-qualified,🪽,wing,E15.0
+Animals-Nature,animal-bird,1F426 200D 2B1B,fully-qualified,🐦‍⬛,black bird,E15.0
+Animals-Nature,animal-bird,1FABF,fully-qualified,🪿,goose,E15.0
+Animals-Nature,animal-bird,1F426 200D 1F525,fully-qualified,🐦‍🔥,phoenix,E15.1
 Animals-Nature,animal-amphibian,1F438,fully-qualified,🐸,frog,E0.6
 Animals-Nature,animal-reptile,1F40A,fully-qualified,🐊,crocodile,E1.0
 Animals-Nature,animal-reptile,1F422,fully-qualified,🐢,turtle,E0.6
@@ -198,6 +205,13 @@ Animals-Nature,animal-marine,1F421,fully-qualified,🐡,blowfish,E0.6
 Animals-Nature,animal-marine,1F988,fully-qualified,🦈,shark,E3.0
 Animals-Nature,animal-marine,1F419,fully-qualified,🐙,octopus,E0.6
 Animals-Nature,animal-marine,1F41A,fully-qualified,🐚,spiral shell,E0.6
+Animals-Nature,animal-marine,1FAB8,fully-qualified,🪸,coral,E14.0
+Animals-Nature,animal-marine,1FABC,fully-qualified,🪼,jellyfish,E15.0
+Animals-Nature,animal-marine,1F980,fully-qualified,🦀,crab,E1.0
+Animals-Nature,animal-marine,1F99E,fully-qualified,🦞,lobster,E11.0
+Animals-Nature,animal-marine,1F990,fully-qualified,🦐,shrimp,E3.0
+Animals-Nature,animal-marine,1F991,fully-qualified,🦑,squid,E3.0
+Animals-Nature,animal-marine,1F9AA,fully-qualified,🦪,oyster,E12.0
 Animals-Nature,animal-bug,1F40C,fully-qualified,🐌,snail,E0.6
 Animals-Nature,animal-bug,1F98B,fully-qualified,🦋,butterfly,E3.0
 Animals-Nature,animal-bug,1F41B,fully-qualified,🐛,bug,E0.6
@@ -219,6 +233,7 @@ Animals-Nature,animal-bug,1F9A0,fully-qualified,🦠,microbe,E11.0
 Animals-Nature,plant-flower,1F490,fully-qualified,💐,bouquet,E0.6
 Animals-Nature,plant-flower,1F338,fully-qualified,🌸,cherry blossom,E0.6
 Animals-Nature,plant-flower,1F4AE,fully-qualified,💮,white flower,E0.6
+Animals-Nature,plant-flower,1FAB7,fully-qualified,🪷,lotus,E14.0
 Animals-Nature,plant-flower,1F3F5 FE0F,fully-qualified,🏵️,rosette,E0.7
 Animals-Nature,plant-flower,1F3F5,unqualified,🏵,rosette,E0.7
 Animals-Nature,plant-flower,1F339,fully-qualified,🌹,rose,E0.6
@@ -227,6 +242,7 @@ Animals-Nature,plant-flower,1F33A,fully-qualified,🌺,hibiscus,E0.6
 Animals-Nature,plant-flower,1F33B,fully-qualified,🌻,sunflower,E0.6
 Animals-Nature,plant-flower,1F33C,fully-qualified,🌼,blossom,E0.6
 Animals-Nature,plant-flower,1F337,fully-qualified,🌷,tulip,E0.6
+Animals-Nature,plant-flower,1FABB,fully-qualified,🪻,hyacinth,E15.0
 Animals-Nature,plant-other,1F331,fully-qualified,🌱,seedling,E0.6
 Animals-Nature,plant-other,1FAB4,fully-qualified,🪴,potted plant,E13.0
 Animals-Nature,plant-other,1F332,fully-qualified,🌲,evergreen tree,E1.0
@@ -241,6 +257,10 @@ Animals-Nature,plant-other,1F340,fully-qualified,🍀,four leaf clover,E0.6
 Animals-Nature,plant-other,1F341,fully-qualified,🍁,maple leaf,E0.6
 Animals-Nature,plant-other,1F342,fully-qualified,🍂,fallen leaf,E0.6
 Animals-Nature,plant-other,1F343,fully-qualified,🍃,leaf fluttering in wind,E0.6
+Animals-Nature,plant-other,1FAB9,fully-qualified,🪹,empty nest,E14.0
+Animals-Nature,plant-other,1FABA,fully-qualified,🪺,nest with eggs,E14.0
+Animals-Nature,plant-other,1F344,fully-qualified,🍄,mushroom,E0.6
+Animals-Nature,plant-other,1FABE,fully-qualified,🪾,leafless tree,E16.0
 Component,skin-tone,1F3FB,component,🏻,light skin tone,E1.0
 Component,skin-tone,1F3FC,component,🏼,medium-light skin tone,E1.0
 Component,skin-tone,1F3FD,component,🏽,medium skin tone,E1.0
@@ -260,7 +280,7 @@ Flags,flag,1F3F3 FE0F 200D 1F308,fully-qualified,🏳️‍🌈,rainbow flag,E4.
 Flags,flag,1F3F3 200D 1F308,unqualified,🏳‍🌈,rainbow flag,E4.0
 Flags,flag,1F3F3 FE0F 200D 26A7 FE0F,fully-qualified,🏳️‍⚧️,transgender flag,E13.0
 Flags,flag,1F3F3 200D 26A7 FE0F,unqualified,🏳‍⚧️,transgender flag,E13.0
-Flags,flag,1F3F3 FE0F 200D 26A7,unqualified,🏳️‍⚧,transgender flag,E13.0
+Flags,flag,1F3F3 FE0F 200D 26A7,minimally-qualified,🏳️‍⚧,transgender flag,E13.0
 Flags,flag,1F3F3 200D 26A7,unqualified,🏳‍⚧,transgender flag,E13.0
 Flags,flag,1F3F4 200D 2620 FE0F,fully-qualified,🏴‍☠️,pirate flag,E11.0
 Flags,flag,1F3F4 200D 2620,minimally-qualified,🏴‍☠,pirate flag,E11.0
@@ -315,6 +335,7 @@ Flags,country-flag,1F1E8 1F1F2,fully-qualified,🇨🇲,flag Cameroon,E2.0
 Flags,country-flag,1F1E8 1F1F3,fully-qualified,🇨🇳,flag China,E0.6
 Flags,country-flag,1F1E8 1F1F4,fully-qualified,🇨🇴,flag Colombia,E2.0
 Flags,country-flag,1F1E8 1F1F5,fully-qualified,🇨🇵,flag Clipperton Island,E2.0
+Flags,country-flag,1F1E8 1F1F6,fully-qualified,🇨🇶,flag Sark,E16.0
 Flags,country-flag,1F1E8 1F1F7,fully-qualified,🇨🇷,flag Costa Rica,E2.0
 Flags,country-flag,1F1E8 1F1FA,fully-qualified,🇨🇺,flag Cuba,E2.0
 Flags,country-flag,1F1E8 1F1FB,fully-qualified,🇨🇻,flag Cape Verde,E2.0
@@ -495,7 +516,7 @@ Flags,country-flag,1F1F9 1F1F1,fully-qualified,🇹🇱,flag Timor-Leste,E2.0
 Flags,country-flag,1F1F9 1F1F2,fully-qualified,🇹🇲,flag Turkmenistan,E2.0
 Flags,country-flag,1F1F9 1F1F3,fully-qualified,🇹🇳,flag Tunisia,E2.0
 Flags,country-flag,1F1F9 1F1F4,fully-qualified,🇹🇴,flag Tonga,E2.0
-Flags,country-flag,1F1F9 1F1F7,fully-qualified,🇹🇷,flag Turkey,E2.0
+Flags,country-flag,1F1F9 1F1F7,fully-qualified,🇹🇷,flag Trkiye,E2.0
 Flags,country-flag,1F1F9 1F1F9,fully-qualified,🇹🇹,flag Trinidad  Tobago,E2.0
 Flags,country-flag,1F1F9 1F1FB,fully-qualified,🇹🇻,flag Tuvalu,E2.0
 Flags,country-flag,1F1F9 1F1FC,fully-qualified,🇹🇼,flag Taiwan,E2.0
@@ -530,6 +551,7 @@ Food-Drink,food-fruit,1F348,fully-qualified,🍈,melon,E0.6
 Food-Drink,food-fruit,1F349,fully-qualified,🍉,watermelon,E0.6
 Food-Drink,food-fruit,1F34A,fully-qualified,🍊,tangerine,E0.6
 Food-Drink,food-fruit,1F34B,fully-qualified,🍋,lemon,E1.0
+Food-Drink,food-fruit,1F34B 200D 1F7E9,fully-qualified,🍋‍🟩,lime,E15.1
 Food-Drink,food-fruit,1F34C,fully-qualified,🍌,banana,E0.6
 Food-Drink,food-fruit,1F34D,fully-qualified,🍍,pineapple,E0.6
 Food-Drink,food-fruit,1F96D,fully-qualified,🥭,mango,E11.0
@@ -557,9 +579,13 @@ Food-Drink,food-vegetable,1F96C,fully-qualified,🥬,leafy green,E11.0
 Food-Drink,food-vegetable,1F966,fully-qualified,🥦,broccoli,E5.0
 Food-Drink,food-vegetable,1F9C4,fully-qualified,🧄,garlic,E12.0
 Food-Drink,food-vegetable,1F9C5,fully-qualified,🧅,onion,E12.0
-Food-Drink,food-vegetable,1F344,fully-qualified,🍄,mushroom,E0.6
 Food-Drink,food-vegetable,1F95C,fully-qualified,🥜,peanuts,E3.0
+Food-Drink,food-vegetable,1FAD8,fully-qualified,🫘,beans,E14.0
 Food-Drink,food-vegetable,1F330,fully-qualified,🌰,chestnut,E0.6
+Food-Drink,food-vegetable,1FADA,fully-qualified,🫚,ginger root,E15.0
+Food-Drink,food-vegetable,1FADB,fully-qualified,🫛,pea pod,E15.0
+Food-Drink,food-vegetable,1F344 200D 1F7EB,fully-qualified,🍄‍🟫,brown mushroom,E15.1
+Food-Drink,food-vegetable,1FADC,fully-qualified,🫜,root vegetable,E16.0
 Food-Drink,food-prepared,1F35E,fully-qualified,🍞,bread,E0.6
 Food-Drink,food-prepared,1F950,fully-qualified,🥐,croissant,E3.0
 Food-Drink,food-prepared,1F956,fully-qualified,🥖,baguette bread,E3.0
@@ -611,11 +637,6 @@ Food-Drink,food-asian,1F361,fully-qualified,🍡,dango,E0.6
 Food-Drink,food-asian,1F95F,fully-qualified,🥟,dumpling,E5.0
 Food-Drink,food-asian,1F960,fully-qualified,🥠,fortune cookie,E5.0
 Food-Drink,food-asian,1F961,fully-qualified,🥡,takeout box,E5.0
-Food-Drink,food-marine,1F980,fully-qualified,🦀,crab,E1.0
-Food-Drink,food-marine,1F99E,fully-qualified,🦞,lobster,E11.0
-Food-Drink,food-marine,1F990,fully-qualified,🦐,shrimp,E3.0
-Food-Drink,food-marine,1F991,fully-qualified,🦑,squid,E3.0
-Food-Drink,food-marine,1F9AA,fully-qualified,🦪,oyster,E12.0
 Food-Drink,food-sweet,1F366,fully-qualified,🍦,soft ice cream,E0.6
 Food-Drink,food-sweet,1F367,fully-qualified,🍧,shaved ice,E0.6
 Food-Drink,food-sweet,1F368,fully-qualified,🍨,ice cream,E0.6
@@ -644,6 +665,7 @@ Food-Drink,drink,1F37A,fully-qualified,🍺,beer mug,E0.6
 Food-Drink,drink,1F37B,fully-qualified,🍻,clinking beer mugs,E0.6
 Food-Drink,drink,1F942,fully-qualified,🥂,clinking glasses,E3.0
 Food-Drink,drink,1F943,fully-qualified,🥃,tumbler glass,E3.0
+Food-Drink,drink,1FAD7,fully-qualified,🫗,pouring liquid,E14.0
 Food-Drink,drink,1F964,fully-qualified,🥤,cup with straw,E5.0
 Food-Drink,drink,1F9CB,fully-qualified,🧋,bubble tea,E13.0
 Food-Drink,drink,1F9C3,fully-qualified,🧃,beverage box,E12.0
@@ -655,6 +677,7 @@ Food-Drink,dishware,1F37D,unqualified,🍽,fork and knife with plate,E0.7
 Food-Drink,dishware,1F374,fully-qualified,🍴,fork and knife,E0.6
 Food-Drink,dishware,1F944,fully-qualified,🥄,spoon,E3.0
 Food-Drink,dishware,1F52A,fully-qualified,🔪,kitchen knife,E0.6
+Food-Drink,dishware,1FAD9,fully-qualified,🫙,jar,E14.0
 Food-Drink,dishware,1F3FA,fully-qualified,🏺,amphora,E1.0
 Objects,clothing,1F453,fully-qualified,👓,glasses,E0.6
 Objects,clothing,1F576 FE0F,fully-qualified,🕶️,sunglasses,E0.7
@@ -677,6 +700,7 @@ Objects,clothing,1FA72,fully-qualified,🩲,briefs,E12.0
 Objects,clothing,1FA73,fully-qualified,🩳,shorts,E12.0
 Objects,clothing,1F459,fully-qualified,👙,bikini,E0.6
 Objects,clothing,1F45A,fully-qualified,👚,womans clothes,E0.6
+Objects,clothing,1FAAD,fully-qualified,🪭,folding hand fan,E15.0
 Objects,clothing,1F45B,fully-qualified,👛,purse,E0.6
 Objects,clothing,1F45C,fully-qualified,👜,handbag,E0.6
 Objects,clothing,1F45D,fully-qualified,👝,clutch bag,E0.6
@@ -692,6 +716,7 @@ Objects,clothing,1F460,fully-qualified,👠,high-heeled shoe,E0.6
 Objects,clothing,1F461,fully-qualified,👡,womans sandal,E0.6
 Objects,clothing,1FA70,fully-qualified,🩰,ballet shoes,E12.0
 Objects,clothing,1F462,fully-qualified,👢,womans boot,E0.6
+Objects,clothing,1FAAE,fully-qualified,🪮,hair pick,E15.0
 Objects,clothing,1F451,fully-qualified,👑,crown,E0.6
 Objects,clothing,1F452,fully-qualified,👒,womans hat,E0.6
 Objects,clothing,1F3A9,fully-qualified,🎩,top hat,E0.6
@@ -734,6 +759,9 @@ Objects,musical-instrument,1F3BB,fully-qualified,🎻,violin,E0.6
 Objects,musical-instrument,1FA95,fully-qualified,🪕,banjo,E12.0
 Objects,musical-instrument,1F941,fully-qualified,🥁,drum,E3.0
 Objects,musical-instrument,1FA98,fully-qualified,🪘,long drum,E13.0
+Objects,musical-instrument,1FA87,fully-qualified,🪇,maracas,E15.0
+Objects,musical-instrument,1FA88,fully-qualified,🪈,flute,E15.0
+Objects,musical-instrument,1FA89,fully-qualified,🪉,harp,E16.0
 Objects,phone,1F4F1,fully-qualified,📱,mobile phone,E0.6
 Objects,phone,1F4F2,fully-qualified,📲,mobile phone with arrow,E0.6
 Objects,phone,260E FE0F,fully-qualified,☎️,telephone,E0.6
@@ -742,6 +770,7 @@ Objects,phone,1F4DE,fully-qualified,📞,telephone receiver,E0.6
 Objects,phone,1F4DF,fully-qualified,📟,pager,E0.6
 Objects,phone,1F4E0,fully-qualified,📠,fax machine,E0.6
 Objects,computer,1F50B,fully-qualified,🔋,battery,E0.6
+Objects,computer,1FAAB,fully-qualified,🪫,low battery,E14.0
 Objects,computer,1F50C,fully-qualified,🔌,electric plug,E0.6
 Objects,computer,1F4BB,fully-qualified,💻,laptop,E0.6
 Objects,computer,1F5A5 FE0F,fully-qualified,🖥️,desktop computer,E0.7
@@ -885,7 +914,7 @@ Objects,tool,1F5E1 FE0F,fully-qualified,🗡️,dagger,E0.7
 Objects,tool,1F5E1,unqualified,🗡,dagger,E0.7
 Objects,tool,2694 FE0F,fully-qualified,⚔️,crossed swords,E1.0
 Objects,tool,2694,unqualified,⚔,crossed swords,E1.0
-Objects,tool,1F52B,fully-qualified,🔫,water pistol,E0.6
+Objects,tool,1F4A3,fully-qualified,💣,bomb,E0.6
 Objects,tool,1FA83,fully-qualified,🪃,boomerang,E13.0
 Objects,tool,1F3F9,fully-qualified,🏹,bow and arrow,E1.0
 Objects,tool,1F6E1 FE0F,fully-qualified,🛡️,shield,E0.7
@@ -902,12 +931,15 @@ Objects,tool,2696 FE0F,fully-qualified,⚖️,balance scale,E1.0
 Objects,tool,2696,unqualified,⚖,balance scale,E1.0
 Objects,tool,1F9AF,fully-qualified,🦯,white cane,E12.0
 Objects,tool,1F517,fully-qualified,🔗,link,E0.6
+Objects,tool,26D3 FE0F 200D 1F4A5,fully-qualified,⛓️‍💥,broken chain,E15.1
+Objects,tool,26D3 200D 1F4A5,unqualified,⛓‍💥,broken chain,E15.1
 Objects,tool,26D3 FE0F,fully-qualified,⛓️,chains,E0.7
 Objects,tool,26D3,unqualified,⛓,chains,E0.7
 Objects,tool,1FA9D,fully-qualified,🪝,hook,E13.0
 Objects,tool,1F9F0,fully-qualified,🧰,toolbox,E11.0
 Objects,tool,1F9F2,fully-qualified,🧲,magnet,E11.0
 Objects,tool,1FA9C,fully-qualified,🪜,ladder,E13.0
+Objects,tool,1FA8F,fully-qualified,🪏,shovel,E16.0
 Objects,science,2697 FE0F,fully-qualified,⚗️,alembic,E1.0
 Objects,science,2697,unqualified,⚗,alembic,E1.0
 Objects,science,1F9EA,fully-qualified,🧪,test tube,E11.0
@@ -920,7 +952,9 @@ Objects,medical,1F489,fully-qualified,💉,syringe,E0.6
 Objects,medical,1FA78,fully-qualified,🩸,drop of blood,E12.0
 Objects,medical,1F48A,fully-qualified,💊,pill,E0.6
 Objects,medical,1FA79,fully-qualified,🩹,adhesive bandage,E12.0
+Objects,medical,1FA7C,fully-qualified,🩼,crutch,E14.0
 Objects,medical,1FA7A,fully-qualified,🩺,stethoscope,E12.0
+Objects,medical,1FA7B,fully-qualified,🩻,x-ray,E14.0
 Objects,household,1F6AA,fully-qualified,🚪,door,E0.6
 Objects,household,1F6D7,fully-qualified,🛗,elevator,E13.0
 Objects,household,1FA9E,fully-qualified,🪞,mirror,E13.0
@@ -943,6 +977,7 @@ Objects,household,1F9FA,fully-qualified,🧺,basket,E11.0
 Objects,household,1F9FB,fully-qualified,🧻,roll of paper,E11.0
 Objects,household,1FAA3,fully-qualified,🪣,bucket,E13.0
 Objects,household,1F9FC,fully-qualified,🧼,soap,E11.0
+Objects,household,1FAE7,fully-qualified,🫧,bubbles,E14.0
 Objects,household,1FAA5,fully-qualified,🪥,toothbrush,E13.0
 Objects,household,1F9FD,fully-qualified,🧽,sponge,E11.0
 Objects,household,1F9EF,fully-qualified,🧯,fire extinguisher,E11.0
@@ -953,8 +988,11 @@ Objects,other-object,26B0,unqualified,⚰,coffin,E1.0
 Objects,other-object,1FAA6,fully-qualified,🪦,headstone,E13.0
 Objects,other-object,26B1 FE0F,fully-qualified,⚱️,funeral urn,E1.0
 Objects,other-object,26B1,unqualified,⚱,funeral urn,E1.0
+Objects,other-object,1F9FF,fully-qualified,🧿,nazar amulet,E11.0
+Objects,other-object,1FAAC,fully-qualified,🪬,hamsa,E14.0
 Objects,other-object,1F5FF,fully-qualified,🗿,moai,E0.6
 Objects,other-object,1FAA7,fully-qualified,🪧,placard,E13.0
+Objects,other-object,1FAAA,fully-qualified,🪪,identification card,E14.0
 People-Body,hand-fingers-open,1F44B,fully-qualified,👋,waving hand,E0.6
 People-Body,hand-fingers-open,1F44B 1F3FB,fully-qualified,👋🏻,waving hand light skin tone,E1.0
 People-Body,hand-fingers-open,1F44B 1F3FC,fully-qualified,👋🏼,waving hand medium-light skin tone,E1.0
@@ -986,6 +1024,42 @@ People-Body,hand-fingers-open,1F596 1F3FC,fully-qualified,🖖🏼,vulcan salute
 People-Body,hand-fingers-open,1F596 1F3FD,fully-qualified,🖖🏽,vulcan salute medium skin tone,E1.0
 People-Body,hand-fingers-open,1F596 1F3FE,fully-qualified,🖖🏾,vulcan salute medium-dark skin tone,E1.0
 People-Body,hand-fingers-open,1F596 1F3FF,fully-qualified,🖖🏿,vulcan salute dark skin tone,E1.0
+People-Body,hand-fingers-open,1FAF1,fully-qualified,🫱,rightwards hand,E14.0
+People-Body,hand-fingers-open,1FAF1 1F3FB,fully-qualified,🫱🏻,rightwards hand light skin tone,E14.0
+People-Body,hand-fingers-open,1FAF1 1F3FC,fully-qualified,🫱🏼,rightwards hand medium-light skin tone,E14.0
+People-Body,hand-fingers-open,1FAF1 1F3FD,fully-qualified,🫱🏽,rightwards hand medium skin tone,E14.0
+People-Body,hand-fingers-open,1FAF1 1F3FE,fully-qualified,🫱🏾,rightwards hand medium-dark skin tone,E14.0
+People-Body,hand-fingers-open,1FAF1 1F3FF,fully-qualified,🫱🏿,rightwards hand dark skin tone,E14.0
+People-Body,hand-fingers-open,1FAF2,fully-qualified,🫲,leftwards hand,E14.0
+People-Body,hand-fingers-open,1FAF2 1F3FB,fully-qualified,🫲🏻,leftwards hand light skin tone,E14.0
+People-Body,hand-fingers-open,1FAF2 1F3FC,fully-qualified,🫲🏼,leftwards hand medium-light skin tone,E14.0
+People-Body,hand-fingers-open,1FAF2 1F3FD,fully-qualified,🫲🏽,leftwards hand medium skin tone,E14.0
+People-Body,hand-fingers-open,1FAF2 1F3FE,fully-qualified,🫲🏾,leftwards hand medium-dark skin tone,E14.0
+People-Body,hand-fingers-open,1FAF2 1F3FF,fully-qualified,🫲🏿,leftwards hand dark skin tone,E14.0
+People-Body,hand-fingers-open,1FAF3,fully-qualified,🫳,palm down hand,E14.0
+People-Body,hand-fingers-open,1FAF3 1F3FB,fully-qualified,🫳🏻,palm down hand light skin tone,E14.0
+People-Body,hand-fingers-open,1FAF3 1F3FC,fully-qualified,🫳🏼,palm down hand medium-light skin tone,E14.0
+People-Body,hand-fingers-open,1FAF3 1F3FD,fully-qualified,🫳🏽,palm down hand medium skin tone,E14.0
+People-Body,hand-fingers-open,1FAF3 1F3FE,fully-qualified,🫳🏾,palm down hand medium-dark skin tone,E14.0
+People-Body,hand-fingers-open,1FAF3 1F3FF,fully-qualified,🫳🏿,palm down hand dark skin tone,E14.0
+People-Body,hand-fingers-open,1FAF4,fully-qualified,🫴,palm up hand,E14.0
+People-Body,hand-fingers-open,1FAF4 1F3FB,fully-qualified,🫴🏻,palm up hand light skin tone,E14.0
+People-Body,hand-fingers-open,1FAF4 1F3FC,fully-qualified,🫴🏼,palm up hand medium-light skin tone,E14.0
+People-Body,hand-fingers-open,1FAF4 1F3FD,fully-qualified,🫴🏽,palm up hand medium skin tone,E14.0
+People-Body,hand-fingers-open,1FAF4 1F3FE,fully-qualified,🫴🏾,palm up hand medium-dark skin tone,E14.0
+People-Body,hand-fingers-open,1FAF4 1F3FF,fully-qualified,🫴🏿,palm up hand dark skin tone,E14.0
+People-Body,hand-fingers-open,1FAF7,fully-qualified,🫷,leftwards pushing hand,E15.0
+People-Body,hand-fingers-open,1FAF7 1F3FB,fully-qualified,🫷🏻,leftwards pushing hand light skin tone,E15.0
+People-Body,hand-fingers-open,1FAF7 1F3FC,fully-qualified,🫷🏼,leftwards pushing hand medium-light skin tone,E15.0
+People-Body,hand-fingers-open,1FAF7 1F3FD,fully-qualified,🫷🏽,leftwards pushing hand medium skin tone,E15.0
+People-Body,hand-fingers-open,1FAF7 1F3FE,fully-qualified,🫷🏾,leftwards pushing hand medium-dark skin tone,E15.0
+People-Body,hand-fingers-open,1FAF7 1F3FF,fully-qualified,🫷🏿,leftwards pushing hand dark skin tone,E15.0
+People-Body,hand-fingers-open,1FAF8,fully-qualified,🫸,rightwards pushing hand,E15.0
+People-Body,hand-fingers-open,1FAF8 1F3FB,fully-qualified,🫸🏻,rightwards pushing hand light skin tone,E15.0
+People-Body,hand-fingers-open,1FAF8 1F3FC,fully-qualified,🫸🏼,rightwards pushing hand medium-light skin tone,E15.0
+People-Body,hand-fingers-open,1FAF8 1F3FD,fully-qualified,🫸🏽,rightwards pushing hand medium skin tone,E15.0
+People-Body,hand-fingers-open,1FAF8 1F3FE,fully-qualified,🫸🏾,rightwards pushing hand medium-dark skin tone,E15.0
+People-Body,hand-fingers-open,1FAF8 1F3FF,fully-qualified,🫸🏿,rightwards pushing hand dark skin tone,E15.0
 People-Body,hand-fingers-partial,1F44C,fully-qualified,👌,OK hand,E0.6
 People-Body,hand-fingers-partial,1F44C 1F3FB,fully-qualified,👌🏻,OK hand light skin tone,E1.0
 People-Body,hand-fingers-partial,1F44C 1F3FC,fully-qualified,👌🏼,OK hand medium-light skin tone,E1.0
@@ -1017,6 +1091,12 @@ People-Body,hand-fingers-partial,1F91E 1F3FC,fully-qualified,🤞🏼,crossed fi
 People-Body,hand-fingers-partial,1F91E 1F3FD,fully-qualified,🤞🏽,crossed fingers medium skin tone,E3.0
 People-Body,hand-fingers-partial,1F91E 1F3FE,fully-qualified,🤞🏾,crossed fingers medium-dark skin tone,E3.0
 People-Body,hand-fingers-partial,1F91E 1F3FF,fully-qualified,🤞🏿,crossed fingers dark skin tone,E3.0
+People-Body,hand-fingers-partial,1FAF0,fully-qualified,🫰,hand with index finger and thumb crossed,E14.0
+People-Body,hand-fingers-partial,1FAF0 1F3FB,fully-qualified,🫰🏻,hand with index finger and thumb crossed light skin tone,E14.0
+People-Body,hand-fingers-partial,1FAF0 1F3FC,fully-qualified,🫰🏼,hand with index finger and thumb crossed medium-light skin tone,E14.0
+People-Body,hand-fingers-partial,1FAF0 1F3FD,fully-qualified,🫰🏽,hand with index finger and thumb crossed medium skin tone,E14.0
+People-Body,hand-fingers-partial,1FAF0 1F3FE,fully-qualified,🫰🏾,hand with index finger and thumb crossed medium-dark skin tone,E14.0
+People-Body,hand-fingers-partial,1FAF0 1F3FF,fully-qualified,🫰🏿,hand with index finger and thumb crossed dark skin tone,E14.0
 People-Body,hand-fingers-partial,1F91F,fully-qualified,🤟,love-you gesture,E5.0
 People-Body,hand-fingers-partial,1F91F 1F3FB,fully-qualified,🤟🏻,love-you gesture light skin tone,E5.0
 People-Body,hand-fingers-partial,1F91F 1F3FC,fully-qualified,🤟🏼,love-you gesture medium-light skin tone,E5.0
@@ -1072,6 +1152,12 @@ People-Body,hand-single-finger,261D 1F3FC,fully-qualified,☝🏼,index pointing
 People-Body,hand-single-finger,261D 1F3FD,fully-qualified,☝🏽,index pointing up medium skin tone,E1.0
 People-Body,hand-single-finger,261D 1F3FE,fully-qualified,☝🏾,index pointing up medium-dark skin tone,E1.0
 People-Body,hand-single-finger,261D 1F3FF,fully-qualified,☝🏿,index pointing up dark skin tone,E1.0
+People-Body,hand-single-finger,1FAF5,fully-qualified,🫵,index pointing at the viewer,E14.0
+People-Body,hand-single-finger,1FAF5 1F3FB,fully-qualified,🫵🏻,index pointing at the viewer light skin tone,E14.0
+People-Body,hand-single-finger,1FAF5 1F3FC,fully-qualified,🫵🏼,index pointing at the viewer medium-light skin tone,E14.0
+People-Body,hand-single-finger,1FAF5 1F3FD,fully-qualified,🫵🏽,index pointing at the viewer medium skin tone,E14.0
+People-Body,hand-single-finger,1FAF5 1F3FE,fully-qualified,🫵🏾,index pointing at the viewer medium-dark skin tone,E14.0
+People-Body,hand-single-finger,1FAF5 1F3FF,fully-qualified,🫵🏿,index pointing at the viewer dark skin tone,E14.0
 People-Body,hand-fingers-closed,1F44D,fully-qualified,👍,thumbs up,E0.6
 People-Body,hand-fingers-closed,1F44D 1F3FB,fully-qualified,👍🏻,thumbs up light skin tone,E1.0
 People-Body,hand-fingers-closed,1F44D 1F3FC,fully-qualified,👍🏼,thumbs up medium-light skin tone,E1.0
@@ -1120,6 +1206,12 @@ People-Body,hands,1F64C 1F3FC,fully-qualified,🙌🏼,raising hands medium-ligh
 People-Body,hands,1F64C 1F3FD,fully-qualified,🙌🏽,raising hands medium skin tone,E1.0
 People-Body,hands,1F64C 1F3FE,fully-qualified,🙌🏾,raising hands medium-dark skin tone,E1.0
 People-Body,hands,1F64C 1F3FF,fully-qualified,🙌🏿,raising hands dark skin tone,E1.0
+People-Body,hands,1FAF6,fully-qualified,🫶,heart hands,E14.0
+People-Body,hands,1FAF6 1F3FB,fully-qualified,🫶🏻,heart hands light skin tone,E14.0
+People-Body,hands,1FAF6 1F3FC,fully-qualified,🫶🏼,heart hands medium-light skin tone,E14.0
+People-Body,hands,1FAF6 1F3FD,fully-qualified,🫶🏽,heart hands medium skin tone,E14.0
+People-Body,hands,1FAF6 1F3FE,fully-qualified,🫶🏾,heart hands medium-dark skin tone,E14.0
+People-Body,hands,1FAF6 1F3FF,fully-qualified,🫶🏿,heart hands dark skin tone,E14.0
 People-Body,hands,1F450,fully-qualified,👐,open hands,E0.6
 People-Body,hands,1F450 1F3FB,fully-qualified,👐🏻,open hands light skin tone,E1.0
 People-Body,hands,1F450 1F3FC,fully-qualified,👐🏼,open hands medium-light skin tone,E1.0
@@ -1133,6 +1225,31 @@ People-Body,hands,1F932 1F3FD,fully-qualified,🤲🏽,palms up together medium 
 People-Body,hands,1F932 1F3FE,fully-qualified,🤲🏾,palms up together medium-dark skin tone,E5.0
 People-Body,hands,1F932 1F3FF,fully-qualified,🤲🏿,palms up together dark skin tone,E5.0
 People-Body,hands,1F91D,fully-qualified,🤝,handshake,E3.0
+People-Body,hands,1F91D 1F3FB,fully-qualified,🤝🏻,handshake light skin tone,E14.0
+People-Body,hands,1F91D 1F3FC,fully-qualified,🤝🏼,handshake medium-light skin tone,E14.0
+People-Body,hands,1F91D 1F3FD,fully-qualified,🤝🏽,handshake medium skin tone,E14.0
+People-Body,hands,1F91D 1F3FE,fully-qualified,🤝🏾,handshake medium-dark skin tone,E14.0
+People-Body,hands,1F91D 1F3FF,fully-qualified,🤝🏿,handshake dark skin tone,E14.0
+People-Body,hands,1FAF1 1F3FB 200D 1FAF2 1F3FC,fully-qualified,🫱🏻‍🫲🏼,handshake light skin tone medium-light skin tone,E14.0
+People-Body,hands,1FAF1 1F3FB 200D 1FAF2 1F3FD,fully-qualified,🫱🏻‍🫲🏽,handshake light skin tone medium skin tone,E14.0
+People-Body,hands,1FAF1 1F3FB 200D 1FAF2 1F3FE,fully-qualified,🫱🏻‍🫲🏾,handshake light skin tone medium-dark skin tone,E14.0
+People-Body,hands,1FAF1 1F3FB 200D 1FAF2 1F3FF,fully-qualified,🫱🏻‍🫲🏿,handshake light skin tone dark skin tone,E14.0
+People-Body,hands,1FAF1 1F3FC 200D 1FAF2 1F3FB,fully-qualified,🫱🏼‍🫲🏻,handshake medium-light skin tone light skin tone,E14.0
+People-Body,hands,1FAF1 1F3FC 200D 1FAF2 1F3FD,fully-qualified,🫱🏼‍🫲🏽,handshake medium-light skin tone medium skin tone,E14.0
+People-Body,hands,1FAF1 1F3FC 200D 1FAF2 1F3FE,fully-qualified,🫱🏼‍🫲🏾,handshake medium-light skin tone medium-dark skin tone,E14.0
+People-Body,hands,1FAF1 1F3FC 200D 1FAF2 1F3FF,fully-qualified,🫱🏼‍🫲🏿,handshake medium-light skin tone dark skin tone,E14.0
+People-Body,hands,1FAF1 1F3FD 200D 1FAF2 1F3FB,fully-qualified,🫱🏽‍🫲🏻,handshake medium skin tone light skin tone,E14.0
+People-Body,hands,1FAF1 1F3FD 200D 1FAF2 1F3FC,fully-qualified,🫱🏽‍🫲🏼,handshake medium skin tone medium-light skin tone,E14.0
+People-Body,hands,1FAF1 1F3FD 200D 1FAF2 1F3FE,fully-qualified,🫱🏽‍🫲🏾,handshake medium skin tone medium-dark skin tone,E14.0
+People-Body,hands,1FAF1 1F3FD 200D 1FAF2 1F3FF,fully-qualified,🫱🏽‍🫲🏿,handshake medium skin tone dark skin tone,E14.0
+People-Body,hands,1FAF1 1F3FE 200D 1FAF2 1F3FB,fully-qualified,🫱🏾‍🫲🏻,handshake medium-dark skin tone light skin tone,E14.0
+People-Body,hands,1FAF1 1F3FE 200D 1FAF2 1F3FC,fully-qualified,🫱🏾‍🫲🏼,handshake medium-dark skin tone medium-light skin tone,E14.0
+People-Body,hands,1FAF1 1F3FE 200D 1FAF2 1F3FD,fully-qualified,🫱🏾‍🫲🏽,handshake medium-dark skin tone medium skin tone,E14.0
+People-Body,hands,1FAF1 1F3FE 200D 1FAF2 1F3FF,fully-qualified,🫱🏾‍🫲🏿,handshake medium-dark skin tone dark skin tone,E14.0
+People-Body,hands,1FAF1 1F3FF 200D 1FAF2 1F3FB,fully-qualified,🫱🏿‍🫲🏻,handshake dark skin tone light skin tone,E14.0
+People-Body,hands,1FAF1 1F3FF 200D 1FAF2 1F3FC,fully-qualified,🫱🏿‍🫲🏼,handshake dark skin tone medium-light skin tone,E14.0
+People-Body,hands,1FAF1 1F3FF 200D 1FAF2 1F3FD,fully-qualified,🫱🏿‍🫲🏽,handshake dark skin tone medium skin tone,E14.0
+People-Body,hands,1FAF1 1F3FF 200D 1FAF2 1F3FE,fully-qualified,🫱🏿‍🫲🏾,handshake dark skin tone medium-dark skin tone,E14.0
 People-Body,hands,1F64F,fully-qualified,🙏,folded hands,E0.6
 People-Body,hands,1F64F 1F3FB,fully-qualified,🙏🏻,folded hands light skin tone,E1.0
 People-Body,hands,1F64F 1F3FC,fully-qualified,🙏🏼,folded hands medium-light skin tone,E1.0
@@ -1206,6 +1323,7 @@ People-Body,body-parts,1F441 FE0F,fully-qualified,👁️,eye,E0.7
 People-Body,body-parts,1F441,unqualified,👁,eye,E0.7
 People-Body,body-parts,1F445,fully-qualified,👅,tongue,E0.6
 People-Body,body-parts,1F444,fully-qualified,👄,mouth,E0.6
+People-Body,body-parts,1FAE6,fully-qualified,🫦,biting lip,E14.0
 People-Body,person,1F476,fully-qualified,👶,baby,E0.6
 People-Body,person,1F476 1F3FB,fully-qualified,👶🏻,baby light skin tone,E1.0
 People-Body,person,1F476 1F3FC,fully-qualified,👶🏼,baby medium-light skin tone,E1.0
@@ -2079,7 +2197,7 @@ People-Body,person-role,1F575 1F3FE,fully-qualified,🕵🏾,detective medium-da
 People-Body,person-role,1F575 1F3FF,fully-qualified,🕵🏿,detective dark skin tone,E2.0
 People-Body,person-role,1F575 FE0F 200D 2642 FE0F,fully-qualified,🕵️‍♂️,man detective,E4.0
 People-Body,person-role,1F575 200D 2642 FE0F,unqualified,🕵‍♂️,man detective,E4.0
-People-Body,person-role,1F575 FE0F 200D 2642,unqualified,🕵️‍♂,man detective,E4.0
+People-Body,person-role,1F575 FE0F 200D 2642,minimally-qualified,🕵️‍♂,man detective,E4.0
 People-Body,person-role,1F575 200D 2642,unqualified,🕵‍♂,man detective,E4.0
 People-Body,person-role,1F575 1F3FB 200D 2642 FE0F,fully-qualified,🕵🏻‍♂️,man detective light skin tone,E4.0
 People-Body,person-role,1F575 1F3FB 200D 2642,minimally-qualified,🕵🏻‍♂,man detective light skin tone,E4.0
@@ -2093,7 +2211,7 @@ People-Body,person-role,1F575 1F3FF 200D 2642 FE0F,fully-qualified,🕵🏿‍�
 People-Body,person-role,1F575 1F3FF 200D 2642,minimally-qualified,🕵🏿‍♂,man detective dark skin tone,E4.0
 People-Body,person-role,1F575 FE0F 200D 2640 FE0F,fully-qualified,🕵️‍♀️,woman detective,E4.0
 People-Body,person-role,1F575 200D 2640 FE0F,unqualified,🕵‍♀️,woman detective,E4.0
-People-Body,person-role,1F575 FE0F 200D 2640,unqualified,🕵️‍♀,woman detective,E4.0
+People-Body,person-role,1F575 FE0F 200D 2640,minimally-qualified,🕵️‍♀,woman detective,E4.0
 People-Body,person-role,1F575 200D 2640,unqualified,🕵‍♀,woman detective,E4.0
 People-Body,person-role,1F575 1F3FB 200D 2640 FE0F,fully-qualified,🕵🏻‍♀️,woman detective light skin tone,E4.0
 People-Body,person-role,1F575 1F3FB 200D 2640,minimally-qualified,🕵🏻‍♀,woman detective light skin tone,E4.0
@@ -2171,6 +2289,12 @@ People-Body,person-role,1F477 1F3FE 200D 2640 FE0F,fully-qualified,👷🏾‍�
 People-Body,person-role,1F477 1F3FE 200D 2640,minimally-qualified,👷🏾‍♀,woman construction worker medium-dark skin tone,E4.0
 People-Body,person-role,1F477 1F3FF 200D 2640 FE0F,fully-qualified,👷🏿‍♀️,woman construction worker dark skin tone,E4.0
 People-Body,person-role,1F477 1F3FF 200D 2640,minimally-qualified,👷🏿‍♀,woman construction worker dark skin tone,E4.0
+People-Body,person-role,1FAC5,fully-qualified,🫅,person with crown,E14.0
+People-Body,person-role,1FAC5 1F3FB,fully-qualified,🫅🏻,person with crown light skin tone,E14.0
+People-Body,person-role,1FAC5 1F3FC,fully-qualified,🫅🏼,person with crown medium-light skin tone,E14.0
+People-Body,person-role,1FAC5 1F3FD,fully-qualified,🫅🏽,person with crown medium skin tone,E14.0
+People-Body,person-role,1FAC5 1F3FE,fully-qualified,🫅🏾,person with crown medium-dark skin tone,E14.0
+People-Body,person-role,1FAC5 1F3FF,fully-qualified,🫅🏿,person with crown dark skin tone,E14.0
 People-Body,person-role,1F934,fully-qualified,🤴,prince,E3.0
 People-Body,person-role,1F934 1F3FB,fully-qualified,🤴🏻,prince light skin tone,E3.0
 People-Body,person-role,1F934 1F3FC,fully-qualified,🤴🏼,prince medium-light skin tone,E3.0
@@ -2291,6 +2415,18 @@ People-Body,person-role,1F930 1F3FC,fully-qualified,🤰🏼,pregnant woman medi
 People-Body,person-role,1F930 1F3FD,fully-qualified,🤰🏽,pregnant woman medium skin tone,E3.0
 People-Body,person-role,1F930 1F3FE,fully-qualified,🤰🏾,pregnant woman medium-dark skin tone,E3.0
 People-Body,person-role,1F930 1F3FF,fully-qualified,🤰🏿,pregnant woman dark skin tone,E3.0
+People-Body,person-role,1FAC3,fully-qualified,🫃,pregnant man,E14.0
+People-Body,person-role,1FAC3 1F3FB,fully-qualified,🫃🏻,pregnant man light skin tone,E14.0
+People-Body,person-role,1FAC3 1F3FC,fully-qualified,🫃🏼,pregnant man medium-light skin tone,E14.0
+People-Body,person-role,1FAC3 1F3FD,fully-qualified,🫃🏽,pregnant man medium skin tone,E14.0
+People-Body,person-role,1FAC3 1F3FE,fully-qualified,🫃🏾,pregnant man medium-dark skin tone,E14.0
+People-Body,person-role,1FAC3 1F3FF,fully-qualified,🫃🏿,pregnant man dark skin tone,E14.0
+People-Body,person-role,1FAC4,fully-qualified,🫄,pregnant person,E14.0
+People-Body,person-role,1FAC4 1F3FB,fully-qualified,🫄🏻,pregnant person light skin tone,E14.0
+People-Body,person-role,1FAC4 1F3FC,fully-qualified,🫄🏼,pregnant person medium-light skin tone,E14.0
+People-Body,person-role,1FAC4 1F3FD,fully-qualified,🫄🏽,pregnant person medium skin tone,E14.0
+People-Body,person-role,1FAC4 1F3FE,fully-qualified,🫄🏾,pregnant person medium-dark skin tone,E14.0
+People-Body,person-role,1FAC4 1F3FF,fully-qualified,🫄🏿,pregnant person dark skin tone,E14.0
 People-Body,person-role,1F931,fully-qualified,🤱,breast-feeding,E5.0
 People-Body,person-role,1F931 1F3FB,fully-qualified,🤱🏻,breast-feeding light skin tone,E5.0
 People-Body,person-role,1F931 1F3FC,fully-qualified,🤱🏼,breast-feeding medium-light skin tone,E5.0
@@ -2333,12 +2469,12 @@ People-Body,person-fantasy,1F936 1F3FC,fully-qualified,🤶🏼,Mrs Claus medium
 People-Body,person-fantasy,1F936 1F3FD,fully-qualified,🤶🏽,Mrs Claus medium skin tone,E3.0
 People-Body,person-fantasy,1F936 1F3FE,fully-qualified,🤶🏾,Mrs Claus medium-dark skin tone,E3.0
 People-Body,person-fantasy,1F936 1F3FF,fully-qualified,🤶🏿,Mrs Claus dark skin tone,E3.0
-People-Body,person-fantasy,1F9D1 200D 1F384,fully-qualified,🧑‍🎄,mx claus,E13.0
-People-Body,person-fantasy,1F9D1 1F3FB 200D 1F384,fully-qualified,🧑🏻‍🎄,mx claus light skin tone,E13.0
-People-Body,person-fantasy,1F9D1 1F3FC 200D 1F384,fully-qualified,🧑🏼‍🎄,mx claus medium-light skin tone,E13.0
-People-Body,person-fantasy,1F9D1 1F3FD 200D 1F384,fully-qualified,🧑🏽‍🎄,mx claus medium skin tone,E13.0
-People-Body,person-fantasy,1F9D1 1F3FE 200D 1F384,fully-qualified,🧑🏾‍🎄,mx claus medium-dark skin tone,E13.0
-People-Body,person-fantasy,1F9D1 1F3FF 200D 1F384,fully-qualified,🧑🏿‍🎄,mx claus dark skin tone,E13.0
+People-Body,person-fantasy,1F9D1 200D 1F384,fully-qualified,🧑‍🎄,Mx Claus,E13.0
+People-Body,person-fantasy,1F9D1 1F3FB 200D 1F384,fully-qualified,🧑🏻‍🎄,Mx Claus light skin tone,E13.0
+People-Body,person-fantasy,1F9D1 1F3FC 200D 1F384,fully-qualified,🧑🏼‍🎄,Mx Claus medium-light skin tone,E13.0
+People-Body,person-fantasy,1F9D1 1F3FD 200D 1F384,fully-qualified,🧑🏽‍🎄,Mx Claus medium skin tone,E13.0
+People-Body,person-fantasy,1F9D1 1F3FE 200D 1F384,fully-qualified,🧑🏾‍🎄,Mx Claus medium-dark skin tone,E13.0
+People-Body,person-fantasy,1F9D1 1F3FF 200D 1F384,fully-qualified,🧑🏿‍🎄,Mx Claus dark skin tone,E13.0
 People-Body,person-fantasy,1F9B8,fully-qualified,🦸,superhero,E11.0
 People-Body,person-fantasy,1F9B8 1F3FB,fully-qualified,🦸🏻,superhero light skin tone,E11.0
 People-Body,person-fantasy,1F9B8 1F3FC,fully-qualified,🦸🏼,superhero medium-light skin tone,E11.0
@@ -2559,6 +2695,7 @@ People-Body,person-fantasy,1F9DF 200D 2642 FE0F,fully-qualified,🧟‍♂️,ma
 People-Body,person-fantasy,1F9DF 200D 2642,minimally-qualified,🧟‍♂,man zombie,E5.0
 People-Body,person-fantasy,1F9DF 200D 2640 FE0F,fully-qualified,🧟‍♀️,woman zombie,E5.0
 People-Body,person-fantasy,1F9DF 200D 2640,minimally-qualified,🧟‍♀,woman zombie,E5.0
+People-Body,person-fantasy,1F9CC,fully-qualified,🧌,troll,E14.0
 People-Body,person-activity,1F486,fully-qualified,💆,person getting massage,E0.6
 People-Body,person-activity,1F486 1F3FB,fully-qualified,💆🏻,person getting massage light skin tone,E1.0
 People-Body,person-activity,1F486 1F3FC,fully-qualified,💆🏼,person getting massage medium-light skin tone,E1.0
@@ -2649,6 +2786,66 @@ People-Body,person-activity,1F6B6 1F3FE 200D 2640 FE0F,fully-qualified,🚶🏾�
 People-Body,person-activity,1F6B6 1F3FE 200D 2640,minimally-qualified,🚶🏾‍♀,woman walking medium-dark skin tone,E4.0
 People-Body,person-activity,1F6B6 1F3FF 200D 2640 FE0F,fully-qualified,🚶🏿‍♀️,woman walking dark skin tone,E4.0
 People-Body,person-activity,1F6B6 1F3FF 200D 2640,minimally-qualified,🚶🏿‍♀,woman walking dark skin tone,E4.0
+People-Body,person-activity,1F6B6 200D 27A1 FE0F,fully-qualified,🚶‍➡️,person walking facing right,E15.1
+People-Body,person-activity,1F6B6 200D 27A1,minimally-qualified,🚶‍➡,person walking facing right,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 27A1 FE0F,fully-qualified,🚶🏻‍➡️,person walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 27A1,minimally-qualified,🚶🏻‍➡,person walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 27A1 FE0F,fully-qualified,🚶🏼‍➡️,person walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 27A1,minimally-qualified,🚶🏼‍➡,person walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 27A1 FE0F,fully-qualified,🚶🏽‍➡️,person walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 27A1,minimally-qualified,🚶🏽‍➡,person walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 27A1 FE0F,fully-qualified,🚶🏾‍➡️,person walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 27A1,minimally-qualified,🚶🏾‍➡,person walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 27A1 FE0F,fully-qualified,🚶🏿‍➡️,person walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 27A1,minimally-qualified,🚶🏿‍➡,person walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🚶‍♀️‍➡️,woman walking facing right,E15.1
+People-Body,person-activity,1F6B6 200D 2640 200D 27A1 FE0F,minimally-qualified,🚶‍♀‍➡️,woman walking facing right,E15.1
+People-Body,person-activity,1F6B6 200D 2640 FE0F 200D 27A1,minimally-qualified,🚶‍♀️‍➡,woman walking facing right,E15.1
+People-Body,person-activity,1F6B6 200D 2640 200D 27A1,minimally-qualified,🚶‍♀‍➡,woman walking facing right,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏻‍♀️‍➡️,woman walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 2640 200D 27A1 FE0F,minimally-qualified,🚶🏻‍♀‍➡️,woman walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 2640 FE0F 200D 27A1,minimally-qualified,🚶🏻‍♀️‍➡,woman walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 2640 200D 27A1,minimally-qualified,🚶🏻‍♀‍➡,woman walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏼‍♀️‍➡️,woman walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 2640 200D 27A1 FE0F,minimally-qualified,🚶🏼‍♀‍➡️,woman walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 2640 FE0F 200D 27A1,minimally-qualified,🚶🏼‍♀️‍➡,woman walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 2640 200D 27A1,minimally-qualified,🚶🏼‍♀‍➡,woman walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏽‍♀️‍➡️,woman walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 2640 200D 27A1 FE0F,minimally-qualified,🚶🏽‍♀‍➡️,woman walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 2640 FE0F 200D 27A1,minimally-qualified,🚶🏽‍♀️‍➡,woman walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 2640 200D 27A1,minimally-qualified,🚶🏽‍♀‍➡,woman walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏾‍♀️‍➡️,woman walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 2640 200D 27A1 FE0F,minimally-qualified,🚶🏾‍♀‍➡️,woman walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 2640 FE0F 200D 27A1,minimally-qualified,🚶🏾‍♀️‍➡,woman walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 2640 200D 27A1,minimally-qualified,🚶🏾‍♀‍➡,woman walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏿‍♀️‍➡️,woman walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 2640 200D 27A1 FE0F,minimally-qualified,🚶🏿‍♀‍➡️,woman walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 2640 FE0F 200D 27A1,minimally-qualified,🚶🏿‍♀️‍➡,woman walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 2640 200D 27A1,minimally-qualified,🚶🏿‍♀‍➡,woman walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🚶‍♂️‍➡️,man walking facing right,E15.1
+People-Body,person-activity,1F6B6 200D 2642 200D 27A1 FE0F,minimally-qualified,🚶‍♂‍➡️,man walking facing right,E15.1
+People-Body,person-activity,1F6B6 200D 2642 FE0F 200D 27A1,minimally-qualified,🚶‍♂️‍➡,man walking facing right,E15.1
+People-Body,person-activity,1F6B6 200D 2642 200D 27A1,minimally-qualified,🚶‍♂‍➡,man walking facing right,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏻‍♂️‍➡️,man walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 2642 200D 27A1 FE0F,minimally-qualified,🚶🏻‍♂‍➡️,man walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 2642 FE0F 200D 27A1,minimally-qualified,🚶🏻‍♂️‍➡,man walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FB 200D 2642 200D 27A1,minimally-qualified,🚶🏻‍♂‍➡,man walking facing right light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏼‍♂️‍➡️,man walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 2642 200D 27A1 FE0F,minimally-qualified,🚶🏼‍♂‍➡️,man walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 2642 FE0F 200D 27A1,minimally-qualified,🚶🏼‍♂️‍➡,man walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FC 200D 2642 200D 27A1,minimally-qualified,🚶🏼‍♂‍➡,man walking facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏽‍♂️‍➡️,man walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 2642 200D 27A1 FE0F,minimally-qualified,🚶🏽‍♂‍➡️,man walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 2642 FE0F 200D 27A1,minimally-qualified,🚶🏽‍♂️‍➡,man walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FD 200D 2642 200D 27A1,minimally-qualified,🚶🏽‍♂‍➡,man walking facing right medium skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏾‍♂️‍➡️,man walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 2642 200D 27A1 FE0F,minimally-qualified,🚶🏾‍♂‍➡️,man walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 2642 FE0F 200D 27A1,minimally-qualified,🚶🏾‍♂️‍➡,man walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FE 200D 2642 200D 27A1,minimally-qualified,🚶🏾‍♂‍➡,man walking facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🚶🏿‍♂️‍➡️,man walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 2642 200D 27A1 FE0F,minimally-qualified,🚶🏿‍♂‍➡️,man walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 2642 FE0F 200D 27A1,minimally-qualified,🚶🏿‍♂️‍➡,man walking facing right dark skin tone,E15.1
+People-Body,person-activity,1F6B6 1F3FF 200D 2642 200D 27A1,minimally-qualified,🚶🏿‍♂‍➡,man walking facing right dark skin tone,E15.1
 People-Body,person-activity,1F9CD,fully-qualified,🧍,person standing,E12.0
 People-Body,person-activity,1F9CD 1F3FB,fully-qualified,🧍🏻,person standing light skin tone,E12.0
 People-Body,person-activity,1F9CD 1F3FC,fully-qualified,🧍🏼,person standing medium-light skin tone,E12.0
@@ -2709,60 +2906,228 @@ People-Body,person-activity,1F9CE 1F3FE 200D 2640 FE0F,fully-qualified,🧎🏾�
 People-Body,person-activity,1F9CE 1F3FE 200D 2640,minimally-qualified,🧎🏾‍♀,woman kneeling medium-dark skin tone,E12.0
 People-Body,person-activity,1F9CE 1F3FF 200D 2640 FE0F,fully-qualified,🧎🏿‍♀️,woman kneeling dark skin tone,E12.0
 People-Body,person-activity,1F9CE 1F3FF 200D 2640,minimally-qualified,🧎🏿‍♀,woman kneeling dark skin tone,E12.0
+People-Body,person-activity,1F9CE 200D 27A1 FE0F,fully-qualified,🧎‍➡️,person kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 200D 27A1,minimally-qualified,🧎‍➡,person kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 27A1 FE0F,fully-qualified,🧎🏻‍➡️,person kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 27A1,minimally-qualified,🧎🏻‍➡,person kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 27A1 FE0F,fully-qualified,🧎🏼‍➡️,person kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 27A1,minimally-qualified,🧎🏼‍➡,person kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 27A1 FE0F,fully-qualified,🧎🏽‍➡️,person kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 27A1,minimally-qualified,🧎🏽‍➡,person kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 27A1 FE0F,fully-qualified,🧎🏾‍➡️,person kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 27A1,minimally-qualified,🧎🏾‍➡,person kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 27A1 FE0F,fully-qualified,🧎🏿‍➡️,person kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 27A1,minimally-qualified,🧎🏿‍➡,person kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🧎‍♀️‍➡️,woman kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 200D 2640 200D 27A1 FE0F,minimally-qualified,🧎‍♀‍➡️,woman kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 200D 2640 FE0F 200D 27A1,minimally-qualified,🧎‍♀️‍➡,woman kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 200D 2640 200D 27A1,minimally-qualified,🧎‍♀‍➡,woman kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏻‍♀️‍➡️,woman kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 2640 200D 27A1 FE0F,minimally-qualified,🧎🏻‍♀‍➡️,woman kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 2640 FE0F 200D 27A1,minimally-qualified,🧎🏻‍♀️‍➡,woman kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 2640 200D 27A1,minimally-qualified,🧎🏻‍♀‍➡,woman kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏼‍♀️‍➡️,woman kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 2640 200D 27A1 FE0F,minimally-qualified,🧎🏼‍♀‍➡️,woman kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 2640 FE0F 200D 27A1,minimally-qualified,🧎🏼‍♀️‍➡,woman kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 2640 200D 27A1,minimally-qualified,🧎🏼‍♀‍➡,woman kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏽‍♀️‍➡️,woman kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 2640 200D 27A1 FE0F,minimally-qualified,🧎🏽‍♀‍➡️,woman kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 2640 FE0F 200D 27A1,minimally-qualified,🧎🏽‍♀️‍➡,woman kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 2640 200D 27A1,minimally-qualified,🧎🏽‍♀‍➡,woman kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏾‍♀️‍➡️,woman kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 2640 200D 27A1 FE0F,minimally-qualified,🧎🏾‍♀‍➡️,woman kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 2640 FE0F 200D 27A1,minimally-qualified,🧎🏾‍♀️‍➡,woman kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 2640 200D 27A1,minimally-qualified,🧎🏾‍♀‍➡,woman kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏿‍♀️‍➡️,woman kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 2640 200D 27A1 FE0F,minimally-qualified,🧎🏿‍♀‍➡️,woman kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 2640 FE0F 200D 27A1,minimally-qualified,🧎🏿‍♀️‍➡,woman kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 2640 200D 27A1,minimally-qualified,🧎🏿‍♀‍➡,woman kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🧎‍♂️‍➡️,man kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 200D 2642 200D 27A1 FE0F,minimally-qualified,🧎‍♂‍➡️,man kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 200D 2642 FE0F 200D 27A1,minimally-qualified,🧎‍♂️‍➡,man kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 200D 2642 200D 27A1,minimally-qualified,🧎‍♂‍➡,man kneeling facing right,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏻‍♂️‍➡️,man kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 2642 200D 27A1 FE0F,minimally-qualified,🧎🏻‍♂‍➡️,man kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 2642 FE0F 200D 27A1,minimally-qualified,🧎🏻‍♂️‍➡,man kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FB 200D 2642 200D 27A1,minimally-qualified,🧎🏻‍♂‍➡,man kneeling facing right light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏼‍♂️‍➡️,man kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 2642 200D 27A1 FE0F,minimally-qualified,🧎🏼‍♂‍➡️,man kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 2642 FE0F 200D 27A1,minimally-qualified,🧎🏼‍♂️‍➡,man kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FC 200D 2642 200D 27A1,minimally-qualified,🧎🏼‍♂‍➡,man kneeling facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏽‍♂️‍➡️,man kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 2642 200D 27A1 FE0F,minimally-qualified,🧎🏽‍♂‍➡️,man kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 2642 FE0F 200D 27A1,minimally-qualified,🧎🏽‍♂️‍➡,man kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FD 200D 2642 200D 27A1,minimally-qualified,🧎🏽‍♂‍➡,man kneeling facing right medium skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏾‍♂️‍➡️,man kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 2642 200D 27A1 FE0F,minimally-qualified,🧎🏾‍♂‍➡️,man kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 2642 FE0F 200D 27A1,minimally-qualified,🧎🏾‍♂️‍➡,man kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FE 200D 2642 200D 27A1,minimally-qualified,🧎🏾‍♂‍➡,man kneeling facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🧎🏿‍♂️‍➡️,man kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 2642 200D 27A1 FE0F,minimally-qualified,🧎🏿‍♂‍➡️,man kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 2642 FE0F 200D 27A1,minimally-qualified,🧎🏿‍♂️‍➡,man kneeling facing right dark skin tone,E15.1
+People-Body,person-activity,1F9CE 1F3FF 200D 2642 200D 27A1,minimally-qualified,🧎🏿‍♂‍➡,man kneeling facing right dark skin tone,E15.1
 People-Body,person-activity,1F9D1 200D 1F9AF,fully-qualified,🧑‍🦯,person with white cane,E12.1
 People-Body,person-activity,1F9D1 1F3FB 200D 1F9AF,fully-qualified,🧑🏻‍🦯,person with white cane light skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FC 200D 1F9AF,fully-qualified,🧑🏼‍🦯,person with white cane medium-light skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FD 200D 1F9AF,fully-qualified,🧑🏽‍🦯,person with white cane medium skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FE 200D 1F9AF,fully-qualified,🧑🏾‍🦯,person with white cane medium-dark skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FF 200D 1F9AF,fully-qualified,🧑🏿‍🦯,person with white cane dark skin tone,E12.1
+People-Body,person-activity,1F9D1 200D 1F9AF 200D 27A1 FE0F,fully-qualified,🧑‍🦯‍➡️,person with white cane facing right,E15.1
+People-Body,person-activity,1F9D1 200D 1F9AF 200D 27A1,minimally-qualified,🧑‍🦯‍➡,person with white cane facing right,E15.1
+People-Body,person-activity,1F9D1 1F3FB 200D 1F9AF 200D 27A1 FE0F,fully-qualified,🧑🏻‍🦯‍➡️,person with white cane facing right light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FB 200D 1F9AF 200D 27A1,minimally-qualified,🧑🏻‍🦯‍➡,person with white cane facing right light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FC 200D 1F9AF 200D 27A1 FE0F,fully-qualified,🧑🏼‍🦯‍➡️,person with white cane facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FC 200D 1F9AF 200D 27A1,minimally-qualified,🧑🏼‍🦯‍➡,person with white cane facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FD 200D 1F9AF 200D 27A1 FE0F,fully-qualified,🧑🏽‍🦯‍➡️,person with white cane facing right medium skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FD 200D 1F9AF 200D 27A1,minimally-qualified,🧑🏽‍🦯‍➡,person with white cane facing right medium skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FE 200D 1F9AF 200D 27A1 FE0F,fully-qualified,🧑🏾‍🦯‍➡️,person with white cane facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FE 200D 1F9AF 200D 27A1,minimally-qualified,🧑🏾‍🦯‍➡,person with white cane facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FF 200D 1F9AF 200D 27A1 FE0F,fully-qualified,🧑🏿‍🦯‍➡️,person with white cane facing right dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FF 200D 1F9AF 200D 27A1,minimally-qualified,🧑🏿‍🦯‍➡,person with white cane facing right dark skin tone,E15.1
 People-Body,person-activity,1F468 200D 1F9AF,fully-qualified,👨‍🦯,man with white cane,E12.0
 People-Body,person-activity,1F468 1F3FB 200D 1F9AF,fully-qualified,👨🏻‍🦯,man with white cane light skin tone,E12.0
 People-Body,person-activity,1F468 1F3FC 200D 1F9AF,fully-qualified,👨🏼‍🦯,man with white cane medium-light skin tone,E12.0
 People-Body,person-activity,1F468 1F3FD 200D 1F9AF,fully-qualified,👨🏽‍🦯,man with white cane medium skin tone,E12.0
 People-Body,person-activity,1F468 1F3FE 200D 1F9AF,fully-qualified,👨🏾‍🦯,man with white cane medium-dark skin tone,E12.0
 People-Body,person-activity,1F468 1F3FF 200D 1F9AF,fully-qualified,👨🏿‍🦯,man with white cane dark skin tone,E12.0
+People-Body,person-activity,1F468 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👨‍🦯‍➡️,man with white cane facing right,E15.1
+People-Body,person-activity,1F468 200D 1F9AF 200D 27A1,minimally-qualified,👨‍🦯‍➡,man with white cane facing right,E15.1
+People-Body,person-activity,1F468 1F3FB 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👨🏻‍🦯‍➡️,man with white cane facing right light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FB 200D 1F9AF 200D 27A1,minimally-qualified,👨🏻‍🦯‍➡,man with white cane facing right light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FC 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👨🏼‍🦯‍➡️,man with white cane facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FC 200D 1F9AF 200D 27A1,minimally-qualified,👨🏼‍🦯‍➡,man with white cane facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FD 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👨🏽‍🦯‍➡️,man with white cane facing right medium skin tone,E15.1
+People-Body,person-activity,1F468 1F3FD 200D 1F9AF 200D 27A1,minimally-qualified,👨🏽‍🦯‍➡,man with white cane facing right medium skin tone,E15.1
+People-Body,person-activity,1F468 1F3FE 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👨🏾‍🦯‍➡️,man with white cane facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FE 200D 1F9AF 200D 27A1,minimally-qualified,👨🏾‍🦯‍➡,man with white cane facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FF 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👨🏿‍🦯‍➡️,man with white cane facing right dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FF 200D 1F9AF 200D 27A1,minimally-qualified,👨🏿‍🦯‍➡,man with white cane facing right dark skin tone,E15.1
 People-Body,person-activity,1F469 200D 1F9AF,fully-qualified,👩‍🦯,woman with white cane,E12.0
 People-Body,person-activity,1F469 1F3FB 200D 1F9AF,fully-qualified,👩🏻‍🦯,woman with white cane light skin tone,E12.0
 People-Body,person-activity,1F469 1F3FC 200D 1F9AF,fully-qualified,👩🏼‍🦯,woman with white cane medium-light skin tone,E12.0
 People-Body,person-activity,1F469 1F3FD 200D 1F9AF,fully-qualified,👩🏽‍🦯,woman with white cane medium skin tone,E12.0
 People-Body,person-activity,1F469 1F3FE 200D 1F9AF,fully-qualified,👩🏾‍🦯,woman with white cane medium-dark skin tone,E12.0
 People-Body,person-activity,1F469 1F3FF 200D 1F9AF,fully-qualified,👩🏿‍🦯,woman with white cane dark skin tone,E12.0
+People-Body,person-activity,1F469 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👩‍🦯‍➡️,woman with white cane facing right,E15.1
+People-Body,person-activity,1F469 200D 1F9AF 200D 27A1,minimally-qualified,👩‍🦯‍➡,woman with white cane facing right,E15.1
+People-Body,person-activity,1F469 1F3FB 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👩🏻‍🦯‍➡️,woman with white cane facing right light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FB 200D 1F9AF 200D 27A1,minimally-qualified,👩🏻‍🦯‍➡,woman with white cane facing right light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FC 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👩🏼‍🦯‍➡️,woman with white cane facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FC 200D 1F9AF 200D 27A1,minimally-qualified,👩🏼‍🦯‍➡,woman with white cane facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FD 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👩🏽‍🦯‍➡️,woman with white cane facing right medium skin tone,E15.1
+People-Body,person-activity,1F469 1F3FD 200D 1F9AF 200D 27A1,minimally-qualified,👩🏽‍🦯‍➡,woman with white cane facing right medium skin tone,E15.1
+People-Body,person-activity,1F469 1F3FE 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👩🏾‍🦯‍➡️,woman with white cane facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FE 200D 1F9AF 200D 27A1,minimally-qualified,👩🏾‍🦯‍➡,woman with white cane facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FF 200D 1F9AF 200D 27A1 FE0F,fully-qualified,👩🏿‍🦯‍➡️,woman with white cane facing right dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FF 200D 1F9AF 200D 27A1,minimally-qualified,👩🏿‍🦯‍➡,woman with white cane facing right dark skin tone,E15.1
 People-Body,person-activity,1F9D1 200D 1F9BC,fully-qualified,🧑‍🦼,person in motorized wheelchair,E12.1
 People-Body,person-activity,1F9D1 1F3FB 200D 1F9BC,fully-qualified,🧑🏻‍🦼,person in motorized wheelchair light skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FC 200D 1F9BC,fully-qualified,🧑🏼‍🦼,person in motorized wheelchair medium-light skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FD 200D 1F9BC,fully-qualified,🧑🏽‍🦼,person in motorized wheelchair medium skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FE 200D 1F9BC,fully-qualified,🧑🏾‍🦼,person in motorized wheelchair medium-dark skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FF 200D 1F9BC,fully-qualified,🧑🏿‍🦼,person in motorized wheelchair dark skin tone,E12.1
+People-Body,person-activity,1F9D1 200D 1F9BC 200D 27A1 FE0F,fully-qualified,🧑‍🦼‍➡️,person in motorized wheelchair facing right,E15.1
+People-Body,person-activity,1F9D1 200D 1F9BC 200D 27A1,minimally-qualified,🧑‍🦼‍➡,person in motorized wheelchair facing right,E15.1
+People-Body,person-activity,1F9D1 1F3FB 200D 1F9BC 200D 27A1 FE0F,fully-qualified,🧑🏻‍🦼‍➡️,person in motorized wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FB 200D 1F9BC 200D 27A1,minimally-qualified,🧑🏻‍🦼‍➡,person in motorized wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FC 200D 1F9BC 200D 27A1 FE0F,fully-qualified,🧑🏼‍🦼‍➡️,person in motorized wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FC 200D 1F9BC 200D 27A1,minimally-qualified,🧑🏼‍🦼‍➡,person in motorized wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FD 200D 1F9BC 200D 27A1 FE0F,fully-qualified,🧑🏽‍🦼‍➡️,person in motorized wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FD 200D 1F9BC 200D 27A1,minimally-qualified,🧑🏽‍🦼‍➡,person in motorized wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FE 200D 1F9BC 200D 27A1 FE0F,fully-qualified,🧑🏾‍🦼‍➡️,person in motorized wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FE 200D 1F9BC 200D 27A1,minimally-qualified,🧑🏾‍🦼‍➡,person in motorized wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FF 200D 1F9BC 200D 27A1 FE0F,fully-qualified,🧑🏿‍🦼‍➡️,person in motorized wheelchair facing right dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FF 200D 1F9BC 200D 27A1,minimally-qualified,🧑🏿‍🦼‍➡,person in motorized wheelchair facing right dark skin tone,E15.1
 People-Body,person-activity,1F468 200D 1F9BC,fully-qualified,👨‍🦼,man in motorized wheelchair,E12.0
 People-Body,person-activity,1F468 1F3FB 200D 1F9BC,fully-qualified,👨🏻‍🦼,man in motorized wheelchair light skin tone,E12.0
 People-Body,person-activity,1F468 1F3FC 200D 1F9BC,fully-qualified,👨🏼‍🦼,man in motorized wheelchair medium-light skin tone,E12.0
 People-Body,person-activity,1F468 1F3FD 200D 1F9BC,fully-qualified,👨🏽‍🦼,man in motorized wheelchair medium skin tone,E12.0
 People-Body,person-activity,1F468 1F3FE 200D 1F9BC,fully-qualified,👨🏾‍🦼,man in motorized wheelchair medium-dark skin tone,E12.0
 People-Body,person-activity,1F468 1F3FF 200D 1F9BC,fully-qualified,👨🏿‍🦼,man in motorized wheelchair dark skin tone,E12.0
+People-Body,person-activity,1F468 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👨‍🦼‍➡️,man in motorized wheelchair facing right,E15.1
+People-Body,person-activity,1F468 200D 1F9BC 200D 27A1,minimally-qualified,👨‍🦼‍➡,man in motorized wheelchair facing right,E15.1
+People-Body,person-activity,1F468 1F3FB 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👨🏻‍🦼‍➡️,man in motorized wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FB 200D 1F9BC 200D 27A1,minimally-qualified,👨🏻‍🦼‍➡,man in motorized wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FC 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👨🏼‍🦼‍➡️,man in motorized wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FC 200D 1F9BC 200D 27A1,minimally-qualified,👨🏼‍🦼‍➡,man in motorized wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FD 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👨🏽‍🦼‍➡️,man in motorized wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F468 1F3FD 200D 1F9BC 200D 27A1,minimally-qualified,👨🏽‍🦼‍➡,man in motorized wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F468 1F3FE 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👨🏾‍🦼‍➡️,man in motorized wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FE 200D 1F9BC 200D 27A1,minimally-qualified,👨🏾‍🦼‍➡,man in motorized wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FF 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👨🏿‍🦼‍➡️,man in motorized wheelchair facing right dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FF 200D 1F9BC 200D 27A1,minimally-qualified,👨🏿‍🦼‍➡,man in motorized wheelchair facing right dark skin tone,E15.1
 People-Body,person-activity,1F469 200D 1F9BC,fully-qualified,👩‍🦼,woman in motorized wheelchair,E12.0
 People-Body,person-activity,1F469 1F3FB 200D 1F9BC,fully-qualified,👩🏻‍🦼,woman in motorized wheelchair light skin tone,E12.0
 People-Body,person-activity,1F469 1F3FC 200D 1F9BC,fully-qualified,👩🏼‍🦼,woman in motorized wheelchair medium-light skin tone,E12.0
 People-Body,person-activity,1F469 1F3FD 200D 1F9BC,fully-qualified,👩🏽‍🦼,woman in motorized wheelchair medium skin tone,E12.0
 People-Body,person-activity,1F469 1F3FE 200D 1F9BC,fully-qualified,👩🏾‍🦼,woman in motorized wheelchair medium-dark skin tone,E12.0
 People-Body,person-activity,1F469 1F3FF 200D 1F9BC,fully-qualified,👩🏿‍🦼,woman in motorized wheelchair dark skin tone,E12.0
+People-Body,person-activity,1F469 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👩‍🦼‍➡️,woman in motorized wheelchair facing right,E15.1
+People-Body,person-activity,1F469 200D 1F9BC 200D 27A1,minimally-qualified,👩‍🦼‍➡,woman in motorized wheelchair facing right,E15.1
+People-Body,person-activity,1F469 1F3FB 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👩🏻‍🦼‍➡️,woman in motorized wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FB 200D 1F9BC 200D 27A1,minimally-qualified,👩🏻‍🦼‍➡,woman in motorized wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FC 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👩🏼‍🦼‍➡️,woman in motorized wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FC 200D 1F9BC 200D 27A1,minimally-qualified,👩🏼‍🦼‍➡,woman in motorized wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FD 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👩🏽‍🦼‍➡️,woman in motorized wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F469 1F3FD 200D 1F9BC 200D 27A1,minimally-qualified,👩🏽‍🦼‍➡,woman in motorized wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F469 1F3FE 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👩🏾‍🦼‍➡️,woman in motorized wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FE 200D 1F9BC 200D 27A1,minimally-qualified,👩🏾‍🦼‍➡,woman in motorized wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FF 200D 1F9BC 200D 27A1 FE0F,fully-qualified,👩🏿‍🦼‍➡️,woman in motorized wheelchair facing right dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FF 200D 1F9BC 200D 27A1,minimally-qualified,👩🏿‍🦼‍➡,woman in motorized wheelchair facing right dark skin tone,E15.1
 People-Body,person-activity,1F9D1 200D 1F9BD,fully-qualified,🧑‍🦽,person in manual wheelchair,E12.1
 People-Body,person-activity,1F9D1 1F3FB 200D 1F9BD,fully-qualified,🧑🏻‍🦽,person in manual wheelchair light skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FC 200D 1F9BD,fully-qualified,🧑🏼‍🦽,person in manual wheelchair medium-light skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FD 200D 1F9BD,fully-qualified,🧑🏽‍🦽,person in manual wheelchair medium skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FE 200D 1F9BD,fully-qualified,🧑🏾‍🦽,person in manual wheelchair medium-dark skin tone,E12.1
 People-Body,person-activity,1F9D1 1F3FF 200D 1F9BD,fully-qualified,🧑🏿‍🦽,person in manual wheelchair dark skin tone,E12.1
+People-Body,person-activity,1F9D1 200D 1F9BD 200D 27A1 FE0F,fully-qualified,🧑‍🦽‍➡️,person in manual wheelchair facing right,E15.1
+People-Body,person-activity,1F9D1 200D 1F9BD 200D 27A1,minimally-qualified,🧑‍🦽‍➡,person in manual wheelchair facing right,E15.1
+People-Body,person-activity,1F9D1 1F3FB 200D 1F9BD 200D 27A1 FE0F,fully-qualified,🧑🏻‍🦽‍➡️,person in manual wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FB 200D 1F9BD 200D 27A1,minimally-qualified,🧑🏻‍🦽‍➡,person in manual wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FC 200D 1F9BD 200D 27A1 FE0F,fully-qualified,🧑🏼‍🦽‍➡️,person in manual wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FC 200D 1F9BD 200D 27A1,minimally-qualified,🧑🏼‍🦽‍➡,person in manual wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FD 200D 1F9BD 200D 27A1 FE0F,fully-qualified,🧑🏽‍🦽‍➡️,person in manual wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FD 200D 1F9BD 200D 27A1,minimally-qualified,🧑🏽‍🦽‍➡,person in manual wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FE 200D 1F9BD 200D 27A1 FE0F,fully-qualified,🧑🏾‍🦽‍➡️,person in manual wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FE 200D 1F9BD 200D 27A1,minimally-qualified,🧑🏾‍🦽‍➡,person in manual wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FF 200D 1F9BD 200D 27A1 FE0F,fully-qualified,🧑🏿‍🦽‍➡️,person in manual wheelchair facing right dark skin tone,E15.1
+People-Body,person-activity,1F9D1 1F3FF 200D 1F9BD 200D 27A1,minimally-qualified,🧑🏿‍🦽‍➡,person in manual wheelchair facing right dark skin tone,E15.1
 People-Body,person-activity,1F468 200D 1F9BD,fully-qualified,👨‍🦽,man in manual wheelchair,E12.0
 People-Body,person-activity,1F468 1F3FB 200D 1F9BD,fully-qualified,👨🏻‍🦽,man in manual wheelchair light skin tone,E12.0
 People-Body,person-activity,1F468 1F3FC 200D 1F9BD,fully-qualified,👨🏼‍🦽,man in manual wheelchair medium-light skin tone,E12.0
 People-Body,person-activity,1F468 1F3FD 200D 1F9BD,fully-qualified,👨🏽‍🦽,man in manual wheelchair medium skin tone,E12.0
 People-Body,person-activity,1F468 1F3FE 200D 1F9BD,fully-qualified,👨🏾‍🦽,man in manual wheelchair medium-dark skin tone,E12.0
 People-Body,person-activity,1F468 1F3FF 200D 1F9BD,fully-qualified,👨🏿‍🦽,man in manual wheelchair dark skin tone,E12.0
+People-Body,person-activity,1F468 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👨‍🦽‍➡️,man in manual wheelchair facing right,E15.1
+People-Body,person-activity,1F468 200D 1F9BD 200D 27A1,minimally-qualified,👨‍🦽‍➡,man in manual wheelchair facing right,E15.1
+People-Body,person-activity,1F468 1F3FB 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👨🏻‍🦽‍➡️,man in manual wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FB 200D 1F9BD 200D 27A1,minimally-qualified,👨🏻‍🦽‍➡,man in manual wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FC 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👨🏼‍🦽‍➡️,man in manual wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FC 200D 1F9BD 200D 27A1,minimally-qualified,👨🏼‍🦽‍➡,man in manual wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F468 1F3FD 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👨🏽‍🦽‍➡️,man in manual wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F468 1F3FD 200D 1F9BD 200D 27A1,minimally-qualified,👨🏽‍🦽‍➡,man in manual wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F468 1F3FE 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👨🏾‍🦽‍➡️,man in manual wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FE 200D 1F9BD 200D 27A1,minimally-qualified,👨🏾‍🦽‍➡,man in manual wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FF 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👨🏿‍🦽‍➡️,man in manual wheelchair facing right dark skin tone,E15.1
+People-Body,person-activity,1F468 1F3FF 200D 1F9BD 200D 27A1,minimally-qualified,👨🏿‍🦽‍➡,man in manual wheelchair facing right dark skin tone,E15.1
 People-Body,person-activity,1F469 200D 1F9BD,fully-qualified,👩‍🦽,woman in manual wheelchair,E12.0
 People-Body,person-activity,1F469 1F3FB 200D 1F9BD,fully-qualified,👩🏻‍🦽,woman in manual wheelchair light skin tone,E12.0
 People-Body,person-activity,1F469 1F3FC 200D 1F9BD,fully-qualified,👩🏼‍🦽,woman in manual wheelchair medium-light skin tone,E12.0
 People-Body,person-activity,1F469 1F3FD 200D 1F9BD,fully-qualified,👩🏽‍🦽,woman in manual wheelchair medium skin tone,E12.0
 People-Body,person-activity,1F469 1F3FE 200D 1F9BD,fully-qualified,👩🏾‍🦽,woman in manual wheelchair medium-dark skin tone,E12.0
 People-Body,person-activity,1F469 1F3FF 200D 1F9BD,fully-qualified,👩🏿‍🦽,woman in manual wheelchair dark skin tone,E12.0
+People-Body,person-activity,1F469 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👩‍🦽‍➡️,woman in manual wheelchair facing right,E15.1
+People-Body,person-activity,1F469 200D 1F9BD 200D 27A1,minimally-qualified,👩‍🦽‍➡,woman in manual wheelchair facing right,E15.1
+People-Body,person-activity,1F469 1F3FB 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👩🏻‍🦽‍➡️,woman in manual wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FB 200D 1F9BD 200D 27A1,minimally-qualified,👩🏻‍🦽‍➡,woman in manual wheelchair facing right light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FC 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👩🏼‍🦽‍➡️,woman in manual wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FC 200D 1F9BD 200D 27A1,minimally-qualified,👩🏼‍🦽‍➡,woman in manual wheelchair facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F469 1F3FD 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👩🏽‍🦽‍➡️,woman in manual wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F469 1F3FD 200D 1F9BD 200D 27A1,minimally-qualified,👩🏽‍🦽‍➡,woman in manual wheelchair facing right medium skin tone,E15.1
+People-Body,person-activity,1F469 1F3FE 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👩🏾‍🦽‍➡️,woman in manual wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FE 200D 1F9BD 200D 27A1,minimally-qualified,👩🏾‍🦽‍➡,woman in manual wheelchair facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FF 200D 1F9BD 200D 27A1 FE0F,fully-qualified,👩🏿‍🦽‍➡️,woman in manual wheelchair facing right dark skin tone,E15.1
+People-Body,person-activity,1F469 1F3FF 200D 1F9BD 200D 27A1,minimally-qualified,👩🏿‍🦽‍➡,woman in manual wheelchair facing right dark skin tone,E15.1
 People-Body,person-activity,1F3C3,fully-qualified,🏃,person running,E0.6
 People-Body,person-activity,1F3C3 1F3FB,fully-qualified,🏃🏻,person running light skin tone,E1.0
 People-Body,person-activity,1F3C3 1F3FC,fully-qualified,🏃🏼,person running medium-light skin tone,E1.0
@@ -2793,6 +3158,66 @@ People-Body,person-activity,1F3C3 1F3FE 200D 2640 FE0F,fully-qualified,🏃🏾�
 People-Body,person-activity,1F3C3 1F3FE 200D 2640,minimally-qualified,🏃🏾‍♀,woman running medium-dark skin tone,E4.0
 People-Body,person-activity,1F3C3 1F3FF 200D 2640 FE0F,fully-qualified,🏃🏿‍♀️,woman running dark skin tone,E4.0
 People-Body,person-activity,1F3C3 1F3FF 200D 2640,minimally-qualified,🏃🏿‍♀,woman running dark skin tone,E4.0
+People-Body,person-activity,1F3C3 200D 27A1 FE0F,fully-qualified,🏃‍➡️,person running facing right,E15.1
+People-Body,person-activity,1F3C3 200D 27A1,minimally-qualified,🏃‍➡,person running facing right,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 27A1 FE0F,fully-qualified,🏃🏻‍➡️,person running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 27A1,minimally-qualified,🏃🏻‍➡,person running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 27A1 FE0F,fully-qualified,🏃🏼‍➡️,person running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 27A1,minimally-qualified,🏃🏼‍➡,person running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 27A1 FE0F,fully-qualified,🏃🏽‍➡️,person running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 27A1,minimally-qualified,🏃🏽‍➡,person running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 27A1 FE0F,fully-qualified,🏃🏾‍➡️,person running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 27A1,minimally-qualified,🏃🏾‍➡,person running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 27A1 FE0F,fully-qualified,🏃🏿‍➡️,person running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 27A1,minimally-qualified,🏃🏿‍➡,person running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🏃‍♀️‍➡️,woman running facing right,E15.1
+People-Body,person-activity,1F3C3 200D 2640 200D 27A1 FE0F,minimally-qualified,🏃‍♀‍➡️,woman running facing right,E15.1
+People-Body,person-activity,1F3C3 200D 2640 FE0F 200D 27A1,minimally-qualified,🏃‍♀️‍➡,woman running facing right,E15.1
+People-Body,person-activity,1F3C3 200D 2640 200D 27A1,minimally-qualified,🏃‍♀‍➡,woman running facing right,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏻‍♀️‍➡️,woman running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 2640 200D 27A1 FE0F,minimally-qualified,🏃🏻‍♀‍➡️,woman running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 2640 FE0F 200D 27A1,minimally-qualified,🏃🏻‍♀️‍➡,woman running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 2640 200D 27A1,minimally-qualified,🏃🏻‍♀‍➡,woman running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏼‍♀️‍➡️,woman running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 2640 200D 27A1 FE0F,minimally-qualified,🏃🏼‍♀‍➡️,woman running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 2640 FE0F 200D 27A1,minimally-qualified,🏃🏼‍♀️‍➡,woman running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 2640 200D 27A1,minimally-qualified,🏃🏼‍♀‍➡,woman running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏽‍♀️‍➡️,woman running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 2640 200D 27A1 FE0F,minimally-qualified,🏃🏽‍♀‍➡️,woman running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 2640 FE0F 200D 27A1,minimally-qualified,🏃🏽‍♀️‍➡,woman running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 2640 200D 27A1,minimally-qualified,🏃🏽‍♀‍➡,woman running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏾‍♀️‍➡️,woman running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 2640 200D 27A1 FE0F,minimally-qualified,🏃🏾‍♀‍➡️,woman running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 2640 FE0F 200D 27A1,minimally-qualified,🏃🏾‍♀️‍➡,woman running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 2640 200D 27A1,minimally-qualified,🏃🏾‍♀‍➡,woman running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 2640 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏿‍♀️‍➡️,woman running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 2640 200D 27A1 FE0F,minimally-qualified,🏃🏿‍♀‍➡️,woman running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 2640 FE0F 200D 27A1,minimally-qualified,🏃🏿‍♀️‍➡,woman running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 2640 200D 27A1,minimally-qualified,🏃🏿‍♀‍➡,woman running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🏃‍♂️‍➡️,man running facing right,E15.1
+People-Body,person-activity,1F3C3 200D 2642 200D 27A1 FE0F,minimally-qualified,🏃‍♂‍➡️,man running facing right,E15.1
+People-Body,person-activity,1F3C3 200D 2642 FE0F 200D 27A1,minimally-qualified,🏃‍♂️‍➡,man running facing right,E15.1
+People-Body,person-activity,1F3C3 200D 2642 200D 27A1,minimally-qualified,🏃‍♂‍➡,man running facing right,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏻‍♂️‍➡️,man running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 2642 200D 27A1 FE0F,minimally-qualified,🏃🏻‍♂‍➡️,man running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 2642 FE0F 200D 27A1,minimally-qualified,🏃🏻‍♂️‍➡,man running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FB 200D 2642 200D 27A1,minimally-qualified,🏃🏻‍♂‍➡,man running facing right light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏼‍♂️‍➡️,man running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 2642 200D 27A1 FE0F,minimally-qualified,🏃🏼‍♂‍➡️,man running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 2642 FE0F 200D 27A1,minimally-qualified,🏃🏼‍♂️‍➡,man running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FC 200D 2642 200D 27A1,minimally-qualified,🏃🏼‍♂‍➡,man running facing right medium-light skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏽‍♂️‍➡️,man running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 2642 200D 27A1 FE0F,minimally-qualified,🏃🏽‍♂‍➡️,man running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 2642 FE0F 200D 27A1,minimally-qualified,🏃🏽‍♂️‍➡,man running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FD 200D 2642 200D 27A1,minimally-qualified,🏃🏽‍♂‍➡,man running facing right medium skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏾‍♂️‍➡️,man running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 2642 200D 27A1 FE0F,minimally-qualified,🏃🏾‍♂‍➡️,man running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 2642 FE0F 200D 27A1,minimally-qualified,🏃🏾‍♂️‍➡,man running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FE 200D 2642 200D 27A1,minimally-qualified,🏃🏾‍♂‍➡,man running facing right medium-dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 2642 FE0F 200D 27A1 FE0F,fully-qualified,🏃🏿‍♂️‍➡️,man running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 2642 200D 27A1 FE0F,minimally-qualified,🏃🏿‍♂‍➡️,man running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 2642 FE0F 200D 27A1,minimally-qualified,🏃🏿‍♂️‍➡,man running facing right dark skin tone,E15.1
+People-Body,person-activity,1F3C3 1F3FF 200D 2642 200D 27A1,minimally-qualified,🏃🏿‍♂‍➡,man running facing right dark skin tone,E15.1
 People-Body,person-activity,1F483,fully-qualified,💃,woman dancing,E0.6
 People-Body,person-activity,1F483 1F3FB,fully-qualified,💃🏻,woman dancing light skin tone,E1.0
 People-Body,person-activity,1F483 1F3FC,fully-qualified,💃🏼,woman dancing medium-light skin tone,E1.0
@@ -2901,7 +3326,7 @@ People-Body,person-sport,1F3CC 1F3FE,fully-qualified,🏌🏾,person golfing med
 People-Body,person-sport,1F3CC 1F3FF,fully-qualified,🏌🏿,person golfing dark skin tone,E4.0
 People-Body,person-sport,1F3CC FE0F 200D 2642 FE0F,fully-qualified,🏌️‍♂️,man golfing,E4.0
 People-Body,person-sport,1F3CC 200D 2642 FE0F,unqualified,🏌‍♂️,man golfing,E4.0
-People-Body,person-sport,1F3CC FE0F 200D 2642,unqualified,🏌️‍♂,man golfing,E4.0
+People-Body,person-sport,1F3CC FE0F 200D 2642,minimally-qualified,🏌️‍♂,man golfing,E4.0
 People-Body,person-sport,1F3CC 200D 2642,unqualified,🏌‍♂,man golfing,E4.0
 People-Body,person-sport,1F3CC 1F3FB 200D 2642 FE0F,fully-qualified,🏌🏻‍♂️,man golfing light skin tone,E4.0
 People-Body,person-sport,1F3CC 1F3FB 200D 2642,minimally-qualified,🏌🏻‍♂,man golfing light skin tone,E4.0
@@ -2915,7 +3340,7 @@ People-Body,person-sport,1F3CC 1F3FF 200D 2642 FE0F,fully-qualified,🏌🏿‍�
 People-Body,person-sport,1F3CC 1F3FF 200D 2642,minimally-qualified,🏌🏿‍♂,man golfing dark skin tone,E4.0
 People-Body,person-sport,1F3CC FE0F 200D 2640 FE0F,fully-qualified,🏌️‍♀️,woman golfing,E4.0
 People-Body,person-sport,1F3CC 200D 2640 FE0F,unqualified,🏌‍♀️,woman golfing,E4.0
-People-Body,person-sport,1F3CC FE0F 200D 2640,unqualified,🏌️‍♀,woman golfing,E4.0
+People-Body,person-sport,1F3CC FE0F 200D 2640,minimally-qualified,🏌️‍♀,woman golfing,E4.0
 People-Body,person-sport,1F3CC 200D 2640,unqualified,🏌‍♀,woman golfing,E4.0
 People-Body,person-sport,1F3CC 1F3FB 200D 2640 FE0F,fully-qualified,🏌🏻‍♀️,woman golfing light skin tone,E4.0
 People-Body,person-sport,1F3CC 1F3FB 200D 2640,minimally-qualified,🏌🏻‍♀,woman golfing light skin tone,E4.0
@@ -3026,7 +3451,7 @@ People-Body,person-sport,26F9 1F3FE,fully-qualified,⛹🏾,person bouncing ball
 People-Body,person-sport,26F9 1F3FF,fully-qualified,⛹🏿,person bouncing ball dark skin tone,E2.0
 People-Body,person-sport,26F9 FE0F 200D 2642 FE0F,fully-qualified,⛹️‍♂️,man bouncing ball,E4.0
 People-Body,person-sport,26F9 200D 2642 FE0F,unqualified,⛹‍♂️,man bouncing ball,E4.0
-People-Body,person-sport,26F9 FE0F 200D 2642,unqualified,⛹️‍♂,man bouncing ball,E4.0
+People-Body,person-sport,26F9 FE0F 200D 2642,minimally-qualified,⛹️‍♂,man bouncing ball,E4.0
 People-Body,person-sport,26F9 200D 2642,unqualified,⛹‍♂,man bouncing ball,E4.0
 People-Body,person-sport,26F9 1F3FB 200D 2642 FE0F,fully-qualified,⛹🏻‍♂️,man bouncing ball light skin tone,E4.0
 People-Body,person-sport,26F9 1F3FB 200D 2642,minimally-qualified,⛹🏻‍♂,man bouncing ball light skin tone,E4.0
@@ -3040,7 +3465,7 @@ People-Body,person-sport,26F9 1F3FF 200D 2642 FE0F,fully-qualified,⛹🏿‍♂
 People-Body,person-sport,26F9 1F3FF 200D 2642,minimally-qualified,⛹🏿‍♂,man bouncing ball dark skin tone,E4.0
 People-Body,person-sport,26F9 FE0F 200D 2640 FE0F,fully-qualified,⛹️‍♀️,woman bouncing ball,E4.0
 People-Body,person-sport,26F9 200D 2640 FE0F,unqualified,⛹‍♀️,woman bouncing ball,E4.0
-People-Body,person-sport,26F9 FE0F 200D 2640,unqualified,⛹️‍♀,woman bouncing ball,E4.0
+People-Body,person-sport,26F9 FE0F 200D 2640,minimally-qualified,⛹️‍♀,woman bouncing ball,E4.0
 People-Body,person-sport,26F9 200D 2640,unqualified,⛹‍♀,woman bouncing ball,E4.0
 People-Body,person-sport,26F9 1F3FB 200D 2640 FE0F,fully-qualified,⛹🏻‍♀️,woman bouncing ball light skin tone,E4.0
 People-Body,person-sport,26F9 1F3FB 200D 2640,minimally-qualified,⛹🏻‍♀,woman bouncing ball light skin tone,E4.0
@@ -3061,7 +3486,7 @@ People-Body,person-sport,1F3CB 1F3FE,fully-qualified,🏋🏾,person lifting wei
 People-Body,person-sport,1F3CB 1F3FF,fully-qualified,🏋🏿,person lifting weights dark skin tone,E2.0
 People-Body,person-sport,1F3CB FE0F 200D 2642 FE0F,fully-qualified,🏋️‍♂️,man lifting weights,E4.0
 People-Body,person-sport,1F3CB 200D 2642 FE0F,unqualified,🏋‍♂️,man lifting weights,E4.0
-People-Body,person-sport,1F3CB FE0F 200D 2642,unqualified,🏋️‍♂,man lifting weights,E4.0
+People-Body,person-sport,1F3CB FE0F 200D 2642,minimally-qualified,🏋️‍♂,man lifting weights,E4.0
 People-Body,person-sport,1F3CB 200D 2642,unqualified,🏋‍♂,man lifting weights,E4.0
 People-Body,person-sport,1F3CB 1F3FB 200D 2642 FE0F,fully-qualified,🏋🏻‍♂️,man lifting weights light skin tone,E4.0
 People-Body,person-sport,1F3CB 1F3FB 200D 2642,minimally-qualified,🏋🏻‍♂,man lifting weights light skin tone,E4.0
@@ -3075,7 +3500,7 @@ People-Body,person-sport,1F3CB 1F3FF 200D 2642 FE0F,fully-qualified,🏋🏿‍�
 People-Body,person-sport,1F3CB 1F3FF 200D 2642,minimally-qualified,🏋🏿‍♂,man lifting weights dark skin tone,E4.0
 People-Body,person-sport,1F3CB FE0F 200D 2640 FE0F,fully-qualified,🏋️‍♀️,woman lifting weights,E4.0
 People-Body,person-sport,1F3CB 200D 2640 FE0F,unqualified,🏋‍♀️,woman lifting weights,E4.0
-People-Body,person-sport,1F3CB FE0F 200D 2640,unqualified,🏋️‍♀,woman lifting weights,E4.0
+People-Body,person-sport,1F3CB FE0F 200D 2640,minimally-qualified,🏋️‍♀,woman lifting weights,E4.0
 People-Body,person-sport,1F3CB 200D 2640,unqualified,🏋‍♀,woman lifting weights,E4.0
 People-Body,person-sport,1F3CB 1F3FB 200D 2640 FE0F,fully-qualified,🏋🏻‍♀️,woman lifting weights light skin tone,E4.0
 People-Body,person-sport,1F3CB 1F3FB 200D 2640,minimally-qualified,🏋🏻‍♀,woman lifting weights light skin tone,E4.0
@@ -3822,7 +4247,6 @@ People-Body,family,1F469 1F3FF 200D 2764 FE0F 200D 1F469 1F3FE,fully-qualified,�
 People-Body,family,1F469 1F3FF 200D 2764 200D 1F469 1F3FE,minimally-qualified,👩🏿‍❤‍👩🏾,couple with heart woman woman dark skin tone medium-dark skin tone,E13.1
 People-Body,family,1F469 1F3FF 200D 2764 FE0F 200D 1F469 1F3FF,fully-qualified,👩🏿‍❤️‍👩🏿,couple with heart woman woman dark skin tone,E13.1
 People-Body,family,1F469 1F3FF 200D 2764 200D 1F469 1F3FF,minimally-qualified,👩🏿‍❤‍👩🏿,couple with heart woman woman dark skin tone,E13.1
-People-Body,family,1F46A,fully-qualified,👪,family,E0.6
 People-Body,family,1F468 200D 1F469 200D 1F466,fully-qualified,👨‍👩‍👦,family man woman boy,E2.0
 People-Body,family,1F468 200D 1F469 200D 1F467,fully-qualified,👨‍👩‍👧,family man woman girl,E2.0
 People-Body,family,1F468 200D 1F469 200D 1F467 200D 1F466,fully-qualified,👨‍👩‍👧‍👦,family man woman girl boy,E2.0
@@ -3853,7 +4277,13 @@ People-Body,person-symbol,1F5E3,unqualified,🗣,speaking head,E0.7
 People-Body,person-symbol,1F464,fully-qualified,👤,bust in silhouette,E0.6
 People-Body,person-symbol,1F465,fully-qualified,👥,busts in silhouette,E1.0
 People-Body,person-symbol,1FAC2,fully-qualified,🫂,people hugging,E13.0
+People-Body,person-symbol,1F46A,fully-qualified,👪,family,E0.6
+People-Body,person-symbol,1F9D1 200D 1F9D1 200D 1F9D2,fully-qualified,🧑‍🧑‍🧒,family adult adult child,E15.1
+People-Body,person-symbol,1F9D1 200D 1F9D1 200D 1F9D2 200D 1F9D2,fully-qualified,🧑‍🧑‍🧒‍🧒,family adult adult child child,E15.1
+People-Body,person-symbol,1F9D1 200D 1F9D2,fully-qualified,🧑‍🧒,family adult child,E15.1
+People-Body,person-symbol,1F9D1 200D 1F9D2 200D 1F9D2,fully-qualified,🧑‍🧒‍🧒,family adult child child,E15.1
 People-Body,person-symbol,1F463,fully-qualified,👣,footprints,E0.6
+People-Body,person-symbol,1FAC6,fully-qualified,🫆,fingerprint,E16.0
 Smileys-Emotion,face-smiling,1F600,fully-qualified,😀,grinning face,E1.0
 Smileys-Emotion,face-smiling,1F603,fully-qualified,😃,grinning face with big eyes,E0.6
 Smileys-Emotion,face-smiling,1F604,fully-qualified,😄,grinning face with smiling eyes,E0.6
@@ -3864,6 +4294,7 @@ Smileys-Emotion,face-smiling,1F923,fully-qualified,🤣,rolling on the floor lau
 Smileys-Emotion,face-smiling,1F602,fully-qualified,😂,face with tears of joy,E0.6
 Smileys-Emotion,face-smiling,1F642,fully-qualified,🙂,slightly smiling face,E1.0
 Smileys-Emotion,face-smiling,1F643,fully-qualified,🙃,upside-down face,E1.0
+Smileys-Emotion,face-smiling,1FAE0,fully-qualified,🫠,melting face,E14.0
 Smileys-Emotion,face-smiling,1F609,fully-qualified,😉,winking face,E0.6
 Smileys-Emotion,face-smiling,1F60A,fully-qualified,😊,smiling face with smiling eyes,E0.6
 Smileys-Emotion,face-smiling,1F607,fully-qualified,😇,smiling face with halo,E1.0
@@ -3883,15 +4314,19 @@ Smileys-Emotion,face-tongue,1F61C,fully-qualified,😜,winking face with tongue,
 Smileys-Emotion,face-tongue,1F92A,fully-qualified,🤪,zany face,E5.0
 Smileys-Emotion,face-tongue,1F61D,fully-qualified,😝,squinting face with tongue,E0.6
 Smileys-Emotion,face-tongue,1F911,fully-qualified,🤑,money-mouth face,E1.0
-Smileys-Emotion,face-hand,1F917,fully-qualified,🤗,hugging face,E1.0
+Smileys-Emotion,face-hand,1F917,fully-qualified,🤗,smiling face with open hands,E1.0
 Smileys-Emotion,face-hand,1F92D,fully-qualified,🤭,face with hand over mouth,E5.0
+Smileys-Emotion,face-hand,1FAE2,fully-qualified,🫢,face with open eyes and hand over mouth,E14.0
+Smileys-Emotion,face-hand,1FAE3,fully-qualified,🫣,face with peeking eye,E14.0
 Smileys-Emotion,face-hand,1F92B,fully-qualified,🤫,shushing face,E5.0
 Smileys-Emotion,face-hand,1F914,fully-qualified,🤔,thinking face,E1.0
+Smileys-Emotion,face-hand,1FAE1,fully-qualified,🫡,saluting face,E14.0
 Smileys-Emotion,face-neutral-skeptical,1F910,fully-qualified,🤐,zipper-mouth face,E1.0
 Smileys-Emotion,face-neutral-skeptical,1F928,fully-qualified,🤨,face with raised eyebrow,E5.0
 Smileys-Emotion,face-neutral-skeptical,1F610,fully-qualified,😐,neutral face,E0.7
 Smileys-Emotion,face-neutral-skeptical,1F611,fully-qualified,😑,expressionless face,E1.0
 Smileys-Emotion,face-neutral-skeptical,1F636,fully-qualified,😶,face without mouth,E1.0
+Smileys-Emotion,face-neutral-skeptical,1FAE5,fully-qualified,🫥,dotted line face,E14.0
 Smileys-Emotion,face-neutral-skeptical,1F636 200D 1F32B FE0F,fully-qualified,😶‍🌫️,face in clouds,E13.1
 Smileys-Emotion,face-neutral-skeptical,1F636 200D 1F32B,minimally-qualified,😶‍🌫,face in clouds,E13.1
 Smileys-Emotion,face-neutral-skeptical,1F60F,fully-qualified,😏,smirking face,E0.6
@@ -3900,11 +4335,17 @@ Smileys-Emotion,face-neutral-skeptical,1F644,fully-qualified,🙄,face with roll
 Smileys-Emotion,face-neutral-skeptical,1F62C,fully-qualified,😬,grimacing face,E1.0
 Smileys-Emotion,face-neutral-skeptical,1F62E 200D 1F4A8,fully-qualified,😮‍💨,face exhaling,E13.1
 Smileys-Emotion,face-neutral-skeptical,1F925,fully-qualified,🤥,lying face,E3.0
+Smileys-Emotion,face-neutral-skeptical,1FAE8,fully-qualified,🫨,shaking face,E15.0
+Smileys-Emotion,face-neutral-skeptical,1F642 200D 2194 FE0F,fully-qualified,🙂‍↔️,head shaking horizontally,E15.1
+Smileys-Emotion,face-neutral-skeptical,1F642 200D 2194,minimally-qualified,🙂‍↔,head shaking horizontally,E15.1
+Smileys-Emotion,face-neutral-skeptical,1F642 200D 2195 FE0F,fully-qualified,🙂‍↕️,head shaking vertically,E15.1
+Smileys-Emotion,face-neutral-skeptical,1F642 200D 2195,minimally-qualified,🙂‍↕,head shaking vertically,E15.1
 Smileys-Emotion,face-sleepy,1F60C,fully-qualified,😌,relieved face,E0.6
 Smileys-Emotion,face-sleepy,1F614,fully-qualified,😔,pensive face,E0.6
 Smileys-Emotion,face-sleepy,1F62A,fully-qualified,😪,sleepy face,E0.6
 Smileys-Emotion,face-sleepy,1F924,fully-qualified,🤤,drooling face,E3.0
 Smileys-Emotion,face-sleepy,1F634,fully-qualified,😴,sleeping face,E1.0
+Smileys-Emotion,face-sleepy,1FAE9,fully-qualified,🫩,face with bags under eyes,E16.0
 Smileys-Emotion,face-unwell,1F637,fully-qualified,😷,face with medical mask,E0.6
 Smileys-Emotion,face-unwell,1F912,fully-qualified,🤒,face with thermometer,E1.0
 Smileys-Emotion,face-unwell,1F915,fully-qualified,🤕,face with head-bandage,E1.0
@@ -3914,7 +4355,7 @@ Smileys-Emotion,face-unwell,1F927,fully-qualified,🤧,sneezing face,E3.0
 Smileys-Emotion,face-unwell,1F975,fully-qualified,🥵,hot face,E11.0
 Smileys-Emotion,face-unwell,1F976,fully-qualified,🥶,cold face,E11.0
 Smileys-Emotion,face-unwell,1F974,fully-qualified,🥴,woozy face,E11.0
-Smileys-Emotion,face-unwell,1F635,fully-qualified,😵,knocked-out face,E0.6
+Smileys-Emotion,face-unwell,1F635,fully-qualified,😵,face with crossed-out eyes,E0.6
 Smileys-Emotion,face-unwell,1F635 200D 1F4AB,fully-qualified,😵‍💫,face with spiral eyes,E13.1
 Smileys-Emotion,face-unwell,1F92F,fully-qualified,🤯,exploding head,E5.0
 Smileys-Emotion,face-hat,1F920,fully-qualified,🤠,cowboy hat face,E3.0
@@ -3924,6 +4365,7 @@ Smileys-Emotion,face-glasses,1F60E,fully-qualified,😎,smiling face with sungla
 Smileys-Emotion,face-glasses,1F913,fully-qualified,🤓,nerd face,E1.0
 Smileys-Emotion,face-glasses,1F9D0,fully-qualified,🧐,face with monocle,E5.0
 Smileys-Emotion,face-concerned,1F615,fully-qualified,😕,confused face,E1.0
+Smileys-Emotion,face-concerned,1FAE4,fully-qualified,🫤,face with diagonal mouth,E14.0
 Smileys-Emotion,face-concerned,1F61F,fully-qualified,😟,worried face,E1.0
 Smileys-Emotion,face-concerned,1F641,fully-qualified,🙁,slightly frowning face,E1.0
 Smileys-Emotion,face-concerned,2639 FE0F,fully-qualified,☹️,frowning face,E0.7
@@ -3933,6 +4375,7 @@ Smileys-Emotion,face-concerned,1F62F,fully-qualified,😯,hushed face,E1.0
 Smileys-Emotion,face-concerned,1F632,fully-qualified,😲,astonished face,E0.6
 Smileys-Emotion,face-concerned,1F633,fully-qualified,😳,flushed face,E0.6
 Smileys-Emotion,face-concerned,1F97A,fully-qualified,🥺,pleading face,E11.0
+Smileys-Emotion,face-concerned,1F979,fully-qualified,🥹,face holding back tears,E14.0
 Smileys-Emotion,face-concerned,1F626,fully-qualified,😦,frowning face with open mouth,E1.0
 Smileys-Emotion,face-concerned,1F627,fully-qualified,😧,anguished face,E1.0
 Smileys-Emotion,face-concerned,1F628,fully-qualified,😨,fearful face,E0.6
@@ -3949,7 +4392,7 @@ Smileys-Emotion,face-concerned,1F629,fully-qualified,😩,weary face,E0.6
 Smileys-Emotion,face-concerned,1F62B,fully-qualified,😫,tired face,E0.6
 Smileys-Emotion,face-concerned,1F971,fully-qualified,🥱,yawning face,E12.0
 Smileys-Emotion,face-negative,1F624,fully-qualified,😤,face with steam from nose,E0.6
-Smileys-Emotion,face-negative,1F621,fully-qualified,😡,pouting face,E0.6
+Smileys-Emotion,face-negative,1F621,fully-qualified,😡,enraged face,E0.6
 Smileys-Emotion,face-negative,1F620,fully-qualified,😠,angry face,E0.6
 Smileys-Emotion,face-negative,1F92C,fully-qualified,🤬,face with symbols on mouth,E5.0
 Smileys-Emotion,face-negative,1F608,fully-qualified,😈,smiling face with horns,E1.0
@@ -3977,33 +4420,36 @@ Smileys-Emotion,cat-face,1F63E,fully-qualified,😾,pouting cat,E0.6
 Smileys-Emotion,monkey-face,1F648,fully-qualified,🙈,see-no-evil monkey,E0.6
 Smileys-Emotion,monkey-face,1F649,fully-qualified,🙉,hear-no-evil monkey,E0.6
 Smileys-Emotion,monkey-face,1F64A,fully-qualified,🙊,speak-no-evil monkey,E0.6
+Smileys-Emotion,heart,1F48C,fully-qualified,💌,love letter,E0.6
+Smileys-Emotion,heart,1F498,fully-qualified,💘,heart with arrow,E0.6
+Smileys-Emotion,heart,1F49D,fully-qualified,💝,heart with ribbon,E0.6
+Smileys-Emotion,heart,1F496,fully-qualified,💖,sparkling heart,E0.6
+Smileys-Emotion,heart,1F497,fully-qualified,💗,growing heart,E0.6
+Smileys-Emotion,heart,1F493,fully-qualified,💓,beating heart,E0.6
+Smileys-Emotion,heart,1F49E,fully-qualified,💞,revolving hearts,E0.6
+Smileys-Emotion,heart,1F495,fully-qualified,💕,two hearts,E0.6
+Smileys-Emotion,heart,1F49F,fully-qualified,💟,heart decoration,E0.6
+Smileys-Emotion,heart,2763 FE0F,fully-qualified,❣️,heart exclamation,E1.0
+Smileys-Emotion,heart,2763,unqualified,❣,heart exclamation,E1.0
+Smileys-Emotion,heart,1F494,fully-qualified,💔,broken heart,E0.6
+Smileys-Emotion,heart,2764 FE0F 200D 1F525,fully-qualified,❤️‍🔥,heart on fire,E13.1
+Smileys-Emotion,heart,2764 200D 1F525,unqualified,❤‍🔥,heart on fire,E13.1
+Smileys-Emotion,heart,2764 FE0F 200D 1FA79,fully-qualified,❤️‍🩹,mending heart,E13.1
+Smileys-Emotion,heart,2764 200D 1FA79,unqualified,❤‍🩹,mending heart,E13.1
+Smileys-Emotion,heart,2764 FE0F,fully-qualified,❤️,red heart,E0.6
+Smileys-Emotion,heart,2764,unqualified,❤,red heart,E0.6
+Smileys-Emotion,heart,1FA77,fully-qualified,🩷,pink heart,E15.0
+Smileys-Emotion,heart,1F9E1,fully-qualified,🧡,orange heart,E5.0
+Smileys-Emotion,heart,1F49B,fully-qualified,💛,yellow heart,E0.6
+Smileys-Emotion,heart,1F49A,fully-qualified,💚,green heart,E0.6
+Smileys-Emotion,heart,1F499,fully-qualified,💙,blue heart,E0.6
+Smileys-Emotion,heart,1FA75,fully-qualified,🩵,light blue heart,E15.0
+Smileys-Emotion,heart,1F49C,fully-qualified,💜,purple heart,E0.6
+Smileys-Emotion,heart,1F90E,fully-qualified,🤎,brown heart,E12.0
+Smileys-Emotion,heart,1F5A4,fully-qualified,🖤,black heart,E3.0
+Smileys-Emotion,heart,1FA76,fully-qualified,🩶,grey heart,E15.0
+Smileys-Emotion,heart,1F90D,fully-qualified,🤍,white heart,E12.0
 Smileys-Emotion,emotion,1F48B,fully-qualified,💋,kiss mark,E0.6
-Smileys-Emotion,emotion,1F48C,fully-qualified,💌,love letter,E0.6
-Smileys-Emotion,emotion,1F498,fully-qualified,💘,heart with arrow,E0.6
-Smileys-Emotion,emotion,1F49D,fully-qualified,💝,heart with ribbon,E0.6
-Smileys-Emotion,emotion,1F496,fully-qualified,💖,sparkling heart,E0.6
-Smileys-Emotion,emotion,1F497,fully-qualified,💗,growing heart,E0.6
-Smileys-Emotion,emotion,1F493,fully-qualified,💓,beating heart,E0.6
-Smileys-Emotion,emotion,1F49E,fully-qualified,💞,revolving hearts,E0.6
-Smileys-Emotion,emotion,1F495,fully-qualified,💕,two hearts,E0.6
-Smileys-Emotion,emotion,1F49F,fully-qualified,💟,heart decoration,E0.6
-Smileys-Emotion,emotion,2763 FE0F,fully-qualified,❣️,heart exclamation,E1.0
-Smileys-Emotion,emotion,2763,unqualified,❣,heart exclamation,E1.0
-Smileys-Emotion,emotion,1F494,fully-qualified,💔,broken heart,E0.6
-Smileys-Emotion,emotion,2764 FE0F 200D 1F525,fully-qualified,❤️‍🔥,heart on fire,E13.1
-Smileys-Emotion,emotion,2764 200D 1F525,unqualified,❤‍🔥,heart on fire,E13.1
-Smileys-Emotion,emotion,2764 FE0F 200D 1FA79,fully-qualified,❤️‍🩹,mending heart,E13.1
-Smileys-Emotion,emotion,2764 200D 1FA79,unqualified,❤‍🩹,mending heart,E13.1
-Smileys-Emotion,emotion,2764 FE0F,fully-qualified,❤️,red heart,E0.6
-Smileys-Emotion,emotion,2764,unqualified,❤,red heart,E0.6
-Smileys-Emotion,emotion,1F9E1,fully-qualified,🧡,orange heart,E5.0
-Smileys-Emotion,emotion,1F49B,fully-qualified,💛,yellow heart,E0.6
-Smileys-Emotion,emotion,1F49A,fully-qualified,💚,green heart,E0.6
-Smileys-Emotion,emotion,1F499,fully-qualified,💙,blue heart,E0.6
-Smileys-Emotion,emotion,1F49C,fully-qualified,💜,purple heart,E0.6
-Smileys-Emotion,emotion,1F90E,fully-qualified,🤎,brown heart,E12.0
-Smileys-Emotion,emotion,1F5A4,fully-qualified,🖤,black heart,E3.0
-Smileys-Emotion,emotion,1F90D,fully-qualified,🤍,white heart,E12.0
 Smileys-Emotion,emotion,1F4AF,fully-qualified,💯,hundred points,E0.6
 Smileys-Emotion,emotion,1F4A2,fully-qualified,💢,anger symbol,E0.6
 Smileys-Emotion,emotion,1F4A5,fully-qualified,💥,collision,E0.6
@@ -4012,18 +4458,17 @@ Smileys-Emotion,emotion,1F4A6,fully-qualified,💦,sweat droplets,E0.6
 Smileys-Emotion,emotion,1F4A8,fully-qualified,💨,dashing away,E0.6
 Smileys-Emotion,emotion,1F573 FE0F,fully-qualified,🕳️,hole,E0.7
 Smileys-Emotion,emotion,1F573,unqualified,🕳,hole,E0.7
-Smileys-Emotion,emotion,1F4A3,fully-qualified,💣,bomb,E0.6
 Smileys-Emotion,emotion,1F4AC,fully-qualified,💬,speech balloon,E0.6
 Smileys-Emotion,emotion,1F441 FE0F 200D 1F5E8 FE0F,fully-qualified,👁️‍🗨️,eye in speech bubble,E2.0
 Smileys-Emotion,emotion,1F441 200D 1F5E8 FE0F,unqualified,👁‍🗨️,eye in speech bubble,E2.0
-Smileys-Emotion,emotion,1F441 FE0F 200D 1F5E8,unqualified,👁️‍🗨,eye in speech bubble,E2.0
+Smileys-Emotion,emotion,1F441 FE0F 200D 1F5E8,minimally-qualified,👁️‍🗨,eye in speech bubble,E2.0
 Smileys-Emotion,emotion,1F441 200D 1F5E8,unqualified,👁‍🗨,eye in speech bubble,E2.0
 Smileys-Emotion,emotion,1F5E8 FE0F,fully-qualified,🗨️,left speech bubble,E2.0
 Smileys-Emotion,emotion,1F5E8,unqualified,🗨,left speech bubble,E2.0
 Smileys-Emotion,emotion,1F5EF FE0F,fully-qualified,🗯️,right anger bubble,E0.7
 Smileys-Emotion,emotion,1F5EF,unqualified,🗯,right anger bubble,E0.7
 Smileys-Emotion,emotion,1F4AD,fully-qualified,💭,thought balloon,E1.0
-Smileys-Emotion,emotion,1F4A4,fully-qualified,💤,zzz,E0.6
+Smileys-Emotion,emotion,1F4A4,fully-qualified,💤,ZZZ,E0.6
 Symbols,transport-sign,1F3E7,fully-qualified,🏧,ATM sign,E0.6
 Symbols,transport-sign,1F6AE,fully-qualified,🚮,litter in bin sign,E1.0
 Symbols,transport-sign,1F6B0,fully-qualified,🚰,potable water,E1.0
@@ -4109,6 +4554,7 @@ Symbols,religion,262E FE0F,fully-qualified,☮️,peace symbol,E1.0
 Symbols,religion,262E,unqualified,☮,peace symbol,E1.0
 Symbols,religion,1F54E,fully-qualified,🕎,menorah,E1.0
 Symbols,religion,1F52F,fully-qualified,🔯,dotted six-pointed star,E0.6
+Symbols,religion,1FAAF,fully-qualified,🪯,khanda,E15.0
 Symbols,zodiac,2648,fully-qualified,♈,Aries,E0.6
 Symbols,zodiac,2649,fully-qualified,♉,Taurus,E0.6
 Symbols,zodiac,264A,fully-qualified,♊,Gemini,E0.6
@@ -4153,6 +4599,7 @@ Symbols,av-symbol,1F3A6,fully-qualified,🎦,cinema,E0.6
 Symbols,av-symbol,1F505,fully-qualified,🔅,dim button,E1.0
 Symbols,av-symbol,1F506,fully-qualified,🔆,bright button,E1.0
 Symbols,av-symbol,1F4F6,fully-qualified,📶,antenna bars,E0.6
+Symbols,av-symbol,1F6DC,fully-qualified,🛜,wireless,E15.0
 Symbols,av-symbol,1F4F3,fully-qualified,📳,vibration mode,E0.6
 Symbols,av-symbol,1F4F4,fully-qualified,📴,mobile phone off,E0.6
 Symbols,gender,2640 FE0F,fully-qualified,♀️,female sign,E4.0
@@ -4166,6 +4613,7 @@ Symbols,math,2716,unqualified,✖,multiply,E0.6
 Symbols,math,2795,fully-qualified,➕,plus,E0.6
 Symbols,math,2796,fully-qualified,➖,minus,E0.6
 Symbols,math,2797,fully-qualified,➗,divide,E0.6
+Symbols,math,1F7F0,fully-qualified,🟰,heavy equals sign,E14.0
 Symbols,math,267E FE0F,fully-qualified,♾️,infinity,E11.0
 Symbols,math,267E,unqualified,♾,infinity,E11.0
 Symbols,punctuation,203C FE0F,fully-qualified,‼️,double exclamation mark,E0.6
@@ -4213,6 +4661,7 @@ Symbols,other-symbol,00AE FE0F,fully-qualified,®️,registered,E0.6
 Symbols,other-symbol,00AE,unqualified,®,registered,E0.6
 Symbols,other-symbol,2122 FE0F,fully-qualified,™️,trade mark,E0.6
 Symbols,other-symbol,2122,unqualified,™,trade mark,E0.6
+Symbols,other-symbol,1FADF,fully-qualified,🫟,splatter,E16.0
 Symbols,keycap,0023 FE0F 20E3,fully-qualified,#️⃣,keycap,E0.6
 Symbols,keycap,0023 20E3,unqualified,#⃣,keycap,E0.6
 Symbols,keycap,002A FE0F 20E3,fully-qualified,*️⃣,keycap,E2.0
@@ -4402,6 +4851,7 @@ Travel-Places,place-other,1F309,fully-qualified,🌉,bridge at night,E0.6
 Travel-Places,place-other,2668 FE0F,fully-qualified,♨️,hot springs,E0.6
 Travel-Places,place-other,2668,unqualified,♨,hot springs,E0.6
 Travel-Places,place-other,1F3A0,fully-qualified,🎠,carousel horse,E0.6
+Travel-Places,place-other,1F6DD,fully-qualified,🛝,playground slide,E14.0
 Travel-Places,place-other,1F3A1,fully-qualified,🎡,ferris wheel,E0.6
 Travel-Places,place-other,1F3A2,fully-qualified,🎢,roller coaster,E0.6
 Travel-Places,place-other,1F488,fully-qualified,💈,barber pole,E0.6
@@ -4455,12 +4905,14 @@ Travel-Places,transport-ground,1F6E4,unqualified,🛤,railway track,E0.7
 Travel-Places,transport-ground,1F6E2 FE0F,fully-qualified,🛢️,oil drum,E0.7
 Travel-Places,transport-ground,1F6E2,unqualified,🛢,oil drum,E0.7
 Travel-Places,transport-ground,26FD,fully-qualified,⛽,fuel pump,E0.6
+Travel-Places,transport-ground,1F6DE,fully-qualified,🛞,wheel,E14.0
 Travel-Places,transport-ground,1F6A8,fully-qualified,🚨,police car light,E0.6
 Travel-Places,transport-ground,1F6A5,fully-qualified,🚥,horizontal traffic light,E0.6
 Travel-Places,transport-ground,1F6A6,fully-qualified,🚦,vertical traffic light,E1.0
 Travel-Places,transport-ground,1F6D1,fully-qualified,🛑,stop sign,E3.0
 Travel-Places,transport-ground,1F6A7,fully-qualified,🚧,construction,E0.6
 Travel-Places,transport-water,2693,fully-qualified,⚓,anchor,E0.6
+Travel-Places,transport-water,1F6DF,fully-qualified,🛟,ring buoy,E14.0
 Travel-Places,transport-water,26F5,fully-qualified,⛵,sailboat,E0.6
 Travel-Places,transport-water,1F6F6,fully-qualified,🛶,canoe,E3.0
 Travel-Places,transport-water,1F6A4,fully-qualified,🚤,speedboat,E0.6
