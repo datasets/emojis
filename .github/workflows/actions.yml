@@ -33,9 +33,14 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit --allow-empty -m "Auto-update of the data packages" -a
+          git add -A
+          git commit --allow-empty -m "Auto-update of the data packages"
+
+      - name: Pull latest changes
+        run: git pull --rebase origin main
 
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
