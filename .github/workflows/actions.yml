@@ -39,28 +39,3 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-  deploy:
-    needs: update
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'  # Updated to a modern LTS version
-
-      - name: Install Data CLI
-        run: npm install -g data-cli
-
-      - name: Verify Data CLI
-        run: data --version
-
-      - name: Deploy Data
-        run: data push
-        env:
-          id: ${{ secrets.dhid }}
-          username: ${{ secrets.dhusername }}
-          token: ${{ secrets.dhtoken }}
