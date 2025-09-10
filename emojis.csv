@@ -198,6 +198,7 @@ Animals-Nature,animal-reptile,1F996,fully-qualified,🦖,T-Rex,E5.0
 Animals-Nature,animal-marine,1F433,fully-qualified,🐳,spouting whale,E0.6
 Animals-Nature,animal-marine,1F40B,fully-qualified,🐋,whale,E1.0
 Animals-Nature,animal-marine,1F42C,fully-qualified,🐬,dolphin,E0.6
+Animals-Nature,animal-marine,1FACD,fully-qualified,🫍,orca,E17.0
 Animals-Nature,animal-marine,1F9AD,fully-qualified,🦭,seal,E13.0
 Animals-Nature,animal-marine,1F41F,fully-qualified,🐟,fish,E0.6
 Animals-Nature,animal-marine,1F420,fully-qualified,🐠,tropical fish,E0.6
@@ -751,10 +752,11 @@ Objects,music,1F3A4,fully-qualified,🎤,microphone,E0.6
 Objects,music,1F3A7,fully-qualified,🎧,headphone,E0.6
 Objects,music,1F4FB,fully-qualified,📻,radio,E0.6
 Objects,musical-instrument,1F3B7,fully-qualified,🎷,saxophone,E0.6
+Objects,musical-instrument,1F3BA,fully-qualified,🎺,trumpet,E0.6
+Objects,musical-instrument,1FA8A,fully-qualified,🪊,trombone,E17.0
 Objects,musical-instrument,1FA97,fully-qualified,🪗,accordion,E13.0
 Objects,musical-instrument,1F3B8,fully-qualified,🎸,guitar,E0.6
 Objects,musical-instrument,1F3B9,fully-qualified,🎹,musical keyboard,E0.6
-Objects,musical-instrument,1F3BA,fully-qualified,🎺,trumpet,E0.6
 Objects,musical-instrument,1F3BB,fully-qualified,🎻,violin,E0.6
 Objects,musical-instrument,1FA95,fully-qualified,🪕,banjo,E12.0
 Objects,musical-instrument,1F941,fully-qualified,🥁,drum,E3.0
@@ -826,8 +828,9 @@ Objects,book-paper,1F4D1,fully-qualified,📑,bookmark tabs,E0.6
 Objects,book-paper,1F516,fully-qualified,🔖,bookmark,E0.6
 Objects,book-paper,1F3F7 FE0F,fully-qualified,🏷️,label,E0.7
 Objects,book-paper,1F3F7,unqualified,🏷,label,E0.7
-Objects,money,1F4B0,fully-qualified,💰,money bag,E0.6
 Objects,money,1FA99,fully-qualified,🪙,coin,E13.0
+Objects,money,1F4B0,fully-qualified,💰,money bag,E0.6
+Objects,money,1FA8E,fully-qualified,🪎,treasure chest,E17.0
 Objects,money,1F4B4,fully-qualified,💴,yen banknote,E0.6
 Objects,money,1F4B5,fully-qualified,💵,dollar banknote,E0.6
 Objects,money,1F4B6,fully-qualified,💶,euro banknote,E1.0
@@ -2696,6 +2699,7 @@ People-Body,person-fantasy,1F9DF 200D 2642,minimally-qualified,🧟‍♂,man zo
 People-Body,person-fantasy,1F9DF 200D 2640 FE0F,fully-qualified,🧟‍♀️,woman zombie,E5.0
 People-Body,person-fantasy,1F9DF 200D 2640,minimally-qualified,🧟‍♀,woman zombie,E5.0
 People-Body,person-fantasy,1F9CC,fully-qualified,🧌,troll,E14.0
+People-Body,person-fantasy,1FAC8,fully-qualified,🫈,hairy creature,E17.0
 People-Body,person-activity,1F486,fully-qualified,💆,person getting massage,E0.6
 People-Body,person-activity,1F486 1F3FB,fully-qualified,💆🏻,person getting massage light skin tone,E1.0
 People-Body,person-activity,1F486 1F3FC,fully-qualified,💆🏼,person getting massage medium-light skin tone,E1.0
@@ -3218,6 +3222,12 @@ People-Body,person-activity,1F3C3 1F3FF 200D 2642 FE0F 200D 27A1 FE0F,fully-qual
 People-Body,person-activity,1F3C3 1F3FF 200D 2642 200D 27A1 FE0F,minimally-qualified,🏃🏿‍♂‍➡️,man running facing right dark skin tone,E15.1
 People-Body,person-activity,1F3C3 1F3FF 200D 2642 FE0F 200D 27A1,minimally-qualified,🏃🏿‍♂️‍➡,man running facing right dark skin tone,E15.1
 People-Body,person-activity,1F3C3 1F3FF 200D 2642 200D 27A1,minimally-qualified,🏃🏿‍♂‍➡,man running facing right dark skin tone,E15.1
+People-Body,person-activity,1F9D1 200D 1FA70,fully-qualified,🧑‍🩰,ballet dancer,E17.0
+People-Body,person-activity,1F9D1 1F3FB 200D 1FA70,fully-qualified,🧑🏻‍🩰,ballet dancer light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FC 200D 1FA70,fully-qualified,🧑🏼‍🩰,ballet dancer medium-light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FD 200D 1FA70,fully-qualified,🧑🏽‍🩰,ballet dancer medium skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FE 200D 1FA70,fully-qualified,🧑🏾‍🩰,ballet dancer medium-dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FF 200D 1FA70,fully-qualified,🧑🏿‍🩰,ballet dancer dark skin tone,E17.0
 People-Body,person-activity,1F483,fully-qualified,💃,woman dancing,E0.6
 People-Body,person-activity,1F483 1F3FB,fully-qualified,💃🏻,woman dancing light skin tone,E1.0
 People-Body,person-activity,1F483 1F3FC,fully-qualified,💃🏼,woman dancing medium-light skin tone,E1.0
@@ -3238,10 +3248,95 @@ People-Body,person-activity,1F574 1F3FD,fully-qualified,🕴🏽,person in suit 
 People-Body,person-activity,1F574 1F3FE,fully-qualified,🕴🏾,person in suit levitating medium-dark skin tone,E4.0
 People-Body,person-activity,1F574 1F3FF,fully-qualified,🕴🏿,person in suit levitating dark skin tone,E4.0
 People-Body,person-activity,1F46F,fully-qualified,👯,people with bunny ears,E0.6
+People-Body,person-activity,1F46F 1F3FB,fully-qualified,👯🏻,people with bunny ears light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FC,fully-qualified,👯🏼,people with bunny ears medium-light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FD,fully-qualified,👯🏽,people with bunny ears medium skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FE,fully-qualified,👯🏾,people with bunny ears medium-dark skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FF,fully-qualified,👯🏿,people with bunny ears dark skin tone,E17.0
 People-Body,person-activity,1F46F 200D 2642 FE0F,fully-qualified,👯‍♂️,men with bunny ears,E4.0
 People-Body,person-activity,1F46F 200D 2642,minimally-qualified,👯‍♂,men with bunny ears,E4.0
+People-Body,person-activity,1F46F 1F3FB 200D 2642 FE0F,fully-qualified,👯🏻‍♂️,men with bunny ears light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FB 200D 2642,minimally-qualified,👯🏻‍♂,men with bunny ears light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FC 200D 2642 FE0F,fully-qualified,👯🏼‍♂️,men with bunny ears medium-light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FC 200D 2642,minimally-qualified,👯🏼‍♂,men with bunny ears medium-light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FD 200D 2642 FE0F,fully-qualified,👯🏽‍♂️,men with bunny ears medium skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FD 200D 2642,minimally-qualified,👯🏽‍♂,men with bunny ears medium skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FE 200D 2642 FE0F,fully-qualified,👯🏾‍♂️,men with bunny ears medium-dark skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FE 200D 2642,minimally-qualified,👯🏾‍♂,men with bunny ears medium-dark skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FF 200D 2642 FE0F,fully-qualified,👯🏿‍♂️,men with bunny ears dark skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FF 200D 2642,minimally-qualified,👯🏿‍♂,men with bunny ears dark skin tone,E17.0
 People-Body,person-activity,1F46F 200D 2640 FE0F,fully-qualified,👯‍♀️,women with bunny ears,E4.0
 People-Body,person-activity,1F46F 200D 2640,minimally-qualified,👯‍♀,women with bunny ears,E4.0
+People-Body,person-activity,1F46F 1F3FB 200D 2640 FE0F,fully-qualified,👯🏻‍♀️,women with bunny ears light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FB 200D 2640,minimally-qualified,👯🏻‍♀,women with bunny ears light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FC 200D 2640 FE0F,fully-qualified,👯🏼‍♀️,women with bunny ears medium-light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FC 200D 2640,minimally-qualified,👯🏼‍♀,women with bunny ears medium-light skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FD 200D 2640 FE0F,fully-qualified,👯🏽‍♀️,women with bunny ears medium skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FD 200D 2640,minimally-qualified,👯🏽‍♀,women with bunny ears medium skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FE 200D 2640 FE0F,fully-qualified,👯🏾‍♀️,women with bunny ears medium-dark skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FE 200D 2640,minimally-qualified,👯🏾‍♀,women with bunny ears medium-dark skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FF 200D 2640 FE0F,fully-qualified,👯🏿‍♀️,women with bunny ears dark skin tone,E17.0
+People-Body,person-activity,1F46F 1F3FF 200D 2640,minimally-qualified,👯🏿‍♀,women with bunny ears dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FB 200D 1F430 200D 1F9D1 1F3FC,fully-qualified,🧑🏻‍🐰‍🧑🏼,people with bunny ears light skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FB 200D 1F430 200D 1F9D1 1F3FD,fully-qualified,🧑🏻‍🐰‍🧑🏽,people with bunny ears light skin tone medium skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FB 200D 1F430 200D 1F9D1 1F3FE,fully-qualified,🧑🏻‍🐰‍🧑🏾,people with bunny ears light skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FB 200D 1F430 200D 1F9D1 1F3FF,fully-qualified,🧑🏻‍🐰‍🧑🏿,people with bunny ears light skin tone dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FC 200D 1F430 200D 1F9D1 1F3FB,fully-qualified,🧑🏼‍🐰‍🧑🏻,people with bunny ears medium-light skin tone light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FC 200D 1F430 200D 1F9D1 1F3FD,fully-qualified,🧑🏼‍🐰‍🧑🏽,people with bunny ears medium-light skin tone medium skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FC 200D 1F430 200D 1F9D1 1F3FE,fully-qualified,🧑🏼‍🐰‍🧑🏾,people with bunny ears medium-light skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FC 200D 1F430 200D 1F9D1 1F3FF,fully-qualified,🧑🏼‍🐰‍🧑🏿,people with bunny ears medium-light skin tone dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FD 200D 1F430 200D 1F9D1 1F3FB,fully-qualified,🧑🏽‍🐰‍🧑🏻,people with bunny ears medium skin tone light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FD 200D 1F430 200D 1F9D1 1F3FC,fully-qualified,🧑🏽‍🐰‍🧑🏼,people with bunny ears medium skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FD 200D 1F430 200D 1F9D1 1F3FE,fully-qualified,🧑🏽‍🐰‍🧑🏾,people with bunny ears medium skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FD 200D 1F430 200D 1F9D1 1F3FF,fully-qualified,🧑🏽‍🐰‍🧑🏿,people with bunny ears medium skin tone dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FE 200D 1F430 200D 1F9D1 1F3FB,fully-qualified,🧑🏾‍🐰‍🧑🏻,people with bunny ears medium-dark skin tone light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FE 200D 1F430 200D 1F9D1 1F3FC,fully-qualified,🧑🏾‍🐰‍🧑🏼,people with bunny ears medium-dark skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FE 200D 1F430 200D 1F9D1 1F3FD,fully-qualified,🧑🏾‍🐰‍🧑🏽,people with bunny ears medium-dark skin tone medium skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FE 200D 1F430 200D 1F9D1 1F3FF,fully-qualified,🧑🏾‍🐰‍🧑🏿,people with bunny ears medium-dark skin tone dark skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FF 200D 1F430 200D 1F9D1 1F3FB,fully-qualified,🧑🏿‍🐰‍🧑🏻,people with bunny ears dark skin tone light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FF 200D 1F430 200D 1F9D1 1F3FC,fully-qualified,🧑🏿‍🐰‍🧑🏼,people with bunny ears dark skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FF 200D 1F430 200D 1F9D1 1F3FD,fully-qualified,🧑🏿‍🐰‍🧑🏽,people with bunny ears dark skin tone medium skin tone,E17.0
+People-Body,person-activity,1F9D1 1F3FF 200D 1F430 200D 1F9D1 1F3FE,fully-qualified,🧑🏿‍🐰‍🧑🏾,people with bunny ears dark skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F468 1F3FB 200D 1F430 200D 1F468 1F3FC,fully-qualified,👨🏻‍🐰‍👨🏼,men with bunny ears light skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F468 1F3FB 200D 1F430 200D 1F468 1F3FD,fully-qualified,👨🏻‍🐰‍👨🏽,men with bunny ears light skin tone medium skin tone,E17.0
+People-Body,person-activity,1F468 1F3FB 200D 1F430 200D 1F468 1F3FE,fully-qualified,👨🏻‍🐰‍👨🏾,men with bunny ears light skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F468 1F3FB 200D 1F430 200D 1F468 1F3FF,fully-qualified,👨🏻‍🐰‍👨🏿,men with bunny ears light skin tone dark skin tone,E17.0
+People-Body,person-activity,1F468 1F3FC 200D 1F430 200D 1F468 1F3FB,fully-qualified,👨🏼‍🐰‍👨🏻,men with bunny ears medium-light skin tone light skin tone,E17.0
+People-Body,person-activity,1F468 1F3FC 200D 1F430 200D 1F468 1F3FD,fully-qualified,👨🏼‍🐰‍👨🏽,men with bunny ears medium-light skin tone medium skin tone,E17.0
+People-Body,person-activity,1F468 1F3FC 200D 1F430 200D 1F468 1F3FE,fully-qualified,👨🏼‍🐰‍👨🏾,men with bunny ears medium-light skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F468 1F3FC 200D 1F430 200D 1F468 1F3FF,fully-qualified,👨🏼‍🐰‍👨🏿,men with bunny ears medium-light skin tone dark skin tone,E17.0
+People-Body,person-activity,1F468 1F3FD 200D 1F430 200D 1F468 1F3FB,fully-qualified,👨🏽‍🐰‍👨🏻,men with bunny ears medium skin tone light skin tone,E17.0
+People-Body,person-activity,1F468 1F3FD 200D 1F430 200D 1F468 1F3FC,fully-qualified,👨🏽‍🐰‍👨🏼,men with bunny ears medium skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F468 1F3FD 200D 1F430 200D 1F468 1F3FE,fully-qualified,👨🏽‍🐰‍👨🏾,men with bunny ears medium skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F468 1F3FD 200D 1F430 200D 1F468 1F3FF,fully-qualified,👨🏽‍🐰‍👨🏿,men with bunny ears medium skin tone dark skin tone,E17.0
+People-Body,person-activity,1F468 1F3FE 200D 1F430 200D 1F468 1F3FB,fully-qualified,👨🏾‍🐰‍👨🏻,men with bunny ears medium-dark skin tone light skin tone,E17.0
+People-Body,person-activity,1F468 1F3FE 200D 1F430 200D 1F468 1F3FC,fully-qualified,👨🏾‍🐰‍👨🏼,men with bunny ears medium-dark skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F468 1F3FE 200D 1F430 200D 1F468 1F3FD,fully-qualified,👨🏾‍🐰‍👨🏽,men with bunny ears medium-dark skin tone medium skin tone,E17.0
+People-Body,person-activity,1F468 1F3FE 200D 1F430 200D 1F468 1F3FF,fully-qualified,👨🏾‍🐰‍👨🏿,men with bunny ears medium-dark skin tone dark skin tone,E17.0
+People-Body,person-activity,1F468 1F3FF 200D 1F430 200D 1F468 1F3FB,fully-qualified,👨🏿‍🐰‍👨🏻,men with bunny ears dark skin tone light skin tone,E17.0
+People-Body,person-activity,1F468 1F3FF 200D 1F430 200D 1F468 1F3FC,fully-qualified,👨🏿‍🐰‍👨🏼,men with bunny ears dark skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F468 1F3FF 200D 1F430 200D 1F468 1F3FD,fully-qualified,👨🏿‍🐰‍👨🏽,men with bunny ears dark skin tone medium skin tone,E17.0
+People-Body,person-activity,1F468 1F3FF 200D 1F430 200D 1F468 1F3FE,fully-qualified,👨🏿‍🐰‍👨🏾,men with bunny ears dark skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F469 1F3FB 200D 1F430 200D 1F469 1F3FC,fully-qualified,👩🏻‍🐰‍👩🏼,women with bunny ears light skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F469 1F3FB 200D 1F430 200D 1F469 1F3FD,fully-qualified,👩🏻‍🐰‍👩🏽,women with bunny ears light skin tone medium skin tone,E17.0
+People-Body,person-activity,1F469 1F3FB 200D 1F430 200D 1F469 1F3FE,fully-qualified,👩🏻‍🐰‍👩🏾,women with bunny ears light skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F469 1F3FB 200D 1F430 200D 1F469 1F3FF,fully-qualified,👩🏻‍🐰‍👩🏿,women with bunny ears light skin tone dark skin tone,E17.0
+People-Body,person-activity,1F469 1F3FC 200D 1F430 200D 1F469 1F3FB,fully-qualified,👩🏼‍🐰‍👩🏻,women with bunny ears medium-light skin tone light skin tone,E17.0
+People-Body,person-activity,1F469 1F3FC 200D 1F430 200D 1F469 1F3FD,fully-qualified,👩🏼‍🐰‍👩🏽,women with bunny ears medium-light skin tone medium skin tone,E17.0
+People-Body,person-activity,1F469 1F3FC 200D 1F430 200D 1F469 1F3FE,fully-qualified,👩🏼‍🐰‍👩🏾,women with bunny ears medium-light skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F469 1F3FC 200D 1F430 200D 1F469 1F3FF,fully-qualified,👩🏼‍🐰‍👩🏿,women with bunny ears medium-light skin tone dark skin tone,E17.0
+People-Body,person-activity,1F469 1F3FD 200D 1F430 200D 1F469 1F3FB,fully-qualified,👩🏽‍🐰‍👩🏻,women with bunny ears medium skin tone light skin tone,E17.0
+People-Body,person-activity,1F469 1F3FD 200D 1F430 200D 1F469 1F3FC,fully-qualified,👩🏽‍🐰‍👩🏼,women with bunny ears medium skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F469 1F3FD 200D 1F430 200D 1F469 1F3FE,fully-qualified,👩🏽‍🐰‍👩🏾,women with bunny ears medium skin tone medium-dark skin tone,E17.0
+People-Body,person-activity,1F469 1F3FD 200D 1F430 200D 1F469 1F3FF,fully-qualified,👩🏽‍🐰‍👩🏿,women with bunny ears medium skin tone dark skin tone,E17.0
+People-Body,person-activity,1F469 1F3FE 200D 1F430 200D 1F469 1F3FB,fully-qualified,👩🏾‍🐰‍👩🏻,women with bunny ears medium-dark skin tone light skin tone,E17.0
+People-Body,person-activity,1F469 1F3FE 200D 1F430 200D 1F469 1F3FC,fully-qualified,👩🏾‍🐰‍👩🏼,women with bunny ears medium-dark skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F469 1F3FE 200D 1F430 200D 1F469 1F3FD,fully-qualified,👩🏾‍🐰‍👩🏽,women with bunny ears medium-dark skin tone medium skin tone,E17.0
+People-Body,person-activity,1F469 1F3FE 200D 1F430 200D 1F469 1F3FF,fully-qualified,👩🏾‍🐰‍👩🏿,women with bunny ears medium-dark skin tone dark skin tone,E17.0
+People-Body,person-activity,1F469 1F3FF 200D 1F430 200D 1F469 1F3FB,fully-qualified,👩🏿‍🐰‍👩🏻,women with bunny ears dark skin tone light skin tone,E17.0
+People-Body,person-activity,1F469 1F3FF 200D 1F430 200D 1F469 1F3FC,fully-qualified,👩🏿‍🐰‍👩🏼,women with bunny ears dark skin tone medium-light skin tone,E17.0
+People-Body,person-activity,1F469 1F3FF 200D 1F430 200D 1F469 1F3FD,fully-qualified,👩🏿‍🐰‍👩🏽,women with bunny ears dark skin tone medium skin tone,E17.0
+People-Body,person-activity,1F469 1F3FF 200D 1F430 200D 1F469 1F3FE,fully-qualified,👩🏿‍🐰‍👩🏾,women with bunny ears dark skin tone medium-dark skin tone,E17.0
 People-Body,person-activity,1F9D6,fully-qualified,🧖,person in steamy room,E5.0
 People-Body,person-activity,1F9D6 1F3FB,fully-qualified,🧖🏻,person in steamy room light skin tone,E5.0
 People-Body,person-activity,1F9D6 1F3FC,fully-qualified,🧖🏼,person in steamy room medium-light skin tone,E5.0
@@ -3603,10 +3698,95 @@ People-Body,person-sport,1F938 1F3FE 200D 2640,minimally-qualified,🤸🏾‍�
 People-Body,person-sport,1F938 1F3FF 200D 2640 FE0F,fully-qualified,🤸🏿‍♀️,woman cartwheeling dark skin tone,E4.0
 People-Body,person-sport,1F938 1F3FF 200D 2640,minimally-qualified,🤸🏿‍♀,woman cartwheeling dark skin tone,E4.0
 People-Body,person-sport,1F93C,fully-qualified,🤼,people wrestling,E3.0
+People-Body,person-sport,1F93C 1F3FB,fully-qualified,🤼🏻,people wrestling light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FC,fully-qualified,🤼🏼,people wrestling medium-light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FD,fully-qualified,🤼🏽,people wrestling medium skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FE,fully-qualified,🤼🏾,people wrestling medium-dark skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FF,fully-qualified,🤼🏿,people wrestling dark skin tone,E17.0
 People-Body,person-sport,1F93C 200D 2642 FE0F,fully-qualified,🤼‍♂️,men wrestling,E4.0
 People-Body,person-sport,1F93C 200D 2642,minimally-qualified,🤼‍♂,men wrestling,E4.0
+People-Body,person-sport,1F93C 1F3FB 200D 2642 FE0F,fully-qualified,🤼🏻‍♂️,men wrestling light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FB 200D 2642,minimally-qualified,🤼🏻‍♂,men wrestling light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FC 200D 2642 FE0F,fully-qualified,🤼🏼‍♂️,men wrestling medium-light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FC 200D 2642,minimally-qualified,🤼🏼‍♂,men wrestling medium-light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FD 200D 2642 FE0F,fully-qualified,🤼🏽‍♂️,men wrestling medium skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FD 200D 2642,minimally-qualified,🤼🏽‍♂,men wrestling medium skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FE 200D 2642 FE0F,fully-qualified,🤼🏾‍♂️,men wrestling medium-dark skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FE 200D 2642,minimally-qualified,🤼🏾‍♂,men wrestling medium-dark skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FF 200D 2642 FE0F,fully-qualified,🤼🏿‍♂️,men wrestling dark skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FF 200D 2642,minimally-qualified,🤼🏿‍♂,men wrestling dark skin tone,E17.0
 People-Body,person-sport,1F93C 200D 2640 FE0F,fully-qualified,🤼‍♀️,women wrestling,E4.0
 People-Body,person-sport,1F93C 200D 2640,minimally-qualified,🤼‍♀,women wrestling,E4.0
+People-Body,person-sport,1F93C 1F3FB 200D 2640 FE0F,fully-qualified,🤼🏻‍♀️,women wrestling light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FB 200D 2640,minimally-qualified,🤼🏻‍♀,women wrestling light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FC 200D 2640 FE0F,fully-qualified,🤼🏼‍♀️,women wrestling medium-light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FC 200D 2640,minimally-qualified,🤼🏼‍♀,women wrestling medium-light skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FD 200D 2640 FE0F,fully-qualified,🤼🏽‍♀️,women wrestling medium skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FD 200D 2640,minimally-qualified,🤼🏽‍♀,women wrestling medium skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FE 200D 2640 FE0F,fully-qualified,🤼🏾‍♀️,women wrestling medium-dark skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FE 200D 2640,minimally-qualified,🤼🏾‍♀,women wrestling medium-dark skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FF 200D 2640 FE0F,fully-qualified,🤼🏿‍♀️,women wrestling dark skin tone,E17.0
+People-Body,person-sport,1F93C 1F3FF 200D 2640,minimally-qualified,🤼🏿‍♀,women wrestling dark skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FB 200D 1FAEF 200D 1F9D1 1F3FC,fully-qualified,🧑🏻‍🫯‍🧑🏼,people wrestling light skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FB 200D 1FAEF 200D 1F9D1 1F3FD,fully-qualified,🧑🏻‍🫯‍🧑🏽,people wrestling light skin tone medium skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FB 200D 1FAEF 200D 1F9D1 1F3FE,fully-qualified,🧑🏻‍🫯‍🧑🏾,people wrestling light skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FB 200D 1FAEF 200D 1F9D1 1F3FF,fully-qualified,🧑🏻‍🫯‍🧑🏿,people wrestling light skin tone dark skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FC 200D 1FAEF 200D 1F9D1 1F3FB,fully-qualified,🧑🏼‍🫯‍🧑🏻,people wrestling medium-light skin tone light skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FC 200D 1FAEF 200D 1F9D1 1F3FD,fully-qualified,🧑🏼‍🫯‍🧑🏽,people wrestling medium-light skin tone medium skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FC 200D 1FAEF 200D 1F9D1 1F3FE,fully-qualified,🧑🏼‍🫯‍🧑🏾,people wrestling medium-light skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FC 200D 1FAEF 200D 1F9D1 1F3FF,fully-qualified,🧑🏼‍🫯‍🧑🏿,people wrestling medium-light skin tone dark skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FD 200D 1FAEF 200D 1F9D1 1F3FB,fully-qualified,🧑🏽‍🫯‍🧑🏻,people wrestling medium skin tone light skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FD 200D 1FAEF 200D 1F9D1 1F3FC,fully-qualified,🧑🏽‍🫯‍🧑🏼,people wrestling medium skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FD 200D 1FAEF 200D 1F9D1 1F3FE,fully-qualified,🧑🏽‍🫯‍🧑🏾,people wrestling medium skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FD 200D 1FAEF 200D 1F9D1 1F3FF,fully-qualified,🧑🏽‍🫯‍🧑🏿,people wrestling medium skin tone dark skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FE 200D 1FAEF 200D 1F9D1 1F3FB,fully-qualified,🧑🏾‍🫯‍🧑🏻,people wrestling medium-dark skin tone light skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FE 200D 1FAEF 200D 1F9D1 1F3FC,fully-qualified,🧑🏾‍🫯‍🧑🏼,people wrestling medium-dark skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FE 200D 1FAEF 200D 1F9D1 1F3FD,fully-qualified,🧑🏾‍🫯‍🧑🏽,people wrestling medium-dark skin tone medium skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FE 200D 1FAEF 200D 1F9D1 1F3FF,fully-qualified,🧑🏾‍🫯‍🧑🏿,people wrestling medium-dark skin tone dark skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FF 200D 1FAEF 200D 1F9D1 1F3FB,fully-qualified,🧑🏿‍🫯‍🧑🏻,people wrestling dark skin tone light skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FF 200D 1FAEF 200D 1F9D1 1F3FC,fully-qualified,🧑🏿‍🫯‍🧑🏼,people wrestling dark skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FF 200D 1FAEF 200D 1F9D1 1F3FD,fully-qualified,🧑🏿‍🫯‍🧑🏽,people wrestling dark skin tone medium skin tone,E17.0
+People-Body,person-sport,1F9D1 1F3FF 200D 1FAEF 200D 1F9D1 1F3FE,fully-qualified,🧑🏿‍🫯‍🧑🏾,people wrestling dark skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F468 1F3FB 200D 1FAEF 200D 1F468 1F3FC,fully-qualified,👨🏻‍🫯‍👨🏼,men wrestling light skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F468 1F3FB 200D 1FAEF 200D 1F468 1F3FD,fully-qualified,👨🏻‍🫯‍👨🏽,men wrestling light skin tone medium skin tone,E17.0
+People-Body,person-sport,1F468 1F3FB 200D 1FAEF 200D 1F468 1F3FE,fully-qualified,👨🏻‍🫯‍👨🏾,men wrestling light skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F468 1F3FB 200D 1FAEF 200D 1F468 1F3FF,fully-qualified,👨🏻‍🫯‍👨🏿,men wrestling light skin tone dark skin tone,E17.0
+People-Body,person-sport,1F468 1F3FC 200D 1FAEF 200D 1F468 1F3FB,fully-qualified,👨🏼‍🫯‍👨🏻,men wrestling medium-light skin tone light skin tone,E17.0
+People-Body,person-sport,1F468 1F3FC 200D 1FAEF 200D 1F468 1F3FD,fully-qualified,👨🏼‍🫯‍👨🏽,men wrestling medium-light skin tone medium skin tone,E17.0
+People-Body,person-sport,1F468 1F3FC 200D 1FAEF 200D 1F468 1F3FE,fully-qualified,👨🏼‍🫯‍👨🏾,men wrestling medium-light skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F468 1F3FC 200D 1FAEF 200D 1F468 1F3FF,fully-qualified,👨🏼‍🫯‍👨🏿,men wrestling medium-light skin tone dark skin tone,E17.0
+People-Body,person-sport,1F468 1F3FD 200D 1FAEF 200D 1F468 1F3FB,fully-qualified,👨🏽‍🫯‍👨🏻,men wrestling medium skin tone light skin tone,E17.0
+People-Body,person-sport,1F468 1F3FD 200D 1FAEF 200D 1F468 1F3FC,fully-qualified,👨🏽‍🫯‍👨🏼,men wrestling medium skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F468 1F3FD 200D 1FAEF 200D 1F468 1F3FE,fully-qualified,👨🏽‍🫯‍👨🏾,men wrestling medium skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F468 1F3FD 200D 1FAEF 200D 1F468 1F3FF,fully-qualified,👨🏽‍🫯‍👨🏿,men wrestling medium skin tone dark skin tone,E17.0
+People-Body,person-sport,1F468 1F3FE 200D 1FAEF 200D 1F468 1F3FB,fully-qualified,👨🏾‍🫯‍👨🏻,men wrestling medium-dark skin tone light skin tone,E17.0
+People-Body,person-sport,1F468 1F3FE 200D 1FAEF 200D 1F468 1F3FC,fully-qualified,👨🏾‍🫯‍👨🏼,men wrestling medium-dark skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F468 1F3FE 200D 1FAEF 200D 1F468 1F3FD,fully-qualified,👨🏾‍🫯‍👨🏽,men wrestling medium-dark skin tone medium skin tone,E17.0
+People-Body,person-sport,1F468 1F3FE 200D 1FAEF 200D 1F468 1F3FF,fully-qualified,👨🏾‍🫯‍👨🏿,men wrestling medium-dark skin tone dark skin tone,E17.0
+People-Body,person-sport,1F468 1F3FF 200D 1FAEF 200D 1F468 1F3FB,fully-qualified,👨🏿‍🫯‍👨🏻,men wrestling dark skin tone light skin tone,E17.0
+People-Body,person-sport,1F468 1F3FF 200D 1FAEF 200D 1F468 1F3FC,fully-qualified,👨🏿‍🫯‍👨🏼,men wrestling dark skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F468 1F3FF 200D 1FAEF 200D 1F468 1F3FD,fully-qualified,👨🏿‍🫯‍👨🏽,men wrestling dark skin tone medium skin tone,E17.0
+People-Body,person-sport,1F468 1F3FF 200D 1FAEF 200D 1F468 1F3FE,fully-qualified,👨🏿‍🫯‍👨🏾,men wrestling dark skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F469 1F3FB 200D 1FAEF 200D 1F469 1F3FC,fully-qualified,👩🏻‍🫯‍👩🏼,women wrestling light skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F469 1F3FB 200D 1FAEF 200D 1F469 1F3FD,fully-qualified,👩🏻‍🫯‍👩🏽,women wrestling light skin tone medium skin tone,E17.0
+People-Body,person-sport,1F469 1F3FB 200D 1FAEF 200D 1F469 1F3FE,fully-qualified,👩🏻‍🫯‍👩🏾,women wrestling light skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F469 1F3FB 200D 1FAEF 200D 1F469 1F3FF,fully-qualified,👩🏻‍🫯‍👩🏿,women wrestling light skin tone dark skin tone,E17.0
+People-Body,person-sport,1F469 1F3FC 200D 1FAEF 200D 1F469 1F3FB,fully-qualified,👩🏼‍🫯‍👩🏻,women wrestling medium-light skin tone light skin tone,E17.0
+People-Body,person-sport,1F469 1F3FC 200D 1FAEF 200D 1F469 1F3FD,fully-qualified,👩🏼‍🫯‍👩🏽,women wrestling medium-light skin tone medium skin tone,E17.0
+People-Body,person-sport,1F469 1F3FC 200D 1FAEF 200D 1F469 1F3FE,fully-qualified,👩🏼‍🫯‍👩🏾,women wrestling medium-light skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F469 1F3FC 200D 1FAEF 200D 1F469 1F3FF,fully-qualified,👩🏼‍🫯‍👩🏿,women wrestling medium-light skin tone dark skin tone,E17.0
+People-Body,person-sport,1F469 1F3FD 200D 1FAEF 200D 1F469 1F3FB,fully-qualified,👩🏽‍🫯‍👩🏻,women wrestling medium skin tone light skin tone,E17.0
+People-Body,person-sport,1F469 1F3FD 200D 1FAEF 200D 1F469 1F3FC,fully-qualified,👩🏽‍🫯‍👩🏼,women wrestling medium skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F469 1F3FD 200D 1FAEF 200D 1F469 1F3FE,fully-qualified,👩🏽‍🫯‍👩🏾,women wrestling medium skin tone medium-dark skin tone,E17.0
+People-Body,person-sport,1F469 1F3FD 200D 1FAEF 200D 1F469 1F3FF,fully-qualified,👩🏽‍🫯‍👩🏿,women wrestling medium skin tone dark skin tone,E17.0
+People-Body,person-sport,1F469 1F3FE 200D 1FAEF 200D 1F469 1F3FB,fully-qualified,👩🏾‍🫯‍👩🏻,women wrestling medium-dark skin tone light skin tone,E17.0
+People-Body,person-sport,1F469 1F3FE 200D 1FAEF 200D 1F469 1F3FC,fully-qualified,👩🏾‍🫯‍👩🏼,women wrestling medium-dark skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F469 1F3FE 200D 1FAEF 200D 1F469 1F3FD,fully-qualified,👩🏾‍🫯‍👩🏽,women wrestling medium-dark skin tone medium skin tone,E17.0
+People-Body,person-sport,1F469 1F3FE 200D 1FAEF 200D 1F469 1F3FF,fully-qualified,👩🏾‍🫯‍👩🏿,women wrestling medium-dark skin tone dark skin tone,E17.0
+People-Body,person-sport,1F469 1F3FF 200D 1FAEF 200D 1F469 1F3FB,fully-qualified,👩🏿‍🫯‍👩🏻,women wrestling dark skin tone light skin tone,E17.0
+People-Body,person-sport,1F469 1F3FF 200D 1FAEF 200D 1F469 1F3FC,fully-qualified,👩🏿‍🫯‍👩🏼,women wrestling dark skin tone medium-light skin tone,E17.0
+People-Body,person-sport,1F469 1F3FF 200D 1FAEF 200D 1F469 1F3FD,fully-qualified,👩🏿‍🫯‍👩🏽,women wrestling dark skin tone medium skin tone,E17.0
+People-Body,person-sport,1F469 1F3FF 200D 1FAEF 200D 1F469 1F3FE,fully-qualified,👩🏿‍🫯‍👩🏾,women wrestling dark skin tone medium-dark skin tone,E17.0
 People-Body,person-sport,1F93D,fully-qualified,🤽,person playing water polo,E3.0
 People-Body,person-sport,1F93D 1F3FB,fully-qualified,🤽🏻,person playing water polo light skin tone,E3.0
 People-Body,person-sport,1F93D 1F3FC,fully-qualified,🤽🏼,person playing water polo medium-light skin tone,E3.0
@@ -4374,6 +4554,7 @@ Smileys-Emotion,face-concerned,1F62E,fully-qualified,😮,face with open mouth,E
 Smileys-Emotion,face-concerned,1F62F,fully-qualified,😯,hushed face,E1.0
 Smileys-Emotion,face-concerned,1F632,fully-qualified,😲,astonished face,E0.6
 Smileys-Emotion,face-concerned,1F633,fully-qualified,😳,flushed face,E0.6
+Smileys-Emotion,face-concerned,1FAEA,fully-qualified,🫪,distorted face,E17.0
 Smileys-Emotion,face-concerned,1F97A,fully-qualified,🥺,pleading face,E11.0
 Smileys-Emotion,face-concerned,1F979,fully-qualified,🥹,face holding back tears,E14.0
 Smileys-Emotion,face-concerned,1F626,fully-qualified,😦,frowning face with open mouth,E1.0
@@ -4452,6 +4633,7 @@ Smileys-Emotion,heart,1F90D,fully-qualified,🤍,white heart,E12.0
 Smileys-Emotion,emotion,1F48B,fully-qualified,💋,kiss mark,E0.6
 Smileys-Emotion,emotion,1F4AF,fully-qualified,💯,hundred points,E0.6
 Smileys-Emotion,emotion,1F4A2,fully-qualified,💢,anger symbol,E0.6
+Smileys-Emotion,emotion,1FAEF,fully-qualified,🫯,fight cloud,E17.0
 Smileys-Emotion,emotion,1F4A5,fully-qualified,💥,collision,E0.6
 Smileys-Emotion,emotion,1F4AB,fully-qualified,💫,dizzy,E0.6
 Smileys-Emotion,emotion,1F4A6,fully-qualified,💦,sweat droplets,E0.6
@@ -4786,6 +4968,7 @@ Travel-Places,place-geographic,1F3D4 FE0F,fully-qualified,🏔️,snow-capped mo
 Travel-Places,place-geographic,1F3D4,unqualified,🏔,snow-capped mountain,E0.7
 Travel-Places,place-geographic,26F0 FE0F,fully-qualified,⛰️,mountain,E0.7
 Travel-Places,place-geographic,26F0,unqualified,⛰,mountain,E0.7
+Travel-Places,place-geographic,1F6D8,fully-qualified,🛘,landslide,E17.0
 Travel-Places,place-geographic,1F30B,fully-qualified,🌋,volcano,E0.6
 Travel-Places,place-geographic,1F5FB,fully-qualified,🗻,mount fuji,E0.6
 Travel-Places,place-geographic,1F3D5 FE0F,fully-qualified,🏕️,camping,E0.7
