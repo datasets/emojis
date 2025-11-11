@@ -1,8 +1,8 @@
 {
-  "bytes": 61,
-  "count_of_rows": 0,
+  "bytes": 560876,
+  "count_of_rows": 5225,
   "descriptor": "List of emojis available from the Unicode Consortium. More information can be found in the Unicode® Technical Standard #51.",
-  "hash": "42969e164ecda962a447b440a910429e",
+  "hash": "b49f0baef68923de089d287a4a321dca",
   "keywords": [
     "unicode",
     "emojis",
@@ -22,7 +22,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 61,
+      "bytes": 560876,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -34,7 +34,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "349be0feb752580459410ca3439723dc",
+      "hash": "5f71f2bbcd90fe2d390adf7bf4bb42fd",
       "name": "emojis",
       "path": "emojis.csv",
       "profile": "tabular-data-resource",
