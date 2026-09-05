@@ -2,25 +2,26 @@
 EMOJI ENCYCLOPEDIA
 app.js
 
-High-performance client-side emoji search and discovery app.
+Main application controller.
 
-Features:
+Expected files:
 
-* CSV loading
-* 4,000+ emoji support
-* Full text search
-* Unicode/codepoint search
-* Category filtering
-* Subgroup filtering
-* Sorting
-* Favorites
-* Recently viewed
-* Emoji detail modal
-* Clipboard support
-* URL hash routing
-* Incremental rendering
-* Keyboard shortcuts
-  ============================================================ */
+/
+├── index.html
+├── styles.css
+├── app.js
+│
+└── data/
+└── emojis.csv
+
+Expected CSV format:
+
+Group,Subgroup,CodePoint,Status,Representation,Name,Section
+
+Example:
+
+Activities,event,1F383,fully-qualified,🎃,jack-o-lantern,E0.6
+============================================================ */
 
 "use strict";
 
@@ -29,51 +30,123 @@ CONFIGURATION
 ============================================================ */
 
 const CONFIG = {
-dataUrl: "./data/emojis.csv",
 
-initialRenderCount: 120,
-renderBatchSize: 100,
+/* ----------------------------------------------------------
+Data source
+---------------------------------------------------------- */
 
-searchDebounce: 120,
+DATA_URL: "./data/emojis.csv",
 
-storageKeys: {
-favorites: "emoji-encyclopedia-favorites",
-recent: "emoji-encyclopedia-recent",
-theme: "emoji-encyclopedia-theme"
-},
+/* ----------------------------------------------------------
+Rendering
+---------------------------------------------------------- */
 
-maxRecent: 24,
+INITIAL_RENDER_COUNT: 120,
 
-defaultSort: "relevance"
+LOAD_MORE_COUNT: 120,
+
+/* ----------------------------------------------------------
+Storage
+---------------------------------------------------------- */
+
+FAVORITES_STORAGE_KEY:
+"emoji-encyclopedia-favorites",
+
+/* ----------------------------------------------------------
+URL parameters
+---------------------------------------------------------- */
+
+URL_SEARCH_PARAM: "q",
+
+URL_GROUP_PARAM: "group",
+
+URL_SUBGROUP_PARAM: "subgroup",
+
+/* ----------------------------------------------------------
+Behavior
+---------------------------------------------------------- */
+
+DEFAULT_SHOW_STATUS:
+
+```
+[
+  "fully-qualified"
+],
+```
+
+SHOW_UNQUALIFIED_VARIANTS: false,
+
+/* ----------------------------------------------------------
+Search
+---------------------------------------------------------- */
+
+SEARCH_MIN_LENGTH: 0,
+
+/* ----------------------------------------------------------
+Toast
+---------------------------------------------------------- */
+
+TOAST_DURATION: 2200
+
 };
 
 /* ============================================================
 APPLICATION STATE
 ============================================================ */
 
-const AppState = {
+const STATE = {
+
+/* ----------------------------------------------------------
+Data
+---------------------------------------------------------- */
+
 emojis: [],
+
 filteredEmojis: [],
 
-groups: new Map(),
-subgroups: new Map(),
-
-favorites: new Set(),
-recent: [],
+/* ----------------------------------------------------------
+Filters
+---------------------------------------------------------- */
 
 searchQuery: "",
 
-activeGroup: "all",
-activeSubgroup: "all",
+selectedGroup: "all",
 
-sortMode: CONFIG.defaultSort,
+selectedSubgroup: "all",
 
-visibleCount: CONFIG.initialRenderCount,
+/* ----------------------------------------------------------
+Sorting
+---------------------------------------------------------- */
 
-selectedEmoji: null,
+sortMode: "relevance",
 
-loading: true,
-error: null
+/* ----------------------------------------------------------
+Pagination
+---------------------------------------------------------- */
+
+visibleCount:
+CONFIG.INITIAL_RENDER_COUNT,
+
+/* ----------------------------------------------------------
+Favorites
+---------------------------------------------------------- */
+
+favorites: new Set(),
+
+/* ----------------------------------------------------------
+Modal
+---------------------------------------------------------- */
+
+activeEmoji: null,
+
+/* ----------------------------------------------------------
+Application
+---------------------------------------------------------- */
+
+isLoading: true,
+
+hasError: false
+
 };
 
 /* ============================================================
@@ -81,762 +154,1244 @@ DOM REFERENCES
 ============================================================ */
 
 const DOM = {
-app: document.getElementById("app"),
 
-searchInput: document.getElementById("searchInput"),
-clearSearch: document.getElementById("clearSearch"),
+/* ----------------------------------------------------------
+Search
+---------------------------------------------------------- */
 
-emojiGrid: document.getElementById("emojiGrid"),
+searchInput:
+document.getElementById("searchInput"),
 
-resultCount: document.getElementById("resultCount"),
-resultLabel: document.getElementById("resultLabel"),
+clearSearch:
+document.getElementById("clearSearch"),
 
-groupFilters: document.getElementById("groupFilters"),
-subgroupFilters: document.getElementById("subgroupFilters"),
+/* ----------------------------------------------------------
+Filters
+---------------------------------------------------------- */
 
-sortSelect: document.getElementById("sortSelect"),
+groupFilters:
+document.getElementById("groupFilters"),
 
-loadMore: document.getElementById("loadMore"),
+subgroupFilters:
+document.getElementById("subgroupFilters"),
 
-randomButton: document.getElementById("randomEmoji"),
+/* ----------------------------------------------------------
+Results
+---------------------------------------------------------- */
 
-favoritesButton: document.getElementById("favoritesButton"),
+emojiGrid:
+document.getElementById("emojiGrid"),
 
-modal: document.getElementById("emojiModal"),
-modalContent: document.getElementById("emojiModalContent"),
-modalClose: document.getElementById("modalClose"),
+resultCount:
+document.getElementById("resultCount"),
 
-loadingState: document.getElementById("loadingState"),
-emptyState: document.getElementById("emptyState"),
-errorState: document.getElementById("errorState"),
+resultLabel:
+document.getElementById("resultLabel"),
 
-statsTotal: document.getElementById("statsTotal"),
-statsGroups: document.getElementById("statsGroups"),
-statsFavorites: document.getElementById("statsFavorites")
+sortSelect:
+document.getElementById("sortSelect"),
+
+loadMore:
+document.getElementById("loadMore"),
+
+/* ----------------------------------------------------------
+States
+---------------------------------------------------------- */
+
+loadingState:
+document.getElementById("loadingState"),
+
+emptyState:
+document.getElementById("emptyState"),
+
+errorState:
+document.getElementById("errorState"),
+
+/* ----------------------------------------------------------
+Stats
+---------------------------------------------------------- */
+
+statsTotal:
+document.getElementById("statsTotal"),
+
+statsGroups:
+document.getElementById("statsGroups"),
+
+statsFavorites:
+document.getElementById("statsFavorites"),
+
+/* ----------------------------------------------------------
+Actions
+---------------------------------------------------------- */
+
+randomEmoji:
+document.getElementById("randomEmoji"),
+
+favoritesButton:
+document.getElementById("favoritesButton"),
+
+/* ----------------------------------------------------------
+Modal
+---------------------------------------------------------- */
+
+emojiModal:
+document.getElementById("emojiModal"),
+
+emojiModalContent:
+document.getElementById("emojiModalContent"),
+
+modalClose:
+document.getElementById("modalClose")
+
 };
 
 /* ============================================================
-INITIALIZATION
+APPLICATION INITIALIZATION
 ============================================================ */
 
-document.addEventListener("DOMContentLoaded", init);
-
 async function init() {
-
-loadStoredData();
-
-bindEvents();
-
-updateTheme();
 
 try {
 
 ```
-await loadEmojiData();
+console.log(
+  "[Emoji Encyclopedia] Starting application..."
+);
 
-buildIndexes();
 
-processRoute();
+/* Load saved favorites */
+
+loadFavorites();
+
+
+/* Read URL state */
+
+loadURLState();
+
+
+/* Attach events before loading */
+
+setupEventListeners();
+
+
+/* Load emoji database */
+
+await loadEmojiDatabase();
+
+
+/* Process and prepare data */
+
+prepareEmojiData();
+
+
+/* Build filters */
+
+renderGroupFilters();
+
+renderSubgroupFilters();
+
+
+/* Apply initial filters */
 
 applyFilters();
 
-renderAll();
 
-AppState.loading = false;
-```
+/* Update stats */
 
-} catch (error) {
+updateStats();
 
-```
-console.error("Failed to initialize Emoji Encyclopedia:", error);
 
-AppState.loading = false;
-AppState.error = error;
+/* Render results */
 
-showError(error);
+renderResults();
+
+
+/* Hide loading */
+
+hideLoadingState();
+
+
+console.log(
+  `[Emoji Encyclopedia] Loaded ${STATE.emojis.length} emoji records.`
+);
 ```
 
 }
+
+catch (error) {
+
+```
+console.error(
+  "[Emoji Encyclopedia] Initialization failed:",
+  error
+);
+
+
+showErrorState(
+  "Unable to load the emoji database. Please make sure data/emojis.csv exists."
+);
+```
+
+}
+
 }
 
 /* ============================================================
-DATA LOADING
+LOAD EMOJI DATABASE
 ============================================================ */
 
-async function loadEmojiData() {
+async function loadEmojiDatabase() {
 
-setLoading(true);
+STATE.isLoading = true;
 
-const response = await fetch(CONFIG.dataUrl);
+const response =
+await fetch(
+CONFIG.DATA_URL,
+{
+cache: "no-store"
+}
+);
 
 if (!response.ok) {
+
+```
 throw new Error(
-`Unable to load emoji data (${response.status})`
+  `Failed to load emoji CSV (${response.status})`
 );
+```
+
 }
 
-const csvText = await response.text();
+const csvText =
+await response.text();
 
-const parsed = parseCSV(csvText);
+if (!csvText.trim()) {
 
-AppState.emojis = parsed
+```
+throw new Error(
+  "Emoji CSV file is empty."
+);
+```
+
+}
+
+const rawRows =
+parseCSV(csvText);
+
+if (!rawRows.length) {
+
+```
+throw new Error(
+  "No emoji records found in CSV."
+);
+```
+
+}
+
+STATE.emojis =
+rawRows
 .map(normalizeEmoji)
 .filter(Boolean);
 
-console.info(
-`[Emoji Encyclopedia] Loaded ${AppState.emojis.length} emojis`
-);
-
-setLoading(false);
 }
 
 /* ============================================================
 CSV PARSER
+============================================================ */
 
-Handles:
+/*
+Custom CSV parser.
 
-* quoted fields
-* commas inside quotes
-* CRLF/LF
-  ============================================================ */
+Supports:
+
+* Commas
+* Quoted fields
+* Escaped quotes
+* Windows line endings
+* Unix line endings
+
+Avoids external dependencies.
+*/
 
 function parseCSV(text) {
 
 const rows = [];
 
 let row = [];
-let value = "";
+
+let field = "";
 
 let insideQuotes = false;
 
-for (let i = 0; i < text.length; i++) {
+for (
+let i = 0;
+i < text.length;
+i++
+) {
 
 ```
-const char = text[i];
-const nextChar = text[i + 1];
+const character =
+  text[i];
 
 
-if (char === '"') {
+const nextCharacter =
+  text[i + 1];
 
-  if (insideQuotes && nextChar === '"') {
 
-    value += '"';
+/* --------------------------------------------------------
+   Quote
+   -------------------------------------------------------- */
+
+if (character === "\"") {
+
+
+  if (
+    insideQuotes &&
+    nextCharacter === "\""
+  ) {
+
+
+    field += "\"";
+
     i++;
 
-  } else {
-
-    insideQuotes = !insideQuotes;
   }
 
+  else {
+
+
+    insideQuotes =
+      !insideQuotes;
+
+  }
+
+
   continue;
+
+
 }
 
 
-if (char === "," && !insideQuotes) {
-
-  row.push(value.trim());
-  value = "";
-
-  continue;
-}
-
+/* --------------------------------------------------------
+   Comma
+   -------------------------------------------------------- */
 
 if (
-  (char === "\n" || char === "\r") &&
+  character === "," &&
   !insideQuotes
 ) {
 
-  if (char === "\r" && nextChar === "\n") {
-    i++;
-  }
 
-  row.push(value.trim());
+  row.push(field);
 
-  if (
-    row.length > 1 ||
-    row[0] !== ""
-  ) {
-    rows.push(row);
-  }
-
-  row = [];
-  value = "";
+  field = "";
 
   continue;
+
+
 }
 
 
-value += char;
+/* --------------------------------------------------------
+   New line
+   -------------------------------------------------------- */
+
+if (
+  (
+    character === "\n" ||
+    character === "\r"
+  ) &&
+  !insideQuotes
+) {
+
+
+  if (
+    character === "\r" &&
+    nextCharacter === "\n"
+  ) {
+
+
+    i++;
+
+
+  }
+
+
+  row.push(field);
+
+
+  if (
+    row.some(
+      value =>
+        value.trim() !== ""
+    )
+  ) {
+
+
+    rows.push(row);
+
+
+  }
+
+
+  row = [];
+
+  field = "";
+
+  continue;
+
+
+}
+
+
+/* --------------------------------------------------------
+   Normal character
+   -------------------------------------------------------- */
+
+field += character;
 ```
 
 }
 
-if (value.length || row.length) {
+/* Final field */
+
+row.push(field);
+
+if (
+row.some(
+value =>
+value.trim() !== ""
+)
+) {
 
 ```
-row.push(value.trim());
 rows.push(row);
 ```
 
 }
 
-if (!rows.length) {
-return [];
-}
-
-const headers = rows[0]
-.map(header =>
-header
-.trim()
-.toLowerCase()
-.replace(/\s+/g, "_")
-);
-
-return rows
-.slice(1)
-.filter(row => row.length)
-.map(row => {
+if (
+rows.length < 2
+) {
 
 ```
-  const object = {};
+return [];
+```
 
-  headers.forEach((header, index) => {
-    object[header] = row[index] ?? "";
-  });
+}
 
-  return object;
-});
+/* ----------------------------------------------------------
+Headers
+---------------------------------------------------------- */
+
+const headers =
+rows[0].map(
+header =>
+
+```
+    normalizeHeader(header)
+);
+```
+
+/* ----------------------------------------------------------
+Convert rows into objects
+---------------------------------------------------------- */
+
+const objects = [];
+
+for (
+let i = 1;
+i < rows.length;
+i++
+) {
+
+```
+const values =
+  rows[i];
+
+
+const object = {};
+
+
+headers.forEach(
+  (
+    header,
+    index
+  ) => {
+
+
+    object[header] =
+      (
+        values[index] ||
+        ""
+      ).trim();
+
+
+  }
+);
+
+
+objects.push(object);
+```
+
+}
+
+return objects;
+
+}
+
+/* ============================================================
+HEADER NORMALIZATION
+============================================================ */
+
+function normalizeHeader(header) {
+
+return String(header)
+
+```
+.trim()
+
+.toLowerCase()
+
+.replace(
+  /[\s\-_]+/g,
+  "_"
+)
 ```
 
 }
 
 /* ============================================================
-EMOJI NORMALIZATION
-
-Makes the application flexible enough to support
-differently formatted emoji CSV datasets.
+NORMALIZE EMOJI RECORD
 ============================================================ */
 
-function normalizeEmoji(raw, index) {
+function normalizeEmoji(raw) {
 
-if (!raw) return null;
+if (!raw) {
 
-const emoji =
-raw.emoji ||
-raw.character ||
-raw.symbol ||
-raw.char ||
-raw.native ||
-raw.unicode_emoji ||
-"";
-
-const name =
-raw.name ||
-raw.description ||
-raw.short_name ||
-raw.title ||
-raw.label ||
-"";
-
-if (!emoji && !name) {
+```
 return null;
+```
+
 }
 
+/* ----------------------------------------------------------
+Extract CSV fields
+---------------------------------------------------------- */
+
 const group =
+
+```
 raw.group ||
+
 raw.category ||
-raw.category_name ||
-raw.major_group ||
+
+raw.categories ||
+
 "Other";
+```
 
 const subgroup =
+
+```
 raw.subgroup ||
+
 raw.sub_category ||
+
 raw.subcategory ||
-raw.sub_group ||
+
 "Other";
+```
 
-const codepoints =
-raw.codepoints ||
+const codepoint =
+
+```
 raw.codepoint ||
-raw.unicode ||
-raw.hex ||
-emojiToCodepoints(emoji);
 
-const version =
-raw.version ||
-raw.emoji_version ||
-raw.unicode_version ||
+raw.code_point ||
+
+raw.codepoints ||
+
+raw.unicode ||
+
 "";
+```
 
 const status =
+
+```
 raw.status ||
-raw.qualification ||
-raw.qualified ||
+
+"unknown";
+```
+
+const representation =
+
+```
+raw.representation ||
+
+raw.emoji ||
+
+raw.character ||
+
+raw.symbol ||
+
 "";
+```
 
-const keywords = collectKeywords(raw);
+const name =
 
-const normalizedName = normalizeSearchText(name);
+```
+raw.name ||
+
+raw.description ||
+
+raw.short_name ||
+
+"Unnamed Emoji";
+```
+
+const section =
+
+```
+raw.section ||
+
+raw.version ||
+
+raw.unicode_version ||
+
+"";
+```
+
+/* ----------------------------------------------------------
+Validate
+---------------------------------------------------------- */
+
+if (
+!representation &&
+!codepoint
+) {
+
+```
+return null;
+```
+
+}
+
+/* ----------------------------------------------------------
+Generate emoji from codepoint if missing
+---------------------------------------------------------- */
+
+let emoji =
+representation;
+
+if (!emoji) {
+
+```
+emoji =
+  codepointToEmoji(codepoint);
+```
+
+}
+
+if (!emoji) {
+
+```
+return null;
+```
+
+}
+
+/* ----------------------------------------------------------
+Normalize codepoint
+---------------------------------------------------------- */
+
+const normalizedCodepoint =
+normalizeCodepoint(
+codepoint ||
+emojiToCodepoints(emoji)
+);
+
+/* ----------------------------------------------------------
+Generate ID
+---------------------------------------------------------- */
+
+const id =
+
+```
+normalizedCodepoint ||
+
+`emoji-${name}-${emoji}`;
+```
+
+/* ----------------------------------------------------------
+Search index
+---------------------------------------------------------- */
+
+const searchText =
+
+```
+[
+  name,
+
+  emoji,
+
+  group,
+
+  subgroup,
+
+  normalizedCodepoint,
+
+  normalizedCodepoint.replace(
+    /\s+/g,
+    ""
+  ),
+
+  section,
+
+  status
+
+]
+
+  .filter(Boolean)
+
+  .join(" ")
+
+  .toLowerCase();
+```
+
+/* ----------------------------------------------------------
+Return normalized object
+---------------------------------------------------------- */
 
 return {
 
 ```
-id: createEmojiId(
-  emoji,
-  codepoints,
-  index
-),
+id,
 
 emoji,
 
 name,
 
-normalizedName,
-
 group,
 
 subgroup,
 
-codepoints: normalizeCodepoints(codepoints),
-
-version,
+codepoint:
+  normalizedCodepoint,
 
 status,
 
-keywords,
+section,
 
-raw,
 
-searchIndex: createSearchIndex({
-  emoji,
-  name,
-  group,
-  subgroup,
-  codepoints,
-  keywords,
-  version
-})
+searchText,
+
+favorite: false
 ```
 
 };
+
 }
 
 /* ============================================================
-SEARCH INDEX
+PREPARE EMOJI DATA
 ============================================================ */
 
-function createSearchIndex(data) {
+function prepareEmojiData() {
 
-return normalizeSearchText(
-[
-data.emoji,
-data.name,
-data.group,
-data.subgroup,
-data.codepoints,
-data.version,
-...data.keywords
-]
-.filter(Boolean)
-.join(" ")
+/* ----------------------------------------------------------
+Filter unwanted qualification variants
+---------------------------------------------------------- */
+
+let emojis =
+STATE.emojis;
+
+if (
+!CONFIG.SHOW_UNQUALIFIED_VARIANTS
+) {
+
+```
+const fullyQualified =
+  emojis.filter(
+    emoji =>
+
+      emoji.status ===
+      "fully-qualified"
+  );
+
+
+/*
+   Some datasets may have entries without a
+   qualification status.
+
+   Only use fully-qualified filtering if such
+   entries actually exist.
+*/
+
+if (
+  fullyQualified.length > 0
+) {
+
+
+  emojis =
+    fullyQualified;
+
+
+}
+```
+
+}
+
+/* ----------------------------------------------------------
+Deduplicate
+---------------------------------------------------------- */
+
+const unique = new Map();
+
+for (
+const emoji of emojis
+) {
+
+```
+const duplicateKey =
+
+  `${emoji.emoji}|${emoji.codepoint}`;
+
+
+if (
+  !unique.has(duplicateKey)
+) {
+
+
+  unique.set(
+    duplicateKey,
+    emoji
+  );
+
+
+}
+```
+
+}
+
+STATE.emojis =
+Array.from(
+unique.values()
 );
+
+/* ----------------------------------------------------------
+Alphabetical base ordering
+---------------------------------------------------------- */
+
+STATE.emojis.sort(
+(
+a,
+b
+) =>
+
+```
+  a.name.localeCompare(
+    b.name
+  )
+```
+
+);
+
+/* ----------------------------------------------------------
+Apply favorite state
+---------------------------------------------------------- */
+
+STATE.emojis.forEach(
+emoji => {
+
+```
+  emoji.favorite =
+    STATE.favorites.has(
+      emoji.id
+    );
+
+
 }
-
-function collectKeywords(raw) {
-
-const possibleFields = [
-
-```
-"keywords",
-"keyword",
-"aliases",
-"alias",
-"tags",
-"tag",
-"shortcodes",
-"shortcode"
 ```
 
-];
+);
 
-const keywords = [];
-
-possibleFields.forEach(field => {
-
-```
-if (!raw[field]) return;
-
-
-const value = String(raw[field]);
-
-
-value
-  .split(/[|,;]+/)
-  .map(item => item.trim())
-  .filter(Boolean)
-  .forEach(item => keywords.push(item));
-```
-
-});
-
-return [...new Set(keywords)];
-}
-
-function normalizeSearchText(value) {
-
-return String(value || "")
-.toLowerCase()
-.normalize("NFKD")
-.replace(/[\u0300-\u036f]/g, "")
-.replace(/[_-]/g, " ")
-.replace(/\s+/g, " ")
-.trim();
 }
 
 /* ============================================================
-CODEPOINT UTILITIES
+CODEPOINT HELPERS
 ============================================================ */
+
+function normalizeCodepoint(value) {
+
+if (!value) {
+
+```
+return "";
+```
+
+}
+
+return String(value)
+
+```
+.trim()
+
+.replace(
+  /U\+/gi,
+  ""
+)
+
+.replace(
+  /0x/gi,
+  ""
+)
+
+.replace(
+  /,/g,
+  " "
+)
+
+.replace(
+  /-/g,
+  " "
+)
+
+.replace(
+  /\s+/g,
+  " "
+)
+
+.toUpperCase();
+```
+
+}
+
+function codepointToEmoji(codepointString) {
+
+if (!codepointString) {
+
+```
+return "";
+```
+
+}
+
+try {
+
+```
+const points =
+
+  normalizeCodepoint(codepointString)
+
+    .split(" ")
+
+    .filter(Boolean)
+
+    .map(
+      point =>
+
+        parseInt(
+          point,
+          16
+        )
+    )
+
+    .filter(
+      point =>
+
+        !Number.isNaN(point)
+    );
+
+
+if (!points.length) {
+
+
+  return "";
+
+
+}
+
+
+return String.fromCodePoint(
+  ...points
+);
+```
+
+}
+
+catch {
+
+```
+return "";
+```
+
+}
+
+}
 
 function emojiToCodepoints(emoji) {
 
-if (!emoji) return "";
+if (!emoji) {
+
+```
+return "";
+```
+
+}
 
 return Array
 .from(emoji)
-.map(character =>
-character
-.codePointAt(0)
-.toString(16)
-.toUpperCase()
+
+```
+.map(
+  character =>
+
+    character
+      .codePointAt(0)
+      .toString(16)
+      .toUpperCase()
 )
+
 .join(" ");
-}
+```
 
-function normalizeCodepoints(value) {
-
-return String(value || "")
-.trim()
-.toUpperCase()
-.replace(/U+/g, "")
-.replace(/0X/g, "")
-.replace(/[-_,]/g, " ")
-.replace(/\s+/g, " ");
-}
-
-function createEmojiId(
-emoji,
-codepoints,
-index
-) {
-
-const base =
-normalizeCodepoints(codepoints) ||
-emojiToCodepoints(emoji) ||
-String(index);
-
-return base
-.replace(/\s+/g, "-")
-.toLowerCase();
 }
 
 /* ============================================================
-INDEX BUILDING
+EVENT LISTENERS
 ============================================================ */
 
-function buildIndexes() {
+function setupEventListeners() {
 
-AppState.groups.clear();
-AppState.subgroups.clear();
-
-AppState.emojis.forEach(emoji => {
-
-```
-if (!AppState.groups.has(emoji.group)) {
-
-  AppState.groups.set(
-    emoji.group,
-    []
-  );
-}
-
-
-AppState.groups
-  .get(emoji.group)
-  .push(emoji);
-
-
-const subgroupKey =
-  `${emoji.group}|||${emoji.subgroup}`;
-
-
-if (!AppState.subgroups.has(subgroupKey)) {
-
-  AppState.subgroups.set(
-    subgroupKey,
-    []
-  );
-}
-
-
-AppState.subgroups
-  .get(subgroupKey)
-  .push(emoji);
-```
-
-});
-}
-
-/* ============================================================
-EVENT BINDING
-============================================================ */
-
-function bindEvents() {
+/* ----------------------------------------------------------
+Search
+---------------------------------------------------------- */
 
 DOM.searchInput?.addEventListener(
 "input",
-debounce(handleSearch, CONFIG.searchDebounce)
+handleSearchInput
 );
+
+/* ----------------------------------------------------------
+Clear search
+---------------------------------------------------------- */
 
 DOM.clearSearch?.addEventListener(
 "click",
 clearSearch
 );
 
+/* ----------------------------------------------------------
+Sort
+---------------------------------------------------------- */
+
 DOM.sortSelect?.addEventListener(
 "change",
 event => {
 
 ```
-  AppState.sortMode = event.target.value;
+  STATE.sortMode =
+    event.target.value;
+
+
+  STATE.visibleCount =
+    CONFIG.INITIAL_RENDER_COUNT;
+
 
   applyFilters();
+
   renderResults();
+
 
 }
 ```
 
 );
 
+/* ----------------------------------------------------------
+Load more
+---------------------------------------------------------- */
+
 DOM.loadMore?.addEventListener(
 "click",
-loadMoreResults
+() => {
+
+```
+  STATE.visibleCount +=
+    CONFIG.LOAD_MORE_COUNT;
+
+
+  renderResults();
+
+
+}
+```
+
 );
 
-DOM.randomButton?.addEventListener(
+/* ----------------------------------------------------------
+Random emoji
+---------------------------------------------------------- */
+
+DOM.randomEmoji?.addEventListener(
 "click",
-showRandomEmoji
+openRandomEmoji
 );
+
+/* ----------------------------------------------------------
+Favorites button
+---------------------------------------------------------- */
 
 DOM.favoritesButton?.addEventListener(
 "click",
 showFavorites
 );
 
+/* ----------------------------------------------------------
+Modal close
+---------------------------------------------------------- */
+
 DOM.modalClose?.addEventListener(
 "click",
-closeModal
+closeEmojiModal
 );
 
-DOM.modal?.addEventListener(
+/* ----------------------------------------------------------
+Modal backdrop
+---------------------------------------------------------- */
+
+DOM.emojiModal?.addEventListener(
 "click",
 event => {
 
 ```
-  if (event.target === DOM.modal) {
-    closeModal();
+  if (
+    event.target === DOM.emojiModal ||
+    event.target.classList.contains(
+      "emoji-modal-backdrop"
+    )
+  ) {
+
+
+    closeEmojiModal();
+
+
   }
+
 
 }
 ```
 
 );
 
+/* ----------------------------------------------------------
+Keyboard shortcuts
+---------------------------------------------------------- */
+
 document.addEventListener(
 "keydown",
-handleKeyboard
+handleKeyboardShortcuts
 );
 
-window.addEventListener(
-"hashchange",
-processRoute
-);
+/* ----------------------------------------------------------
+Browser navigation
+---------------------------------------------------------- */
 
 window.addEventListener(
-"scroll",
-handleScrollLoad,
-{ passive: true }
+"popstate",
+() => {
+
+```
+  loadURLState();
+
+  applyFilters();
+
+  renderGroupFilters();
+
+  renderSubgroupFilters();
+
+  renderResults();
+
+
+}
+```
+
 );
+
 }
 
 /* ============================================================
-SEARCH
+SEARCH INPUT
 ============================================================ */
 
-function handleSearch(event) {
+function handleSearchInput(event) {
 
-AppState.searchQuery =
+STATE.searchQuery =
 event.target.value.trim();
 
-AppState.visibleCount =
-CONFIG.initialRenderCount;
+STATE.visibleCount =
+CONFIG.INITIAL_RENDER_COUNT;
 
-updateClearButton();
+/* Clear button */
+
+if (DOM.clearSearch) {
+
+```
+DOM.clearSearch.hidden =
+  !STATE.searchQuery;
+```
+
+}
+
+/* Search changes reset category selection only
+if user wants global searching */
 
 applyFilters();
 
 renderResults();
 
 updateURL();
+
 }
+
+/* ============================================================
+CLEAR SEARCH
+============================================================ */
 
 function clearSearch() {
 
-AppState.searchQuery = "";
+STATE.searchQuery = "";
 
 if (DOM.searchInput) {
+
+```
 DOM.searchInput.value = "";
+
+
+DOM.searchInput.focus();
+```
+
 }
 
-updateClearButton();
+if (DOM.clearSearch) {
+
+```
+DOM.clearSearch.hidden = true;
+```
+
+}
+
+STATE.visibleCount =
+CONFIG.INITIAL_RENDER_COUNT;
 
 applyFilters();
 
 renderResults();
 
-DOM.searchInput?.focus();
-}
+updateURL();
 
-function searchEmoji(
-emoji,
-query
-) {
-
-if (!query) {
-return {
-match: true,
-score: 0
-};
-}
-
-const normalizedQuery =
-normalizeSearchText(query);
-
-const terms =
-normalizedQuery
-.split(/\s+/)
-.filter(Boolean);
-
-let score = 0;
-
-for (const term of terms) {
-
-```
-const termUpper =
-  term.toUpperCase();
-
-
-if (
-  emoji.emoji === query ||
-  emoji.emoji.includes(query)
-) {
-
-  score += 1000;
-  continue;
-}
-
-
-if (
-  emoji.codepoints.includes(termUpper)
-) {
-
-  score += 900;
-  continue;
-}
-
-
-if (
-  emoji.normalizedName === term
-) {
-
-  score += 800;
-  continue;
-}
-
-
-if (
-  emoji.normalizedName.startsWith(term)
-) {
-
-  score += 700;
-  continue;
-}
-
-
-if (
-  emoji.normalizedName.includes(term)
-) {
-
-  score += 600;
-  continue;
-}
-
-
-if (
-  emoji.keywords.some(keyword =>
-    normalizeSearchText(keyword)
-      .includes(term)
-  )
-) {
-
-  score += 500;
-  continue;
-}
-
-
-if (
-  emoji.group &&
-  normalizeSearchText(emoji.group)
-    .includes(term)
-) {
-
-  score += 200;
-  continue;
-}
-
-
-if (
-  emoji.subgroup &&
-  normalizeSearchText(emoji.subgroup)
-    .includes(term)
-) {
-
-  score += 150;
-  continue;
-}
-
-
-if (
-  emoji.searchIndex.includes(term)
-) {
-
-  score += 50;
-  continue;
-}
-
-
-return {
-  match: false,
-  score: 0
-};
-```
-
-}
-
-return {
-match: true,
-score
-};
 }
 
 /* ============================================================
@@ -845,128 +1400,527 @@ FILTERING
 
 function applyFilters() {
 
-const results = [];
+const query =
+STATE.searchQuery
+.toLowerCase()
+.trim();
 
-for (const emoji of AppState.emojis) {
+let results =
+[...STATE.emojis];
+
+/* ----------------------------------------------------------
+Group filter
+---------------------------------------------------------- */
+
+if (
+STATE.selectedGroup !== "all"
+) {
 
 ```
-if (
-  AppState.activeGroup !== "all" &&
-  emoji.group !== AppState.activeGroup
-) {
-  continue;
-}
+results =
+  results.filter(
+    emoji =>
 
-
-if (
-  AppState.activeSubgroup !== "all" &&
-  emoji.subgroup !== AppState.activeSubgroup
-) {
-  continue;
-}
-
-
-const search =
-  searchEmoji(
-    emoji,
-    AppState.searchQuery
+      emoji.group ===
+      STATE.selectedGroup
   );
-
-
-if (!search.match) {
-  continue;
-}
-
-
-results.push({
-  emoji,
-  score: search.score
-});
 ```
 
 }
 
-AppState.filteredEmojis =
-sortResults(results)
-.map(item => item.emoji);
+/* ----------------------------------------------------------
+Subgroup filter
+---------------------------------------------------------- */
 
-AppState.visibleCount =
-Math.min(
-AppState.visibleCount,
-Math.max(
-CONFIG.initialRenderCount,
-AppState.filteredEmojis.length
-)
+if (
+STATE.selectedSubgroup !== "all"
+) {
+
+```
+results =
+  results.filter(
+    emoji =>
+
+      emoji.subgroup ===
+      STATE.selectedSubgroup
+  );
+```
+
+}
+
+/* ----------------------------------------------------------
+Search filter
+---------------------------------------------------------- */
+
+if (
+query.length >=
+CONFIG.SEARCH_MIN_LENGTH
+) {
+
+```
+if (query) {
+
+
+  const normalizedQuery =
+    normalizeSearchQuery(query);
+
+
+  results =
+    results.filter(
+      emoji =>
+
+        emojiMatchesSearch(
+          emoji,
+          normalizedQuery
+        )
+    );
+
+
+}
+```
+
+}
+
+/* ----------------------------------------------------------
+Sorting
+---------------------------------------------------------- */
+
+results =
+sortEmojis(
+results,
+STATE.sortMode,
+query
 );
+
+STATE.filteredEmojis =
+results;
+
 }
 
-function sortResults(results) {
+/* ============================================================
+NORMALIZE SEARCH QUERY
+============================================================ */
 
-const mode =
-AppState.sortMode;
+function normalizeSearchQuery(query) {
 
-return results.sort((a, b) => {
+return query
 
 ```
-const emojiA = a.emoji;
-const emojiB = b.emoji;
+.toLowerCase()
 
+.replace(
+  /u\+/g,
+  ""
+)
 
-if (mode === "name-asc") {
+.replace(
+  /0x/g,
+  ""
+)
 
-  return emojiA.name.localeCompare(
-    emojiB.name
-  );
-
-}
-
-
-if (mode === "name-desc") {
-
-  return emojiB.name.localeCompare(
-    emojiA.name
-  );
+.trim();
+```
 
 }
 
+/* ============================================================
+SEARCH MATCHING
+============================================================ */
 
-if (mode === "unicode") {
+function emojiMatchesSearch(
+emoji,
+query
+) {
 
-  return emojiA.codepoints.localeCompare(
-    emojiB.codepoints
-  );
+if (!query) {
+
+```
+return true;
+```
 
 }
 
+/* Direct emoji search */
 
-if (mode === "favorites") {
+if (
+emoji.emoji.includes(query)
+) {
 
-  const aFavorite =
-    AppState.favorites.has(emojiA.id);
+```
+return true;
+```
 
-  const bFavorite =
-    AppState.favorites.has(emojiB.id);
+}
+
+/* Normal full-text search */
+
+if (
+emoji.searchText.includes(query)
+) {
+
+```
+return true;
+```
+
+}
+
+/* Codepoint without spaces */
+
+const compactCodepoint =
+emoji.codepoint
+.replace(
+/\s+/g,
+""
+)
+.toLowerCase();
+
+const compactQuery =
+query
+.replace(
+/\s+/g,
+""
+);
+
+if (
+compactCodepoint.includes(
+compactQuery
+)
+) {
+
+```
+return true;
+```
+
+}
+
+/* Word matching */
+
+const words =
+query
+.split(/\s+/)
+.filter(Boolean);
+
+if (
+words.length > 1
+) {
+
+```
+return words.every(
+  word =>
+
+    emoji.searchText.includes(
+      word
+    )
+);
+```
+
+}
+
+return false;
+
+}
+
+/* ============================================================
+SORTING
+============================================================ */
+
+function sortEmojis(
+emojis,
+sortMode,
+searchQuery
+) {
+
+const sorted =
+[...emojis];
+
+switch (sortMode) {
+
+```
+/* --------------------------------------------------------
+   Name ascending
+   -------------------------------------------------------- */
+
+case "name-asc":
+
+  sorted.sort(
+    (
+      a,
+      b
+    ) =>
+
+      a.name.localeCompare(
+        b.name
+      )
+  );
+
+  break;
 
 
-  if (aFavorite !== bFavorite) {
+/* --------------------------------------------------------
+   Name descending
+   -------------------------------------------------------- */
 
-    return aFavorite ? -1 : 1;
+case "name-desc":
+
+  sorted.sort(
+    (
+      a,
+      b
+    ) =>
+
+      b.name.localeCompare(
+        a.name
+      )
+  );
+
+  break;
+
+
+/* --------------------------------------------------------
+   Unicode
+   -------------------------------------------------------- */
+
+case "unicode":
+
+  sorted.sort(
+    (
+      a,
+      b
+    ) =>
+
+      compareCodepoints(
+        a.codepoint,
+        b.codepoint
+      )
+  );
+
+  break;
+
+
+/* --------------------------------------------------------
+   Favorites
+   -------------------------------------------------------- */
+
+case "favorites":
+
+  sorted.sort(
+    (
+      a,
+      b
+    ) => {
+
+
+      if (
+        a.favorite &&
+        !b.favorite
+      ) return -1;
+
+
+      if (
+        !a.favorite &&
+        b.favorite
+      ) return 1;
+
+
+      return a.name.localeCompare(
+        b.name
+      );
+
+
+    }
+  );
+
+  break;
+
+
+/* --------------------------------------------------------
+   Search relevance
+   -------------------------------------------------------- */
+
+case "relevance":
+
+default:
+
+
+  if (searchQuery) {
+
+
+    sorted.sort(
+      (
+        a,
+        b
+      ) =>
+
+        getSearchScore(
+          b,
+          searchQuery
+        )
+
+        -
+
+        getSearchScore(
+          a,
+          searchQuery
+        )
+    );
+
+
   }
 
 
-  return emojiA.name.localeCompare(
-    emojiB.name
-  );
-}
-
-
-return (
-  b.score - a.score ||
-  emojiA.name.localeCompare(emojiB.name)
-);
+  break;
 ```
 
-});
+}
+
+return sorted;
+
+}
+
+/* ============================================================
+SEARCH RELEVANCE
+============================================================ */
+
+function getSearchScore(
+emoji,
+query
+) {
+
+const normalizedQuery =
+query.toLowerCase();
+
+const name =
+emoji.name.toLowerCase();
+
+let score = 0;
+
+/* Exact name */
+
+if (
+name === normalizedQuery
+) {
+
+```
+score += 1000;
+```
+
+}
+
+/* Starts with */
+
+if (
+name.startsWith(
+normalizedQuery
+)
+) {
+
+```
+score += 500;
+```
+
+}
+
+/* Name contains */
+
+if (
+name.includes(
+normalizedQuery
+)
+) {
+
+```
+score += 250;
+```
+
+}
+
+/* Group */
+
+if (
+emoji.group
+.toLowerCase()
+.includes(
+normalizedQuery
+)
+) {
+
+```
+score += 80;
+```
+
+}
+
+/* Subgroup */
+
+if (
+emoji.subgroup
+.toLowerCase()
+.includes(
+normalizedQuery
+)
+) {
+
+```
+score += 60;
+```
+
+}
+
+/* Codepoint */
+
+if (
+emoji.codepoint
+.toLowerCase()
+.includes(
+normalizedQuery
+)
+) {
+
+```
+score += 150;
+```
+
+}
+
+/* Favorite boost */
+
+if (
+emoji.favorite
+) {
+
+```
+score += 5;
+```
+
+}
+
+return score;
+
+}
+
+/* ============================================================
+CODEPOINT SORTING
+============================================================ */
+
+function compareCodepoints(
+a,
+b
+) {
+
+const firstA =
+parseInt(
+a.split(" ")[0],
+16
+);
+
+const firstB =
+parseInt(
+b.split(" ")[0],
+16
+);
+
+return firstA - firstB;
+
 }
 
 /* ============================================================
@@ -978,188 +1932,495 @@ function renderGroupFilters() {
 if (!DOM.groupFilters) return;
 
 const groups =
-Array.from(AppState.groups.entries());
+getGroups();
 
-DOM.groupFilters.innerHTML = "";
+const fragment =
+document.createDocumentFragment();
 
-DOM.groupFilters.appendChild(
-createFilterButton(
-"all",
-"All Emojis",
-AppState.emojis.length,
-AppState.activeGroup === "all",
-() => {
+/* ----------------------------------------------------------
+All
+---------------------------------------------------------- */
+
+fragment.appendChild(
 
 ```
-    AppState.activeGroup = "all";
-    AppState.activeSubgroup = "all";
+createFilterButton(
+  {
+    label: "All Emojis",
 
-    resetVisibleResults();
+    value: "all",
 
+    count:
+      STATE.emojis.length,
+
+    active:
+      STATE.selectedGroup ===
+      "all",
+
+    onClick:
+      () => {
+
+
+        STATE.selectedGroup =
+          "all";
+
+
+        STATE.selectedSubgroup =
+          "all";
+
+
+        STATE.visibleCount =
+          CONFIG.INITIAL_RENDER_COUNT;
+
+
+        applyFilters();
+
+        renderGroupFilters();
+
+        renderSubgroupFilters();
+
+        renderResults();
+
+        updateURL();
+
+
+      }
   }
 )
 ```
 
 );
 
-groups.forEach(([group, emojis]) => {
+/* ----------------------------------------------------------
+Groups
+---------------------------------------------------------- */
+
+groups.forEach(
+group => {
 
 ```
-DOM.groupFilters.appendChild(
-  createFilterButton(
-    group,
-    group,
-    emojis.length,
-    AppState.activeGroup === group,
-    () => {
+  const count =
+    STATE.emojis.filter(
+      emoji =>
 
-      AppState.activeGroup = group;
-      AppState.activeSubgroup = "all";
+        emoji.group === group
+    ).length;
 
-      resetVisibleResults();
 
-    }
-  )
-);
-```
+  fragment.appendChild(
 
-});
+    createFilterButton(
+      {
+        label:
+          formatGroupName(group),
+
+        value:
+          group,
+
+        count,
+
+        active:
+          STATE.selectedGroup ===
+          group,
+
+        onClick:
+          () => {
+
+
+            STATE.selectedGroup =
+              group;
+
+
+            STATE.selectedSubgroup =
+              "all";
+
+
+            STATE.visibleCount =
+              CONFIG.INITIAL_RENDER_COUNT;
+
+
+            applyFilters();
+
+            renderGroupFilters();
+
+            renderSubgroupFilters();
+
+            renderResults();
+
+            updateURL();
+
+
+          }
+      }
+    )
+
+  );
+
+
 }
+```
+
+);
+
+DOM.groupFilters.replaceChildren(
+fragment
+);
+
+}
+
+/* ============================================================
+SUBGROUP FILTERS
+============================================================ */
 
 function renderSubgroupFilters() {
 
 if (!DOM.subgroupFilters) return;
 
-DOM.subgroupFilters.innerHTML = "";
-
-if (
-AppState.activeGroup === "all"
-) {
-return;
-}
-
 const subgroups =
-[];
+getSubgroups();
 
-for (
-const [key, emojis]
-of AppState.subgroups.entries()
-) {
+const fragment =
+document.createDocumentFragment();
+
+/* ----------------------------------------------------------
+All subgroups
+---------------------------------------------------------- */
+
+fragment.appendChild(
 
 ```
-const [group, subgroup] =
-  key.split("|||");
-
-
-if (
-  group === AppState.activeGroup
-) {
-
-  subgroups.push({
-    subgroup,
-    count: emojis.length
-  });
-}
-```
-
-}
-
-if (!subgroups.length) {
-return;
-}
-
-DOM.subgroupFilters.appendChild(
 createFilterButton(
-"all",
-"All",
-subgroups.reduce(
-(total, item) =>
-total + item.count,
-0
-),
-AppState.activeSubgroup === "all",
-() => {
+  {
+    label: "All Subcategories",
 
-```
-    AppState.activeSubgroup = "all";
+    value: "all",
 
-    resetVisibleResults();
+    count:
 
+      STATE.selectedGroup === "all"
+
+        ? STATE.emojis.length
+
+        : STATE.emojis.filter(
+            emoji =>
+
+              emoji.group ===
+              STATE.selectedGroup
+          ).length,
+
+    active:
+
+      STATE.selectedSubgroup ===
+      "all",
+
+    onClick:
+      () => {
+
+
+        STATE.selectedSubgroup =
+          "all";
+
+
+        STATE.visibleCount =
+          CONFIG.INITIAL_RENDER_COUNT;
+
+
+        applyFilters();
+
+        renderSubgroupFilters();
+
+        renderResults();
+
+        updateURL();
+
+
+      }
   }
 )
 ```
 
 );
 
-subgroups.forEach(item => {
+/* ----------------------------------------------------------
+Subgroups
+---------------------------------------------------------- */
+
+subgroups.forEach(
+subgroup => {
 
 ```
-DOM.subgroupFilters.appendChild(
-  createFilterButton(
-    item.subgroup,
-    item.subgroup,
-    item.count,
-    AppState.activeSubgroup === item.subgroup,
-    () => {
+  const count =
+    STATE.emojis.filter(
+      emoji => {
 
-      AppState.activeSubgroup =
-        item.subgroup;
 
-      resetVisibleResults();
+        if (
+          STATE.selectedGroup !== "all" &&
+          emoji.group !== STATE.selectedGroup
+        ) {
 
-    }
-  )
+
+          return false;
+
+
+        }
+
+
+        return (
+          emoji.subgroup === subgroup
+        );
+
+
+      }
+    ).length;
+
+
+  fragment.appendChild(
+
+    createFilterButton(
+      {
+        label:
+          formatGroupName(subgroup),
+
+        value:
+          subgroup,
+
+        count,
+
+        active:
+
+          STATE.selectedSubgroup ===
+          subgroup,
+
+        onClick:
+          () => {
+
+
+            STATE.selectedSubgroup =
+              subgroup;
+
+
+            STATE.visibleCount =
+              CONFIG.INITIAL_RENDER_COUNT;
+
+
+            applyFilters();
+
+            renderSubgroupFilters();
+
+            renderResults();
+
+            updateURL();
+
+
+          }
+      }
+    )
+
+  );
+
+
+}
+```
+
 );
-```
 
-});
+DOM.subgroupFilters.replaceChildren(
+fragment
+);
+
 }
 
+/* ============================================================
+CREATE FILTER BUTTON
+============================================================ */
+
 function createFilterButton(
-value,
-label,
-count,
-active,
-onClick
+options
 ) {
 
 const button =
 document.createElement("button");
 
-button.type = "button";
+button.type =
+"button";
 
 button.className =
-`filter-button${active ? " active" : ""}`;
+"filter-button";
 
-button.dataset.value = value;
+if (options.active) {
 
-const text =
+```
+button.classList.add(
+  "active"
+);
+```
+
+}
+
+const label =
 document.createElement("span");
 
-text.textContent = label;
+label.textContent =
+options.label;
 
-const badge =
+const count =
 document.createElement("span");
 
-badge.className = "filter-count";
+count.className =
+"filter-count";
 
-badge.textContent = count;
+count.textContent =
+formatNumber(
+options.count
+);
 
 button.append(
-text,
-badge
+label,
+count
 );
 
 button.addEventListener(
 "click",
-onClick
+options.onClick
 );
 
 return button;
+
 }
 
 /* ============================================================
-RESULTS RENDERING
+GET GROUPS
+============================================================ */
+
+function getGroups() {
+
+return [
+
+```
+...new Set(
+
+  STATE.emojis.map(
+    emoji =>
+      emoji.group
+  )
+
+)
+```
+
+]
+
+```
+.filter(Boolean)
+
+.sort(
+  (
+    a,
+    b
+  ) =>
+
+    a.localeCompare(b)
+);
+```
+
+}
+
+/* ============================================================
+GET SUBGROUPS
+============================================================ */
+
+function getSubgroups() {
+
+return [
+
+```
+...new Set(
+
+  STATE.emojis
+
+    .filter(
+      emoji => {
+
+
+        if (
+          STATE.selectedGroup ===
+          "all"
+        ) {
+
+
+          return true;
+
+
+        }
+
+
+        return (
+          emoji.group ===
+          STATE.selectedGroup
+        );
+
+
+      }
+    )
+
+    .map(
+      emoji =>
+        emoji.subgroup
+    )
+
+)
+```
+
+]
+
+```
+.filter(Boolean)
+
+.sort(
+  (
+    a,
+    b
+  ) =>
+
+    a.localeCompare(b)
+);
+```
+
+}
+
+/* ============================================================
+FORMAT GROUP NAME
+============================================================ */
+
+function formatGroupName(value) {
+
+if (!value) {
+
+```
+return "Other";
+```
+
+}
+
+return String(value)
+
+```
+.replace(
+  /[-_]/g,
+  " "
+)
+
+.replace(
+  /\b\w/g,
+  character =>
+    character.toUpperCase()
+);
+```
+
+}
+
+/* ============================================================
+RENDER RESULTS
 ============================================================ */
 
 function renderResults() {
@@ -1167,62 +2428,121 @@ function renderResults() {
 if (!DOM.emojiGrid) return;
 
 const total =
-AppState.filteredEmojis.length;
+STATE.filteredEmojis.length;
 
-updateResultCount(total);
+const visible =
+STATE.filteredEmojis.slice(
+0,
+STATE.visibleCount
+);
 
-if (!total) {
+/* ----------------------------------------------------------
+Empty state
+---------------------------------------------------------- */
+
+if (
+total === 0
+) {
 
 ```
-DOM.emojiGrid.innerHTML = "";
+DOM.emojiGrid.replaceChildren();
 
-showEmptyState(true);
 
-toggleLoadMore(false);
+showEmptyState();
+
+
+updateResultCount(
+  0
+);
+
+
+hideLoadMore();
+
 
 return;
 ```
 
 }
 
-showEmptyState(false);
+hideEmptyState();
 
-const visible =
-AppState.filteredEmojis.slice(
-0,
-AppState.visibleCount
-);
+/* ----------------------------------------------------------
+Render cards
+---------------------------------------------------------- */
 
 const fragment =
 document.createDocumentFragment();
 
-visible.forEach(emoji => {
+visible.forEach(
+emoji => {
 
 ```
-fragment.appendChild(
-  createEmojiCard(emoji)
+  fragment.appendChild(
+
+    createEmojiCard(
+      emoji
+    )
+
+  );
+
+
+}
+```
+
+);
+
+DOM.emojiGrid.replaceChildren(
+fragment
+);
+
+/* ----------------------------------------------------------
+Count
+---------------------------------------------------------- */
+
+updateResultCount(
+total
+);
+
+/* ----------------------------------------------------------
+Load more
+---------------------------------------------------------- */
+
+if (
+visible.length < total
+) {
+
+```
+showLoadMore(
+  total -
+  visible.length
 );
 ```
 
-});
-
-DOM.emojiGrid.innerHTML = "";
-
-DOM.emojiGrid.appendChild(fragment);
-
-toggleLoadMore(
-AppState.visibleCount < total
-);
 }
 
-function createEmojiCard(emoji) {
+else {
+
+```
+hideLoadMore();
+```
+
+}
+
+}
+
+/* ============================================================
+CREATE EMOJI CARD
+============================================================ */
+
+function createEmojiCard(
+emoji
+) {
 
 const card =
 document.createElement("article");
 
-card.className = "emoji-card";
-
-card.dataset.id = emoji.id;
+card.className =
+"emoji-card";
 
 card.tabIndex = 0;
 
@@ -1233,57 +2553,90 @@ card.setAttribute(
 
 card.setAttribute(
 "aria-label",
-`View ${emoji.name}`
+`View details for ${emoji.name}`
 );
+
+/* ----------------------------------------------------------
+Emoji symbol
+---------------------------------------------------------- */
 
 const symbol =
 document.createElement("div");
 
-symbol.className = "emoji-symbol";
+symbol.className =
+"emoji-symbol";
 
-symbol.textContent = emoji.emoji;
+symbol.textContent =
+emoji.emoji;
+
+/* ----------------------------------------------------------
+Info
+---------------------------------------------------------- */
 
 const info =
 document.createElement("div");
 
-info.className = "emoji-info";
+info.className =
+"emoji-info";
 
 const name =
 document.createElement("h3");
 
-name.className = "emoji-name";
+name.className =
+"emoji-name";
 
 name.textContent =
-emoji.name ||
-"Unnamed Emoji";
+emoji.name;
 
-const code =
+const codepoint =
 document.createElement("div");
 
-code.className = "emoji-codepoint";
+codepoint.className =
+"emoji-codepoint";
 
-code.textContent =
-emoji.codepoints;
+codepoint.textContent =
+`U+${emoji.codepoint}`;
+
+info.append(
+name,
+codepoint
+);
+
+/* ----------------------------------------------------------
+Favorite
+---------------------------------------------------------- */
 
 const favorite =
 document.createElement("button");
 
-favorite.type = "button";
+favorite.type =
+"button";
 
 favorite.className =
 "emoji-favorite";
 
-favorite.textContent =
-AppState.favorites.has(emoji.id)
-? "★"
-: "☆";
-
 favorite.setAttribute(
 "aria-label",
-AppState.favorites.has(emoji.id)
-? "Remove from favorites"
-: "Add to favorites"
+
+```
+emoji.favorite
+
+  ? `Remove ${emoji.name} from favorites`
+
+  : `Add ${emoji.name} to favorites`
+```
+
 );
+
+favorite.textContent =
+
+```
+emoji.favorite
+
+  ? "★"
+
+  : "☆";
+```
 
 favorite.addEventListener(
 "click",
@@ -1292,33 +2645,58 @@ event => {
 ```
   event.stopPropagation();
 
-  toggleFavorite(emoji);
+
+  toggleFavorite(
+    emoji
+  );
+
 
   favorite.textContent =
-    AppState.favorites.has(emoji.id)
+
+    emoji.favorite
+
       ? "★"
+
       : "☆";
+
+
+  favorite.setAttribute(
+    "aria-label",
+
+    emoji.favorite
+
+      ? `Remove ${emoji.name} from favorites`
+
+      : `Add ${emoji.name} to favorites`
+  );
+
 
 }
 ```
 
 );
 
-info.append(
-name,
-code
-);
-
-card.append(
-symbol,
-info,
-favorite
-);
+/* ----------------------------------------------------------
+Card click
+---------------------------------------------------------- */
 
 card.addEventListener(
 "click",
-() => openEmoji(emoji)
+() => {
+
+```
+  openEmojiModal(
+    emoji
+  );
+
+}
+```
+
 );
+
+/* ----------------------------------------------------------
+Keyboard
+---------------------------------------------------------- */
 
 card.addEventListener(
 "keydown",
@@ -1330,103 +2708,396 @@ event => {
     event.key === " "
   ) {
 
+
     event.preventDefault();
 
-    openEmoji(emoji);
+
+    openEmojiModal(
+      emoji
+    );
+
+
   }
+
 
 }
 ```
 
 );
 
+card.append(
+symbol,
+info,
+favorite
+);
+
 return card;
+
+}
+
+/* ============================================================
+RESULT COUNT
+============================================================ */
+
+function updateResultCount(
+count
+) {
+
+if (DOM.resultCount) {
+
+```
+DOM.resultCount.textContent =
+  formatNumber(count);
+```
+
+}
+
+if (DOM.resultLabel) {
+
+```
+DOM.resultLabel.textContent =
+
+  count === 1
+
+    ? "emoji"
+
+    : "emojis";
+```
+
+}
+
 }
 
 /* ============================================================
 LOAD MORE
 ============================================================ */
 
-function loadMoreResults() {
-
-AppState.visibleCount +=
-CONFIG.renderBatchSize;
-
-renderResults();
-}
-
-function handleScrollLoad() {
-
-if (
-!DOM.loadMore ||
-DOM.loadMore.hidden
+function showLoadMore(
+remaining
 ) {
-return;
-}
-
-const rect =
-DOM.loadMore.getBoundingClientRect();
-
-if (
-rect.top <
-window.innerHeight + 300
-) {
-
-```
-loadMoreResults();
-```
-
-}
-}
-
-function toggleLoadMore(show) {
 
 if (!DOM.loadMore) return;
 
-DOM.loadMore.hidden = !show;
+DOM.loadMore.hidden =
+false;
+
+const nextAmount =
+Math.min(
+CONFIG.LOAD_MORE_COUNT,
+remaining
+);
+
+DOM.loadMore.textContent =
+`Load ${formatNumber(nextAmount)} More Emojis`;
+
+}
+
+function hideLoadMore() {
+
+if (!DOM.loadMore) return;
+
+DOM.loadMore.hidden =
+true;
+
 }
 
 /* ============================================================
-EMOJI DETAIL VIEW
+FAVORITES
 ============================================================ */
 
-function openEmoji(emoji) {
+function loadFavorites() {
 
-AppState.selectedEmoji = emoji;
-
-addRecentEmoji(emoji);
-
-if (!DOM.modal) {
+try {
 
 ```
-copyEmojiToClipboard(emoji);
+const stored =
+  localStorage.getItem(
+    CONFIG.FAVORITES_STORAGE_KEY
+  );
+
+
+if (!stored) return;
+
+
+const favorites =
+  JSON.parse(stored);
+
+
+if (
+  Array.isArray(favorites)
+) {
+
+
+  STATE.favorites =
+    new Set(favorites);
+
+
+}
+```
+
+}
+
+catch (error) {
+
+```
+console.warn(
+  "[Emoji Encyclopedia] Unable to load favorites:",
+  error
+);
+
+
+STATE.favorites =
+  new Set();
+```
+
+}
+
+}
+
+function saveFavorites() {
+
+try {
+
+```
+localStorage.setItem(
+
+  CONFIG.FAVORITES_STORAGE_KEY,
+
+  JSON.stringify(
+
+    Array.from(
+      STATE.favorites
+    )
+
+  )
+
+);
+```
+
+}
+
+catch (error) {
+
+```
+console.warn(
+  "[Emoji Encyclopedia] Unable to save favorites:",
+  error
+);
+```
+
+}
+
+}
+
+function toggleFavorite(
+emoji
+) {
+
+if (!emoji) return;
+
+if (
+STATE.favorites.has(
+emoji.id
+)
+) {
+
+```
+STATE.favorites.delete(
+  emoji.id
+);
+
+
+emoji.favorite = false;
+
+
+showToast(
+  `${emoji.emoji} Removed from favorites`
+);
+```
+
+}
+
+else {
+
+```
+STATE.favorites.add(
+  emoji.id
+);
+
+
+emoji.favorite = true;
+
+
+showToast(
+  `${emoji.emoji} Added to favorites`
+);
+```
+
+}
+
+saveFavorites();
+
+updateStats();
+
+}
+
+/* ============================================================
+SHOW FAVORITES
+============================================================ */
+
+function showFavorites() {
+
+const favoriteCount =
+STATE.favorites.size;
+
+if (
+favoriteCount === 0
+) {
+
+```
+showToast(
+  "You haven't added any favorites yet."
+);
+
 
 return;
 ```
 
 }
 
-DOM.modal.hidden = false;
+/* Reset category filters */
 
-document.body.classList.add(
-"modal-open"
-);
+STATE.selectedGroup =
+"all";
 
-renderEmojiModal(emoji);
+STATE.selectedSubgroup =
+"all";
 
-updateURL(emoji.id);
+/* Clear search */
+
+STATE.searchQuery = "";
+
+if (DOM.searchInput) {
+
+```
+DOM.searchInput.value = "";
+```
+
 }
 
-function renderEmojiModal(emoji) {
+if (DOM.clearSearch) {
 
-if (!DOM.modalContent) return;
+```
+DOM.clearSearch.hidden = true;
+```
 
-DOM.modalContent.innerHTML = "";
+}
+
+/* Filter favorites */
+
+STATE.filteredEmojis =
+STATE.emojis.filter(
+emoji =>
+
+```
+    emoji.favorite
+);
+```
+
+STATE.sortMode =
+"favorites";
+
+if (DOM.sortSelect) {
+
+```
+DOM.sortSelect.value =
+  "favorites";
+```
+
+}
+
+STATE.visibleCount =
+CONFIG.INITIAL_RENDER_COUNT;
+
+renderGroupFilters();
+
+renderSubgroupFilters();
+
+renderResults();
+
+showToast(
+`${favoriteCount} favorite${favoriteCount === 1 ? "" : "s"}`
+);
+
+}
+
+/* ============================================================
+RANDOM EMOJI
+============================================================ */
+
+function openRandomEmoji() {
+
+if (
+!STATE.emojis.length
+) return;
+
+const randomIndex =
+Math.floor(
+
+```
+  Math.random() *
+  STATE.emojis.length
+
+);
+```
+
+const emoji =
+STATE.emojis[
+randomIndex
+];
+
+openEmojiModal(
+emoji
+);
+
+}
+
+/* ============================================================
+EMOJI MODAL
+============================================================ */
+
+function openEmojiModal(
+emoji
+) {
+
+if (
+!emoji ||
+!DOM.emojiModal ||
+!DOM.emojiModalContent
+) {
+
+```
+return;
+```
+
+}
+
+STATE.activeEmoji =
+emoji;
+
+/* Clear existing */
+
+DOM.emojiModalContent.replaceChildren();
+
+/* ----------------------------------------------------------
+Header
+---------------------------------------------------------- */
 
 const header =
 document.createElement("div");
 
-header.className = "emoji-modal-header";
+header.className =
+"emoji-modal-header";
 
 const symbol =
 document.createElement("div");
@@ -1437,15 +3108,17 @@ symbol.className =
 symbol.textContent =
 emoji.emoji;
 
-const title =
+const titleContainer =
 document.createElement("div");
 
-const name =
+const title =
 document.createElement("h2");
 
-name.textContent =
-emoji.name ||
-"Unnamed Emoji";
+title.id =
+"emojiModalTitle";
+
+title.textContent =
+emoji.name;
 
 const category =
 document.createElement("p");
@@ -1454,17 +3127,21 @@ category.className =
 "emoji-modal-category";
 
 category.textContent =
-`${emoji.group} · ${emoji.subgroup}`;
+`${formatGroupName(emoji.group)} · ${formatGroupName(emoji.subgroup)}`;
 
-title.append(
-name,
+titleContainer.append(
+title,
 category
 );
 
 header.append(
 symbol,
-title
+titleContainer
 );
+
+/* ----------------------------------------------------------
+Metadata
+---------------------------------------------------------- */
 
 const metadata =
 document.createElement("div");
@@ -1472,59 +3149,54 @@ document.createElement("div");
 metadata.className =
 "emoji-metadata";
 
-addMetadataRow(
-metadata,
-"Unicode Codepoints",
-emoji.codepoints
-);
-
-if (emoji.version) {
+metadata.append(
 
 ```
-addMetadataRow(
-  metadata,
-  "Emoji Version",
-  emoji.version
-);
-```
+createMetadataRow(
+  "Emoji",
+  emoji.emoji
+),
 
-}
+createMetadataRow(
+  "Name",
+  emoji.name
+),
 
-if (emoji.status) {
+createMetadataRow(
+  "Unicode Codepoint",
+  `U+${emoji.codepoint}`
+),
 
-```
-addMetadataRow(
-  metadata,
+createMetadataRow(
+  "Group",
+  formatGroupName(
+    emoji.group
+  )
+),
+
+createMetadataRow(
+  "Subgroup",
+  formatGroupName(
+    emoji.subgroup
+  )
+),
+
+createMetadataRow(
   "Qualification",
   emoji.status
-);
+),
+
+createMetadataRow(
+  "Emoji Version",
+  emoji.section || "Unknown"
+)
 ```
 
-}
-
-addMetadataRow(
-metadata,
-"Category",
-emoji.group
 );
 
-addMetadataRow(
-metadata,
-"Subcategory",
-emoji.subgroup
-);
-
-if (emoji.keywords.length) {
-
-```
-addMetadataRow(
-  metadata,
-  "Keywords",
-  emoji.keywords.join(", ")
-);
-```
-
-}
+/* ----------------------------------------------------------
+Actions
+---------------------------------------------------------- */
 
 const actions =
 document.createElement("div");
@@ -1532,72 +3204,221 @@ document.createElement("div");
 actions.className =
 "emoji-modal-actions";
 
-const copyButton =
+/* Copy emoji */
+
+const copyEmojiButton =
 createActionButton(
 "Copy Emoji",
-() => copyEmojiToClipboard(emoji)
-);
-
-const codeButton =
-createActionButton(
-"Copy Codepoint",
-() =>
-copyText(
-emoji.codepoints,
-"Codepoint copied!"
-)
-);
-
-const favoriteButton =
-createActionButton(
-AppState.favorites.has(emoji.id)
-? "Remove Favorite"
-: "Add Favorite",
-() => {
+async () => {
 
 ```
-    toggleFavorite(emoji);
+    const copied =
+      await copyToClipboard(
+        emoji.emoji
+      );
 
-    renderEmojiModal(emoji);
+
+    if (copied) {
+
+
+      showToast(
+        `${emoji.emoji} Copied to clipboard`
+      );
+
+
+    }
+
 
   }
 );
 ```
 
-const shareButton =
+/* Copy Unicode */
+
+const copyUnicodeButton =
 createActionButton(
-"Copy Link",
+"Copy Unicode",
+async () => {
+
+```
+    const copied =
+      await copyToClipboard(
+        `U+${emoji.codepoint}`
+      );
+
+
+    if (copied) {
+
+
+      showToast(
+        "Unicode codepoint copied"
+      );
+
+
+    }
+
+
+  }
+);
+```
+
+/* Favorite */
+
+const favoriteButton =
+createActionButton(
+emoji.favorite
+
+```
+    ? "Remove Favorite"
+
+    : "Add Favorite",
+
+  () => {
+
+
+    toggleFavorite(
+      emoji
+    );
+
+
+    favoriteButton.textContent =
+
+      emoji.favorite
+
+        ? "Remove Favorite"
+
+        : "Add Favorite";
+
+
+  }
+);
+```
+
+/* Search similar */
+
+const similarButton =
+createActionButton(
+"View Category",
 () => {
 
 ```
-    const url =
-      `${window.location.origin}${window.location.pathname}#emoji=${encodeURIComponent(emoji.id)}`;
+    closeEmojiModal();
 
 
-    copyText(
-      url,
-      "Link copied!"
-    );
+    STATE.selectedGroup =
+      emoji.group;
+
+
+    STATE.selectedSubgroup =
+      "all";
+
+
+    STATE.searchQuery =
+      "";
+
+
+    if (DOM.searchInput) {
+
+
+      DOM.searchInput.value =
+        "";
+
+
+    }
+
+
+    applyFilters();
+
+    renderGroupFilters();
+
+    renderSubgroupFilters();
+
+    renderResults();
+
+    updateURL();
+
+
   }
 );
 ```
 
 actions.append(
-copyButton,
-codeButton,
+
+```
+copyEmojiButton,
+
+copyUnicodeButton,
+
 favoriteButton,
-shareButton
+
+similarButton
+```
+
 );
 
-DOM.modalContent.append(
+DOM.emojiModalContent.append(
+
+```
 header,
+
 metadata,
+
 actions
+```
+
 );
+
+/* ----------------------------------------------------------
+Open modal
+---------------------------------------------------------- */
+
+DOM.emojiModal.hidden =
+false;
+
+document.body.classList.add(
+"modal-open"
+);
+
+/* Focus close button */
+
+setTimeout(
+() => {
+
+```
+  DOM.modalClose?.focus();
+
+
+},
+50
+```
+
+);
+
 }
 
-function addMetadataRow(
-container,
+function closeEmojiModal() {
+
+if (
+!DOM.emojiModal
+) return;
+
+DOM.emojiModal.hidden =
+true;
+
+document.body.classList.remove(
+"modal-open"
+);
+
+STATE.activeEmoji =
+null;
+
+}
+
+/* ============================================================
+METADATA ROW
+============================================================ */
+
+function createMetadataRow(
 label,
 value
 ) {
@@ -1609,7 +3430,7 @@ row.className =
 "emoji-metadata-row";
 
 const labelElement =
-document.createElement("span");
+document.createElement("div");
 
 labelElement.className =
 "emoji-metadata-label";
@@ -1618,7 +3439,7 @@ labelElement.textContent =
 label;
 
 const valueElement =
-document.createElement("code");
+document.createElement("div");
 
 valueElement.className =
 "emoji-metadata-value";
@@ -1631,8 +3452,13 @@ labelElement,
 valueElement
 );
 
-container.appendChild(row);
+return row;
+
 }
+
+/* ============================================================
+ACTION BUTTON
+============================================================ */
 
 function createActionButton(
 label,
@@ -1642,12 +3468,14 @@ handler
 const button =
 document.createElement("button");
 
-button.type = "button";
+button.type =
+"button";
 
 button.className =
 "emoji-action-button";
 
-button.textContent = label;
+button.textContent =
+label;
 
 button.addEventListener(
 "click",
@@ -1655,335 +3483,110 @@ handler
 );
 
 return button;
-}
 
-function closeModal() {
-
-AppState.selectedEmoji = null;
-
-if (DOM.modal) {
-DOM.modal.hidden = true;
-}
-
-document.body.classList.remove(
-"modal-open"
-);
-
-if (
-window.location.hash.startsWith("#emoji=")
-) {
-
-```
-history.replaceState(
-  null,
-  "",
-  window.location.pathname +
-  window.location.search
-);
-```
-
-}
-}
-
-/* ============================================================
-FAVORITES
-============================================================ */
-
-function toggleFavorite(emoji) {
-
-if (
-AppState.favorites.has(emoji.id)
-) {
-
-```
-AppState.favorites.delete(emoji.id);
-```
-
-} else {
-
-```
-AppState.favorites.add(emoji.id);
-```
-
-}
-
-saveFavorites();
-
-updateStats();
-
-renderResults();
-}
-
-function showFavorites() {
-
-const favorites =
-AppState.emojis.filter(emoji =>
-AppState.favorites.has(emoji.id)
-);
-
-AppState.searchQuery = "";
-
-if (DOM.searchInput) {
-DOM.searchInput.value = "";
-}
-
-AppState.filteredEmojis =
-favorites;
-
-AppState.visibleCount =
-CONFIG.initialRenderCount;
-
-updateResultCount(
-favorites.length,
-"favorites"
-);
-
-renderResults();
-}
-
-function saveFavorites() {
-
-localStorage.setItem(
-CONFIG.storageKeys.favorites,
-JSON.stringify(
-[...AppState.favorites]
-)
-);
-}
-
-/* ============================================================
-RECENT EMOJIS
-============================================================ */
-
-function addRecentEmoji(emoji) {
-
-AppState.recent =
-AppState.recent.filter(
-id => id !== emoji.id
-);
-
-AppState.recent.unshift(
-emoji.id
-);
-
-AppState.recent =
-AppState.recent.slice(
-0,
-CONFIG.maxRecent
-);
-
-localStorage.setItem(
-CONFIG.storageKeys.recent,
-JSON.stringify(AppState.recent)
-);
-}
-
-/* ============================================================
-RANDOM DISCOVERY
-============================================================ */
-
-function showRandomEmoji() {
-
-const source =
-AppState.filteredEmojis.length
-? AppState.filteredEmojis
-: AppState.emojis;
-
-if (!source.length) return;
-
-const randomIndex =
-Math.floor(
-Math.random() * source.length
-);
-
-openEmoji(
-source[randomIndex]
-);
 }
 
 /* ============================================================
 CLIPBOARD
 ============================================================ */
 
-async function copyEmojiToClipboard(emoji) {
-
-await copyText(
-emoji.emoji,
-`${emoji.emoji} copied!`
-);
-}
-
-async function copyText(
-value,
-message = "Copied!"
+async function copyToClipboard(
+text
 ) {
 
 try {
 
 ```
-await navigator.clipboard.writeText(value);
+if (
+  navigator.clipboard &&
+  window.isSecureContext
+) {
 
-showToast(message);
+
+  await navigator.clipboard.writeText(
+    text
+  );
+
+
+  return true;
+
+
+}
+
+
+/* Fallback */
+
+const textarea =
+  document.createElement(
+    "textarea"
+  );
+
+
+textarea.value =
+  text;
+
+
+textarea.style.position =
+  "fixed";
+
+
+textarea.style.opacity =
+  "0";
+
+
+document.body.appendChild(
+  textarea
+);
+
+
+textarea.select();
+
+
+document.execCommand(
+  "copy"
+);
+
+
+textarea.remove();
+
+
+return true;
 ```
 
-} catch (error) {
+}
+
+catch (error) {
 
 ```
 console.warn(
-  "Clipboard API unavailable:",
+  "Clipboard copy failed:",
   error
 );
 
 
-fallbackCopy(value);
+showToast(
+  "Unable to copy to clipboard"
+);
 
-showToast(message);
+
+return false;
 ```
 
 }
-}
 
-function fallbackCopy(value) {
-
-const textarea =
-document.createElement("textarea");
-
-textarea.value = value;
-
-textarea.style.position = "fixed";
-
-textarea.style.opacity = "0";
-
-document.body.appendChild(textarea);
-
-textarea.select();
-
-document.execCommand("copy");
-
-textarea.remove();
 }
 
 /* ============================================================
-URL ROUTING
+KEYBOARD SHORTCUTS
 ============================================================ */
 
-function processRoute() {
-
-const hash =
-window.location.hash;
-
-if (!hash) return;
-
-const match =
-hash.match(/^#emoji=(.+)$/);
-
-if (!match) return;
-
-const id =
-decodeURIComponent(match[1]);
-
-const emoji =
-AppState.emojis.find(
-item => item.id === id
-);
-
-if (emoji) {
-
-```
-setTimeout(() => {
-  openEmojiFromRoute(emoji);
-}, 0);
-```
-
-}
-}
-
-function openEmojiFromRoute(emoji) {
-
-AppState.selectedEmoji = emoji;
-
-addRecentEmoji(emoji);
-
-if (!DOM.modal) return;
-
-DOM.modal.hidden = false;
-
-document.body.classList.add(
-"modal-open"
-);
-
-renderEmojiModal(emoji);
-}
-
-function updateURL(emojiId = null) {
-
-if (emojiId) {
-
-```
-const hash =
-  `#emoji=${encodeURIComponent(emojiId)}`;
-
-
-if (
-  window.location.hash !== hash
+function handleKeyboardShortcuts(
+event
 ) {
 
-  history.replaceState(
-    null,
-    "",
-    hash
-  );
-}
-
-return;
-```
-
-}
-
-if (
-AppState.searchQuery
-) {
-
-```
-const params =
-  new URLSearchParams();
-
-params.set(
-  "q",
-  AppState.searchQuery
-);
-
-
-history.replaceState(
-  null,
-  "",
-  `${window.location.pathname}?${params.toString()}`
-);
-```
-
-}
-}
-
-/* ============================================================
-KEYBOARD CONTROLS
-============================================================ */
-
-function handleKeyboard(event) {
-
-if (
-event.key === "/" &&
-!isTypingTarget(event.target)
-) {
-
-```
-event.preventDefault();
-
-DOM.searchInput?.focus();
-
-return;
-```
-
-}
+/* ----------------------------------------------------------
+Escape
+---------------------------------------------------------- */
 
 if (
 event.key === "Escape"
@@ -1991,397 +3594,518 @@ event.key === "Escape"
 
 ```
 if (
-  AppState.selectedEmoji
+  STATE.activeEmoji
 ) {
 
-  closeModal();
 
-} else {
+  closeEmojiModal();
 
-  clearSearch();
+
 }
+
+
+return;
 ```
 
 }
+
+/* ----------------------------------------------------------
+Search with /
+---------------------------------------------------------- */
 
 if (
-event.key === "Enter" &&
-event.ctrlKey
+event.key === "/" &&
+!isTypingInInput()
 ) {
 
 ```
-showRandomEmoji();
+event.preventDefault();
+
+
+DOM.searchInput?.focus();
+
+
+return;
 ```
 
 }
+
+/* ----------------------------------------------------------
+Random emoji
+Ctrl + Enter
+---------------------------------------------------------- */
+
+if (
+event.ctrlKey &&
+event.key === "Enter"
+) {
+
+```
+event.preventDefault();
+
+
+openRandomEmoji();
+```
+
 }
 
-function isTypingTarget(element) {
-
-if (!element) return false;
-
-const tag =
-element.tagName?.toLowerCase();
-
-return (
-tag === "input" ||
-tag === "textarea" ||
-element.isContentEditable
-);
 }
 
 /* ============================================================
-UI STATE
+INPUT DETECTION
 ============================================================ */
 
-function renderAll() {
+function isTypingInInput() {
 
-renderGroupFilters();
+const active =
+document.activeElement;
 
-renderSubgroupFilters();
+if (!active) return false;
 
-renderResults();
+const tag =
+active.tagName.toLowerCase();
 
-updateStats();
-
-updateClearButton();
-}
-
-function resetVisibleResults() {
-
-AppState.visibleCount =
-CONFIG.initialRenderCount;
-
-applyFilters();
-
-renderAll();
-
-updateURL();
-}
-
-function updateResultCount(
-count,
-label = "emojis"
-) {
-
-if (DOM.resultCount) {
+return (
 
 ```
-DOM.resultCount.textContent =
-  count.toLocaleString();
+tag === "input" ||
+
+tag === "textarea" ||
+
+tag === "select" ||
+
+active.isContentEditable
 ```
 
-}
-
-if (DOM.resultLabel) {
-
-```
-DOM.resultLabel.textContent =
-  label;
-```
+);
 
 }
-}
 
-function updateClearButton() {
-
-if (!DOM.clearSearch) return;
-
-DOM.clearSearch.hidden =
-!AppState.searchQuery;
-}
+/* ============================================================
+STATS
+============================================================ */
 
 function updateStats() {
+
+/* ----------------------------------------------------------
+Total emojis
+---------------------------------------------------------- */
 
 if (DOM.statsTotal) {
 
 ```
 DOM.statsTotal.textContent =
-  AppState.emojis.length.toLocaleString();
+  formatNumber(
+    STATE.emojis.length
+  );
 ```
 
 }
+
+/* ----------------------------------------------------------
+Groups
+---------------------------------------------------------- */
 
 if (DOM.statsGroups) {
 
 ```
 DOM.statsGroups.textContent =
-  AppState.groups.size.toLocaleString();
+  formatNumber(
+    getGroups().length
+  );
 ```
 
 }
+
+/* ----------------------------------------------------------
+Favorites
+---------------------------------------------------------- */
 
 if (DOM.statsFavorites) {
 
 ```
 DOM.statsFavorites.textContent =
-  AppState.favorites.size.toLocaleString();
+  formatNumber(
+    STATE.favorites.size
+  );
 ```
 
 }
+
 }
 
-function setLoading(show) {
+/* ============================================================
+LOADING STATE
+============================================================ */
 
-if (!DOM.loadingState) return;
+function hideLoadingState() {
 
-DOM.loadingState.hidden = !show;
+STATE.isLoading =
+false;
+
+if (DOM.loadingState) {
+
+```
+DOM.loadingState.hidden =
+  true;
+```
+
 }
 
-function showEmptyState(show) {
-
-if (!DOM.emptyState) return;
-
-DOM.emptyState.hidden = !show;
 }
 
-function showError(error) {
+/* ============================================================
+EMPTY STATE
+============================================================ */
 
-console.error(error);
+function showEmptyState() {
+
+if (DOM.emptyState) {
+
+```
+DOM.emptyState.hidden =
+  false;
+```
+
+}
+
+}
+
+function hideEmptyState() {
+
+if (DOM.emptyState) {
+
+```
+DOM.emptyState.hidden =
+  true;
+```
+
+}
+
+}
+
+/* ============================================================
+ERROR STATE
+============================================================ */
+
+function showErrorState(
+message
+) {
+
+STATE.hasError =
+true;
+
+STATE.isLoading =
+false;
+
+if (DOM.loadingState) {
+
+```
+DOM.loadingState.hidden =
+  true;
+```
+
+}
 
 if (DOM.errorState) {
 
 ```
-DOM.errorState.hidden = false;
+DOM.errorState.hidden =
+  false;
+
 
 DOM.errorState.textContent =
-  `Unable to load the emoji database: ${error.message}`;
+  message;
 ```
 
 }
+
+}
+
+/* ============================================================
+URL STATE
+============================================================ */
+
+function loadURLState() {
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+const query =
+params.get(
+CONFIG.URL_SEARCH_PARAM
+);
+
+const group =
+params.get(
+CONFIG.URL_GROUP_PARAM
+);
+
+const subgroup =
+params.get(
+CONFIG.URL_SUBGROUP_PARAM
+);
+
+if (query) {
+
+```
+STATE.searchQuery =
+  query;
+
+
+if (DOM.searchInput) {
+
+
+  DOM.searchInput.value =
+    query;
+
+
+}
+
+
+if (DOM.clearSearch) {
+
+
+  DOM.clearSearch.hidden =
+    false;
+
+
+}
+```
+
+}
+
+if (group) {
+
+```
+STATE.selectedGroup =
+  group;
+```
+
+}
+
+if (subgroup) {
+
+```
+STATE.selectedSubgroup =
+  subgroup;
+```
+
+}
+
+}
+
+function updateURL() {
+
+try {
+
+```
+const url =
+  new URL(
+    window.location.href
+  );
+
+
+/* Search */
+
+if (
+  STATE.searchQuery
+) {
+
+
+  url.searchParams.set(
+
+    CONFIG.URL_SEARCH_PARAM,
+
+    STATE.searchQuery
+
+  );
+
+
+}
+
+else {
+
+
+  url.searchParams.delete(
+    CONFIG.URL_SEARCH_PARAM
+  );
+
+
+}
+
+
+/* Group */
+
+if (
+  STATE.selectedGroup !== "all"
+) {
+
+
+  url.searchParams.set(
+
+    CONFIG.URL_GROUP_PARAM,
+
+    STATE.selectedGroup
+
+  );
+
+
+}
+
+else {
+
+
+  url.searchParams.delete(
+    CONFIG.URL_GROUP_PARAM
+  );
+
+
+}
+
+
+/* Subgroup */
+
+if (
+  STATE.selectedSubgroup !== "all"
+) {
+
+
+  url.searchParams.set(
+
+    CONFIG.URL_SUBGROUP_PARAM,
+
+    STATE.selectedSubgroup
+
+  );
+
+
+}
+
+else {
+
+
+  url.searchParams.delete(
+    CONFIG.URL_SUBGROUP_PARAM
+  );
+
+
+}
+
+
+window.history.replaceState(
+
+  {},
+
+  "",
+
+  url
+
+);
+```
+
+}
+
+catch (error) {
+
+```
+console.warn(
+  "Unable to update URL:",
+  error
+);
+```
+
+}
+
 }
 
 /* ============================================================
 TOAST NOTIFICATIONS
 ============================================================ */
 
-function showToast(message) {
+let toastTimer = null;
+
+function showToast(
+message
+) {
 
 let toast =
-document.getElementById("appToast");
+document.querySelector(
+".app-toast"
+);
 
 if (!toast) {
 
 ```
 toast =
-  document.createElement("div");
+  document.createElement(
+    "div"
+  );
 
-toast.id = "appToast";
 
-toast.className = "app-toast";
+toast.className =
+  "app-toast";
 
-document.body.appendChild(toast);
+
+document.body.appendChild(
+  toast
+);
 ```
 
 }
 
-toast.textContent = message;
+toast.textContent =
+message;
 
-toast.classList.add("visible");
+toast.classList.add(
+"visible"
+);
 
 clearTimeout(
-showToast.timeout
+toastTimer
 );
 
-showToast.timeout =
-setTimeout(() => {
+toastTimer =
+setTimeout(
+() => {
 
 ```
-  toast.classList.remove(
-    "visible"
-  );
-
-}, 1800);
-```
-
-}
-
-/* ============================================================
-LOCAL STORAGE
-============================================================ */
-
-function loadStoredData() {
-
-try {
-
-```
-const favorites =
-  JSON.parse(
-    localStorage.getItem(
-      CONFIG.storageKeys.favorites
-    ) || "[]"
-  );
+    toast.classList.remove(
+      "visible"
+    );
 
 
-AppState.favorites =
-  new Set(favorites);
-```
+  },
 
-} catch {
-
-```
-AppState.favorites = new Set();
-```
-
-}
-
-try {
-
-```
-const recent =
-  JSON.parse(
-    localStorage.getItem(
-      CONFIG.storageKeys.recent
-    ) || "[]"
-  );
-
-
-AppState.recent =
-  Array.isArray(recent)
-    ? recent
-    : [];
-```
-
-} catch {
-
-```
-AppState.recent = [];
-```
-
-}
-}
-
-/* ============================================================
-THEME
-============================================================ */
-
-function updateTheme() {
-
-const savedTheme =
-localStorage.getItem(
-CONFIG.storageKeys.theme
+  CONFIG.TOAST_DURATION
 );
+```
 
-if (!savedTheme) return;
-
-document.documentElement.dataset.theme =
-savedTheme;
 }
 
 /* ============================================================
-DEBOUNCE
+NUMBER FORMATTING
 ============================================================ */
 
-function debounce(
-callback,
-delay
+function formatNumber(
+number
 ) {
 
-let timeout;
+return new Intl.NumberFormat(
+"en-US"
+).format(
+number || 0
+);
 
-return (...args) => {
-
-```
-clearTimeout(timeout);
-
-
-timeout =
-  setTimeout(
-    () => callback(...args),
-    delay
-  );
-```
-
-};
 }
 
 /* ============================================================
-PUBLIC DEBUG API
-
-Useful from browser DevTools:
-
-EmojiApp.search("heart")
-EmojiApp.random()
-EmojiApp.stats()
-EmojiApp.get("1f602")
+APPLICATION START
 ============================================================ */
 
-window.EmojiApp = {
-
-get state() {
-return AppState;
-},
-
-search(query) {
-
-```
-AppState.searchQuery =
-  String(query || "");
-
-if (DOM.searchInput) {
-
-  DOM.searchInput.value =
-    AppState.searchQuery;
-}
-
-applyFilters();
-
-renderResults();
-```
-
-},
-
-random() {
-
-```
-showRandomEmoji();
-```
-
-},
-
-get(id) {
-
-```
-return AppState.emojis.find(
-  emoji => emoji.id === id
+document.addEventListener(
+"DOMContentLoaded",
+init
 );
-```
-
-},
-
-stats() {
-
-```
-return {
-
-  total:
-    AppState.emojis.length,
-
-  filtered:
-    AppState.filteredEmojis.length,
-
-  groups:
-    AppState.groups.size,
-
-  subgroups:
-    AppState.subgroups.size,
-
-  favorites:
-    AppState.favorites.size
-
-};
-```
-
-},
-
-favorites() {
-
-```
-return AppState.emojis.filter(
-  emoji =>
-    AppState.favorites.has(emoji.id)
-);
-```
-
-}
-};
