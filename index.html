@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
+
+<meta
+name="description"
+content="A searchable encyclopedia of Unicode emojis. Browse thousands of emojis by category, name, Unicode codepoint, and version."
+
+>
+
+<meta
+name="keywords"
+content="emoji, emoji encyclopedia, unicode emoji, emoji search, emoji database, unicode"
+
+>
+
+<meta
+name="theme-color"
+content="#ffffff"
+
+>
+
+  <title>Emoji Encyclopedia — Search Every Emoji</title>
+
+  <link
+    rel="stylesheet"
+    href="./styles.css"
+  >
+
+</head>
+
+<body>
+
+<!-- ==========================================================
+     APPLICATION
+     ========================================================== -->
+
+<div
+  id="app"
+  class="app-shell"
+>
+
+  <!-- ========================================================
+       HEADER
+       ======================================================== -->
+
+  <header class="site-header">
+
+<div class="header-container">
+
+
+  <!-- BRAND -->
+
+  <a
+    href="./"
+    class="brand"
+    aria-label="Emoji Encyclopedia Home"
+  >
+
+    <div class="brand-icon">
+      😊
+    </div>
+
+    <div class="brand-text">
+
+      <span class="brand-title">
+        Emoji Encyclopedia
+      </span>
+
+      <span class="brand-subtitle">
+        The Unicode Emoji Database
+      </span>
+
+    </div>
+
+  </a>
+
+
+  <!-- HEADER ACTIONS -->
+
+  <nav
+    class="header-actions"
+    aria-label="Primary Navigation"
+  >
+
+    <button
+      id="randomEmoji"
+      class="header-button"
+      type="button"
+      title="Discover a random emoji"
+    >
+
+      <span class="header-button-icon">
+        🎲
+      </span>
+
+      <span class="header-button-label">
+        Random
+      </span>
+
+    </button>
+
+
+    <button
+      id="favoritesButton"
+      class="header-button"
+      type="button"
+      title="View your favorite emojis"
+    >
+
+      <span class="header-button-icon">
+        ★
+      </span>
+
+      <span class="header-button-label">
+        Favorites
+      </span>
+
+    </button>
+
+  </nav>
+
+
+</div>
+
+  </header>
+
+  <!-- ========================================================
+       HERO / SEARCH
+       ======================================================== -->
+
+  <section class="hero-section">
+
+<div class="hero-container">
+
+
+  <div class="hero-content">
+
+    <div class="hero-badge">
+
+      <span class="hero-badge-icon">
+        🌐
+      </span>
+
+      Unicode Emoji Database
+
+    </div>
+
+
+    <h1 class="hero-title">
+
+      Search the world's emoji language.
+
+    </h1>
+
+
+    <p class="hero-description">
+
+      Explore thousands of Unicode emojis. Search by name,
+      symbol, category, Unicode codepoint, or keyword.
+
+    </p>
+
+
+  </div>
+
+
+
+  <!-- SEARCH -->
+
+  <div class="search-container">
+
+    <div class="search-box">
+
+
+      <div class="search-icon">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+          />
+
+        </svg>
+
+      </div>
+
+
+      <input
+        id="searchInput"
+        class="search-input"
+        type="search"
+        placeholder="Search emojis, names, codepoints..."
+        autocomplete="off"
+        spellcheck="false"
+        aria-label="Search emojis"
+      >
+
+
+      <button
+        id="clearSearch"
+        class="clear-search"
+        type="button"
+        hidden
+        aria-label="Clear search"
+      >
+
+        ×
+
+      </button>
+
+
+    </div>
+
+
+    <div class="search-hints">
+
+      <span>
+        Try:
+      </span>
+
+      <button
+        type="button"
+        class="search-example"
+        data-search="heart"
+      >
+        heart
+      </button>
+
+      <button
+        type="button"
+        class="search-example"
+        data-search="rocket"
+      >
+        rocket
+      </button>
+
+      <button
+        type="button"
+        class="search-example"
+        data-search="smile"
+      >
+        smile
+      </button>
+
+      <button
+        type="button"
+        class="search-example"
+        data-search="1F600"
+      >
+        1F600
+      </button>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+  </section>
+
+  <!-- ========================================================
+       DATABASE STATISTICS
+       ======================================================== -->
+
+  <section class="stats-section">
+
+<div class="stats-container">
+
+
+  <div class="stat-card">
+
+    <div class="stat-value" id="statsTotal">
+      —
+    </div>
+
+    <div class="stat-label">
+      Emoji Records
+    </div>
+
+  </div>
+
+
+  <div class="stat-divider"></div>
+
+
+  <div class="stat-card">
+
+    <div class="stat-value" id="statsGroups">
+      —
+    </div>
+
+    <div class="stat-label">
+      Categories
+    </div>
+
+  </div>
+
+
+  <div class="stat-divider"></div>
+
+
+  <div class="stat-card">
+
+    <div class="stat-value" id="statsFavorites">
+      0
+    </div>
+
+    <div class="stat-label">
+      Favorites
+    </div>
+
+  </div>
+
+
+  <div class="stat-divider"></div>
+
+
+  <div class="stat-card">
+
+    <div class="stat-value">
+      Unicode
+    </div>
+
+    <div class="stat-label">
+      Standard
+    </div>
+
+  </div>
+
+
+</div>
+
+  </section>
+
+  <!-- ========================================================
+       MAIN CONTENT
+       ======================================================== -->
+
+  <main class="main-content">
+
+<div class="content-container">
+
+
+  <!-- ====================================================
+       SIDEBAR
+       ==================================================== -->
+
+  <aside class="sidebar">
+
+
+    <div class="sidebar-section">
+
+
+      <div class="sidebar-heading">
+
+        <span>
+          Categories
+        </span>
+
+        <span class="sidebar-heading-icon">
+          ☰
+        </span>
+
+      </div>
+
+
+      <div
+        id="groupFilters"
+        class="filter-list"
+        aria-label="Emoji categories"
+      >
+
+        <!-- Generated by app.js -->
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- SUBGROUPS -->
+
+    <div
+      class="sidebar-section subgroup-section"
+    >
+
+
+      <div class="sidebar-heading">
+
+        <span>
+          Subcategories
+        </span>
+
+      </div>
+
+
+      <div
+        id="subgroupFilters"
+        class="filter-list subgroup-list"
+        aria-label="Emoji subcategories"
+      >
+
+        <!-- Generated by app.js -->
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- KEYBOARD HELP -->
+
+    <div class="keyboard-help">
+
+      <div class="keyboard-help-title">
+        Keyboard Shortcuts
+      </div>
+
+
+      <div class="keyboard-shortcut">
+
+        <span>
+          Search
+        </span>
+
+        <kbd>/</kbd>
+
+      </div>
+
+
+      <div class="keyboard-shortcut">
+
+        <span>
+          Close
+        </span>
+
+        <kbd>ESC</kbd>
+
+      </div>
+
+
+      <div class="keyboard-shortcut">
+
+        <span>
+          Random
+        </span>
+
+        <kbd>Ctrl</kbd>
+        <span>+</span>
+        <kbd>Enter</kbd>
+
+      </div>
+
+
+    </div>
+
+
+  </aside>
+
+
+
+  <!-- ====================================================
+       RESULTS AREA
+       ==================================================== -->
+
+  <section class="results-section">
+
+
+    <!-- RESULTS HEADER -->
+
+    <div class="results-header">
+
+
+      <div class="results-title-container">
+
+        <h2 class="results-title">
+
+          Emoji Explorer
+
+        </h2>
+
+
+        <div class="results-count">
+
+          <strong id="resultCount">
+            0
+          </strong>
+
+          <span id="resultLabel">
+            emojis
+          </span>
+
+          found
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- SORT -->
+
+      <div class="results-controls">
+
+
+        <label
+          for="sortSelect"
+          class="sort-label"
+        >
+          Sort
+        </label>
+
+
+        <select
+          id="sortSelect"
+          class="sort-select"
+        >
+
+          <option value="relevance">
+            Relevance
+          </option>
+
+          <option value="name-asc">
+            Name A–Z
+          </option>
+
+          <option value="name-desc">
+            Name Z–A
+          </option>
+
+          <option value="unicode">
+            Unicode
+          </option>
+
+          <option value="favorites">
+            Favorites
+          </option>
+
+        </select>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         LOADING STATE
+         ================================================== -->
+
+    <div
+      id="loadingState"
+      class="loading-state"
+    >
+
+
+      <div class="loading-spinner"></div>
+
+
+      <h3>
+        Loading Emoji Database
+      </h3>
+
+
+      <p>
+        Preparing thousands of Unicode emoji records...
+      </p>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         ERROR STATE
+         ================================================== -->
+
+    <div
+      id="errorState"
+      class="error-state"
+      hidden
+    >
+
+      Unable to load the emoji database.
+
+    </div>
+
+
+
+    <!-- ==================================================
+         EMPTY STATE
+         ================================================== -->
+
+    <div
+      id="emptyState"
+      class="empty-state"
+      hidden
+    >
+
+
+      <div class="empty-icon">
+        🔎
+      </div>
+
+
+      <h3>
+        No emojis found
+      </h3>
+
+
+      <p>
+        Try searching for another name, category,
+        Unicode codepoint, or keyword.
+      </p>
+
+
+      <button
+        class="empty-reset-button"
+        type="button"
+        onclick="document.getElementById('searchInput').value=''; document.getElementById('searchInput').dispatchEvent(new Event('input'));"
+      >
+
+        Clear Search
+
+      </button>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         EMOJI GRID
+         ================================================== -->
+
+    <div
+      id="emojiGrid"
+      class="emoji-grid"
+      aria-live="polite"
+    >
+
+      <!-- Generated by app.js -->
+
+    </div>
+
+
+
+    <!-- ==================================================
+         LOAD MORE
+         ================================================== -->
+
+    <div class="load-more-container">
+
+
+      <button
+        id="loadMore"
+        class="load-more-button"
+        type="button"
+        hidden
+      >
+
+        Load More Emojis
+
+      </button>
+
+
+    </div>
+
+
+  </section>
+
+
+</div>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+
+  <footer class="site-footer">
+
+<div class="footer-container">
+
+
+  <div class="footer-brand">
+
+    <div class="footer-logo">
+      😊
+    </div>
+
+
+    <div>
+
+      <strong>
+        Emoji Encyclopedia
+      </strong>
+
+      <p>
+        Explore the language of the internet.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="footer-links">
+
+    <span>
+      Powered by Unicode Emoji Data
+    </span>
+
+    <span class="footer-separator">
+      ·
+    </span>
+
+    <span id="footerYear"></span>
+
+  </div>
+
+
+</div>
+
+  </footer>
+
+</div>
+
+<!-- ==========================================================
+     EMOJI DETAIL MODAL
+     ========================================================== -->
+
+<div
+  id="emojiModal"
+  class="emoji-modal"
+  hidden
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="emojiModalTitle"
+>
+
+  <div class="emoji-modal-backdrop"></div>
+
+  <div class="emoji-modal-dialog">
+
+<!-- CLOSE BUTTON -->
+
+<button
+  id="modalClose"
+  class="modal-close"
+  type="button"
+  aria-label="Close emoji details"
+>
+
+  ×
+
+</button>
+
+
+
+<!-- CONTENT GENERATED BY JAVASCRIPT -->
+
+<div
+  id="emojiModalContent"
+  class="emoji-modal-content"
+>
+
+</div>
+
+  </div>
+
+</div>
+
+<!-- ==========================================================
+     NOSCRIPT
+     ========================================================== -->
+
+<noscript>
+
+  <div class="noscript-message">
+
+<h1>
+  JavaScript Required
+</h1>
+
+<p>
+  The Emoji Encyclopedia requires JavaScript
+  to search and explore the emoji database.
+</p>
+
+  </div>
+
+</noscript>
+
+<!-- ==========================================================
+     SCRIPTS
+     ========================================================== -->
+
+<script src="./app.js"></script>
+
+<!-- ==========================================================
+     SMALL UI HELPERS
+     ========================================================== -->
+
+<script>
+
+
+/* ------------------------------------------------------------
+   Search Examples
+   ------------------------------------------------------------ */
+
+document
+  .querySelectorAll(".search-example")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        const searchInput =
+          document.getElementById("searchInput");
+
+
+        if (!searchInput) return;
+
+
+        searchInput.value =
+          button.dataset.search;
+
+
+        searchInput.dispatchEvent(
+          new Event("input", {
+            bubbles: true
+          })
+        );
+
+
+        searchInput.focus();
+
+      }
+    );
+
+  });
+
+
+
+/* ------------------------------------------------------------
+   Footer Year
+   ------------------------------------------------------------ */
+
+const footerYear =
+  document.getElementById("footerYear");
+
+
+if (footerYear) {
+
+  footerYear.textContent =
+    new Date().getFullYear();
+
+}
+
+
+</script>
+
+</body>
+</html>
