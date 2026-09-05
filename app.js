@@ -68,11 +68,9 @@ Behavior
 
 DEFAULT_SHOW_STATUS:
 
-```
 [
   "fully-qualified"
 ],
-```
 
 SHOW_UNQUALIFIED_VARIANTS: false,
 
@@ -253,7 +251,6 @@ async function init() {
 
 try {
 
-```
 console.log(
   "[Emoji Encyclopedia] Starting application..."
 );
@@ -314,13 +311,11 @@ hideLoadingState();
 console.log(
   `[Emoji Encyclopedia] Loaded ${STATE.emojis.length} emoji records.`
 );
-```
 
 }
 
 catch (error) {
 
-```
 console.error(
   "[Emoji Encyclopedia] Initialization failed:",
   error
@@ -330,7 +325,6 @@ console.error(
 showErrorState(
   "Unable to load the emoji database. Please make sure data/emojis.csv exists."
 );
-```
 
 }
 
@@ -354,11 +348,9 @@ cache: "no-store"
 
 if (!response.ok) {
 
-```
 throw new Error(
   `Failed to load emoji CSV (${response.status})`
 );
-```
 
 }
 
@@ -367,11 +359,9 @@ await response.text();
 
 if (!csvText.trim()) {
 
-```
 throw new Error(
   "Emoji CSV file is empty."
 );
-```
 
 }
 
@@ -380,11 +370,9 @@ parseCSV(csvText);
 
 if (!rawRows.length) {
 
-```
 throw new Error(
   "No emoji records found in CSV."
 );
-```
 
 }
 
@@ -429,7 +417,6 @@ i < text.length;
 i++
 ) {
 
-```
 const character =
   text[i];
 
@@ -549,7 +536,6 @@ if (
    -------------------------------------------------------- */
 
 field += character;
-```
 
 }
 
@@ -564,9 +550,7 @@ value.trim() !== ""
 )
 ) {
 
-```
 rows.push(row);
-```
 
 }
 
@@ -574,9 +558,7 @@ if (
 rows.length < 2
 ) {
 
-```
 return [];
-```
 
 }
 
@@ -588,10 +570,8 @@ const headers =
 rows[0].map(
 header =>
 
-```
     normalizeHeader(header)
 );
-```
 
 /* ----------------------------------------------------------
 Convert rows into objects
@@ -605,7 +585,6 @@ i < rows.length;
 i++
 ) {
 
-```
 const values =
   rows[i];
 
@@ -632,7 +611,6 @@ headers.forEach(
 
 
 objects.push(object);
-```
 
 }
 
@@ -648,7 +626,6 @@ function normalizeHeader(header) {
 
 return String(header)
 
-```
 .trim()
 
 .toLowerCase()
@@ -657,7 +634,6 @@ return String(header)
   /[\s\-_]+/g,
   "_"
 )
-```
 
 }
 
@@ -669,9 +645,7 @@ function normalizeEmoji(raw) {
 
 if (!raw) {
 
-```
 return null;
-```
 
 }
 
@@ -681,7 +655,6 @@ Extract CSV fields
 
 const group =
 
-```
 raw.group ||
 
 raw.category ||
@@ -689,11 +662,9 @@ raw.category ||
 raw.categories ||
 
 "Other";
-```
 
 const subgroup =
 
-```
 raw.subgroup ||
 
 raw.sub_category ||
@@ -701,11 +672,9 @@ raw.sub_category ||
 raw.subcategory ||
 
 "Other";
-```
 
 const codepoint =
 
-```
 raw.codepoint ||
 
 raw.code_point ||
@@ -715,19 +684,15 @@ raw.codepoints ||
 raw.unicode ||
 
 "";
-```
 
 const status =
 
-```
 raw.status ||
 
 "unknown";
-```
 
 const representation =
 
-```
 raw.representation ||
 
 raw.emoji ||
@@ -737,11 +702,9 @@ raw.character ||
 raw.symbol ||
 
 "";
-```
 
 const name =
 
-```
 raw.name ||
 
 raw.description ||
@@ -749,11 +712,9 @@ raw.description ||
 raw.short_name ||
 
 "Unnamed Emoji";
-```
 
 const section =
 
-```
 raw.section ||
 
 raw.version ||
@@ -761,7 +722,6 @@ raw.version ||
 raw.unicode_version ||
 
 "";
-```
 
 /* ----------------------------------------------------------
 Validate
@@ -772,9 +732,7 @@ if (
 !codepoint
 ) {
 
-```
 return null;
-```
 
 }
 
@@ -787,18 +745,14 @@ representation;
 
 if (!emoji) {
 
-```
 emoji =
   codepointToEmoji(codepoint);
-```
 
 }
 
 if (!emoji) {
 
-```
 return null;
-```
 
 }
 
@@ -818,11 +772,9 @@ Generate ID
 
 const id =
 
-```
 normalizedCodepoint ||
 
 `emoji-${name}-${emoji}`;
-```
 
 /* ----------------------------------------------------------
 Search index
@@ -830,7 +782,6 @@ Search index
 
 const searchText =
 
-```
 [
   name,
 
@@ -858,7 +809,6 @@ const searchText =
   .join(" ")
 
   .toLowerCase();
-```
 
 /* ----------------------------------------------------------
 Return normalized object
@@ -866,7 +816,6 @@ Return normalized object
 
 return {
 
-```
 id,
 
 emoji,
@@ -888,7 +837,6 @@ section,
 searchText,
 
 favorite: false
-```
 
 };
 
@@ -911,7 +859,6 @@ if (
 !CONFIG.SHOW_UNQUALIFIED_VARIANTS
 ) {
 
-```
 const fullyQualified =
   emojis.filter(
     emoji =>
@@ -939,7 +886,6 @@ if (
 
 
 }
-```
 
 }
 
@@ -953,7 +899,6 @@ for (
 const emoji of emojis
 ) {
 
-```
 const duplicateKey =
 
   `${emoji.emoji}|${emoji.codepoint}`;
@@ -971,7 +916,6 @@ if (
 
 
 }
-```
 
 }
 
@@ -990,11 +934,9 @@ a,
 b
 ) =>
 
-```
   a.name.localeCompare(
     b.name
   )
-```
 
 );
 
@@ -1005,7 +947,6 @@ Apply favorite state
 STATE.emojis.forEach(
 emoji => {
 
-```
   emoji.favorite =
     STATE.favorites.has(
       emoji.id
@@ -1013,7 +954,6 @@ emoji => {
 
 
 }
-```
 
 );
 
@@ -1027,15 +967,12 @@ function normalizeCodepoint(value) {
 
 if (!value) {
 
-```
 return "";
-```
 
 }
 
 return String(value)
 
-```
 .trim()
 
 .replace(
@@ -1064,7 +1001,6 @@ return String(value)
 )
 
 .toUpperCase();
-```
 
 }
 
@@ -1072,15 +1008,12 @@ function codepointToEmoji(codepointString) {
 
 if (!codepointString) {
 
-```
 return "";
-```
 
 }
 
 try {
 
-```
 const points =
 
   normalizeCodepoint(codepointString)
@@ -1117,15 +1050,12 @@ if (!points.length) {
 return String.fromCodePoint(
   ...points
 );
-```
 
 }
 
 catch {
 
-```
 return "";
-```
 
 }
 
@@ -1135,16 +1065,13 @@ function emojiToCodepoints(emoji) {
 
 if (!emoji) {
 
-```
 return "";
-```
 
 }
 
 return Array
 .from(emoji)
 
-```
 .map(
   character =>
 
@@ -1155,7 +1082,6 @@ return Array
 )
 
 .join(" ");
-```
 
 }
 
@@ -1191,7 +1117,6 @@ DOM.sortSelect?.addEventListener(
 "change",
 event => {
 
-```
   STATE.sortMode =
     event.target.value;
 
@@ -1206,7 +1131,6 @@ event => {
 
 
 }
-```
 
 );
 
@@ -1218,7 +1142,6 @@ DOM.loadMore?.addEventListener(
 "click",
 () => {
 
-```
   STATE.visibleCount +=
     CONFIG.LOAD_MORE_COUNT;
 
@@ -1227,7 +1150,6 @@ DOM.loadMore?.addEventListener(
 
 
 }
-```
 
 );
 
@@ -1266,7 +1188,6 @@ DOM.emojiModal?.addEventListener(
 "click",
 event => {
 
-```
   if (
     event.target === DOM.emojiModal ||
     event.target.classList.contains(
@@ -1282,7 +1203,6 @@ event => {
 
 
 }
-```
 
 );
 
@@ -1303,7 +1223,6 @@ window.addEventListener(
 "popstate",
 () => {
 
-```
   loadURLState();
 
   applyFilters();
@@ -1316,7 +1235,6 @@ window.addEventListener(
 
 
 }
-```
 
 );
 
@@ -1338,10 +1256,8 @@ CONFIG.INITIAL_RENDER_COUNT;
 
 if (DOM.clearSearch) {
 
-```
 DOM.clearSearch.hidden =
   !STATE.searchQuery;
-```
 
 }
 
@@ -1366,20 +1282,16 @@ STATE.searchQuery = "";
 
 if (DOM.searchInput) {
 
-```
 DOM.searchInput.value = "";
 
 
 DOM.searchInput.focus();
-```
 
 }
 
 if (DOM.clearSearch) {
 
-```
 DOM.clearSearch.hidden = true;
-```
 
 }
 
@@ -1416,7 +1328,6 @@ if (
 STATE.selectedGroup !== "all"
 ) {
 
-```
 results =
   results.filter(
     emoji =>
@@ -1424,7 +1335,6 @@ results =
       emoji.group ===
       STATE.selectedGroup
   );
-```
 
 }
 
@@ -1436,7 +1346,6 @@ if (
 STATE.selectedSubgroup !== "all"
 ) {
 
-```
 results =
   results.filter(
     emoji =>
@@ -1444,7 +1353,6 @@ results =
       emoji.subgroup ===
       STATE.selectedSubgroup
   );
-```
 
 }
 
@@ -1457,7 +1365,6 @@ query.length >=
 CONFIG.SEARCH_MIN_LENGTH
 ) {
 
-```
 if (query) {
 
 
@@ -1477,7 +1384,6 @@ if (query) {
 
 
 }
-```
 
 }
 
@@ -1505,7 +1411,6 @@ function normalizeSearchQuery(query) {
 
 return query
 
-```
 .toLowerCase()
 
 .replace(
@@ -1519,7 +1424,6 @@ return query
 )
 
 .trim();
-```
 
 }
 
@@ -1534,9 +1438,7 @@ query
 
 if (!query) {
 
-```
 return true;
-```
 
 }
 
@@ -1546,9 +1448,7 @@ if (
 emoji.emoji.includes(query)
 ) {
 
-```
 return true;
-```
 
 }
 
@@ -1558,9 +1458,7 @@ if (
 emoji.searchText.includes(query)
 ) {
 
-```
 return true;
-```
 
 }
 
@@ -1587,9 +1485,7 @@ compactQuery
 )
 ) {
 
-```
 return true;
-```
 
 }
 
@@ -1604,7 +1500,6 @@ if (
 words.length > 1
 ) {
 
-```
 return words.every(
   word =>
 
@@ -1612,7 +1507,6 @@ return words.every(
       word
     )
 );
-```
 
 }
 
@@ -1635,7 +1529,6 @@ const sorted =
 
 switch (sortMode) {
 
-```
 /* --------------------------------------------------------
    Name ascending
    -------------------------------------------------------- */
@@ -1769,7 +1662,6 @@ default:
 
 
   break;
-```
 
 }
 
@@ -1800,9 +1692,7 @@ if (
 name === normalizedQuery
 ) {
 
-```
 score += 1000;
-```
 
 }
 
@@ -1814,9 +1704,7 @@ normalizedQuery
 )
 ) {
 
-```
 score += 500;
-```
 
 }
 
@@ -1828,9 +1716,7 @@ normalizedQuery
 )
 ) {
 
-```
 score += 250;
-```
 
 }
 
@@ -1844,9 +1730,7 @@ normalizedQuery
 )
 ) {
 
-```
 score += 80;
-```
 
 }
 
@@ -1860,9 +1744,7 @@ normalizedQuery
 )
 ) {
 
-```
 score += 60;
-```
 
 }
 
@@ -1876,9 +1758,7 @@ normalizedQuery
 )
 ) {
 
-```
 score += 150;
-```
 
 }
 
@@ -1888,9 +1768,7 @@ if (
 emoji.favorite
 ) {
 
-```
 score += 5;
-```
 
 }
 
@@ -1943,7 +1821,6 @@ All
 
 fragment.appendChild(
 
-```
 createFilterButton(
   {
     label: "All Emojis",
@@ -1987,7 +1864,6 @@ createFilterButton(
       }
   }
 )
-```
 
 );
 
@@ -1998,7 +1874,6 @@ Groups
 groups.forEach(
 group => {
 
-```
   const count =
     STATE.emojis.filter(
       emoji =>
@@ -2058,7 +1933,6 @@ group => {
 
 
 }
-```
 
 );
 
@@ -2088,7 +1962,6 @@ All subgroups
 
 fragment.appendChild(
 
-```
 createFilterButton(
   {
     label: "All Subcategories",
@@ -2137,7 +2010,6 @@ createFilterButton(
       }
   }
 )
-```
 
 );
 
@@ -2148,7 +2020,6 @@ Subgroups
 subgroups.forEach(
 subgroup => {
 
-```
   const count =
     STATE.emojis.filter(
       emoji => {
@@ -2221,7 +2092,6 @@ subgroup => {
 
 
 }
-```
 
 );
 
@@ -2250,11 +2120,9 @@ button.className =
 
 if (options.active) {
 
-```
 button.classList.add(
   "active"
 );
-```
 
 }
 
@@ -2297,7 +2165,6 @@ function getGroups() {
 
 return [
 
-```
 ...new Set(
 
   STATE.emojis.map(
@@ -2306,11 +2173,9 @@ return [
   )
 
 )
-```
 
 ]
 
-```
 .filter(Boolean)
 
 .sort(
@@ -2321,7 +2186,6 @@ return [
 
     a.localeCompare(b)
 );
-```
 
 }
 
@@ -2333,7 +2197,6 @@ function getSubgroups() {
 
 return [
 
-```
 ...new Set(
 
   STATE.emojis
@@ -2369,11 +2232,9 @@ return [
     )
 
 )
-```
 
 ]
 
-```
 .filter(Boolean)
 
 .sort(
@@ -2384,7 +2245,6 @@ return [
 
     a.localeCompare(b)
 );
-```
 
 }
 
@@ -2396,15 +2256,12 @@ function formatGroupName(value) {
 
 if (!value) {
 
-```
 return "Other";
-```
 
 }
 
 return String(value)
 
-```
 .replace(
   /[-_]/g,
   " "
@@ -2415,7 +2272,6 @@ return String(value)
   character =>
     character.toUpperCase()
 );
-```
 
 }
 
@@ -2444,7 +2300,6 @@ if (
 total === 0
 ) {
 
-```
 DOM.emojiGrid.replaceChildren();
 
 
@@ -2460,7 +2315,6 @@ hideLoadMore();
 
 
 return;
-```
 
 }
 
@@ -2476,7 +2330,6 @@ document.createDocumentFragment();
 visible.forEach(
 emoji => {
 
-```
   fragment.appendChild(
 
     createEmojiCard(
@@ -2487,7 +2340,6 @@ emoji => {
 
 
 }
-```
 
 );
 
@@ -2511,20 +2363,16 @@ if (
 visible.length < total
 ) {
 
-```
 showLoadMore(
   total -
   visible.length
 );
-```
 
 }
 
 else {
 
-```
 hideLoadMore();
-```
 
 }
 
@@ -2618,31 +2466,26 @@ favorite.className =
 favorite.setAttribute(
 "aria-label",
 
-```
 emoji.favorite
 
   ? `Remove ${emoji.name} from favorites`
 
   : `Add ${emoji.name} to favorites`
-```
 
 );
 
 favorite.textContent =
 
-```
 emoji.favorite
 
   ? "★"
 
   : "☆";
-```
 
 favorite.addEventListener(
 "click",
 event => {
 
-```
   event.stopPropagation();
 
 
@@ -2672,7 +2515,6 @@ event => {
 
 
 }
-```
 
 );
 
@@ -2684,13 +2526,11 @@ card.addEventListener(
 "click",
 () => {
 
-```
   openEmojiModal(
     emoji
   );
 
 }
-```
 
 );
 
@@ -2702,7 +2542,6 @@ card.addEventListener(
 "keydown",
 event => {
 
-```
   if (
     event.key === "Enter" ||
     event.key === " "
@@ -2721,7 +2560,6 @@ event => {
 
 
 }
-```
 
 );
 
@@ -2745,16 +2583,13 @@ count
 
 if (DOM.resultCount) {
 
-```
 DOM.resultCount.textContent =
   formatNumber(count);
-```
 
 }
 
 if (DOM.resultLabel) {
 
-```
 DOM.resultLabel.textContent =
 
   count === 1
@@ -2762,7 +2597,6 @@ DOM.resultLabel.textContent =
     ? "emoji"
 
     : "emojis";
-```
 
 }
 
@@ -2809,7 +2643,6 @@ function loadFavorites() {
 
 try {
 
-```
 const stored =
   localStorage.getItem(
     CONFIG.FAVORITES_STORAGE_KEY
@@ -2833,13 +2666,11 @@ if (
 
 
 }
-```
 
 }
 
 catch (error) {
 
-```
 console.warn(
   "[Emoji Encyclopedia] Unable to load favorites:",
   error
@@ -2848,7 +2679,6 @@ console.warn(
 
 STATE.favorites =
   new Set();
-```
 
 }
 
@@ -2858,7 +2688,6 @@ function saveFavorites() {
 
 try {
 
-```
 localStorage.setItem(
 
   CONFIG.FAVORITES_STORAGE_KEY,
@@ -2872,18 +2701,15 @@ localStorage.setItem(
   )
 
 );
-```
 
 }
 
 catch (error) {
 
-```
 console.warn(
   "[Emoji Encyclopedia] Unable to save favorites:",
   error
 );
-```
 
 }
 
@@ -2901,7 +2727,6 @@ emoji.id
 )
 ) {
 
-```
 STATE.favorites.delete(
   emoji.id
 );
@@ -2913,13 +2738,11 @@ emoji.favorite = false;
 showToast(
   `${emoji.emoji} Removed from favorites`
 );
-```
 
 }
 
 else {
 
-```
 STATE.favorites.add(
   emoji.id
 );
@@ -2931,7 +2754,6 @@ emoji.favorite = true;
 showToast(
   `${emoji.emoji} Added to favorites`
 );
-```
 
 }
 
@@ -2954,14 +2776,12 @@ if (
 favoriteCount === 0
 ) {
 
-```
 showToast(
   "You haven't added any favorites yet."
 );
 
 
 return;
-```
 
 }
 
@@ -2979,17 +2799,13 @@ STATE.searchQuery = "";
 
 if (DOM.searchInput) {
 
-```
 DOM.searchInput.value = "";
-```
 
 }
 
 if (DOM.clearSearch) {
 
-```
 DOM.clearSearch.hidden = true;
-```
 
 }
 
@@ -2999,20 +2815,16 @@ STATE.filteredEmojis =
 STATE.emojis.filter(
 emoji =>
 
-```
     emoji.favorite
 );
-```
 
 STATE.sortMode =
 "favorites";
 
 if (DOM.sortSelect) {
 
-```
 DOM.sortSelect.value =
   "favorites";
-```
 
 }
 
@@ -3044,12 +2856,10 @@ if (
 const randomIndex =
 Math.floor(
 
-```
   Math.random() *
   STATE.emojis.length
 
 );
-```
 
 const emoji =
 STATE.emojis[
@@ -3076,9 +2886,7 @@ if (
 !DOM.emojiModalContent
 ) {
 
-```
 return;
-```
 
 }
 
@@ -3151,7 +2959,6 @@ metadata.className =
 
 metadata.append(
 
-```
 createMetadataRow(
   "Emoji",
   emoji.emoji
@@ -3190,7 +2997,6 @@ createMetadataRow(
   "Emoji Version",
   emoji.section || "Unknown"
 )
-```
 
 );
 
@@ -3211,7 +3017,6 @@ createActionButton(
 "Copy Emoji",
 async () => {
 
-```
     const copied =
       await copyToClipboard(
         emoji.emoji
@@ -3231,7 +3036,6 @@ async () => {
 
   }
 );
-```
 
 /* Copy Unicode */
 
@@ -3240,7 +3044,6 @@ createActionButton(
 "Copy Unicode",
 async () => {
 
-```
     const copied =
       await copyToClipboard(
         `U+${emoji.codepoint}`
@@ -3260,7 +3063,6 @@ async () => {
 
   }
 );
-```
 
 /* Favorite */
 
@@ -3268,7 +3070,6 @@ const favoriteButton =
 createActionButton(
 emoji.favorite
 
-```
     ? "Remove Favorite"
 
     : "Add Favorite",
@@ -3292,7 +3093,6 @@ emoji.favorite
 
   }
 );
-```
 
 /* Search similar */
 
@@ -3301,7 +3101,6 @@ createActionButton(
 "View Category",
 () => {
 
-```
     closeEmojiModal();
 
 
@@ -3340,11 +3139,9 @@ createActionButton(
 
   }
 );
-```
 
 actions.append(
 
-```
 copyEmojiButton,
 
 copyUnicodeButton,
@@ -3352,19 +3149,16 @@ copyUnicodeButton,
 favoriteButton,
 
 similarButton
-```
 
 );
 
 DOM.emojiModalContent.append(
 
-```
 header,
 
 metadata,
 
 actions
-```
 
 );
 
@@ -3384,13 +3178,11 @@ document.body.classList.add(
 setTimeout(
 () => {
 
-```
   DOM.modalClose?.focus();
 
 
 },
 50
-```
 
 );
 
@@ -3496,7 +3288,6 @@ text
 
 try {
 
-```
 if (
   navigator.clipboard &&
   window.isSecureContext
@@ -3551,13 +3342,11 @@ textarea.remove();
 
 
 return true;
-```
 
 }
 
 catch (error) {
 
-```
 console.warn(
   "Clipboard copy failed:",
   error
@@ -3570,7 +3359,6 @@ showToast(
 
 
 return false;
-```
 
 }
 
@@ -3592,7 +3380,6 @@ if (
 event.key === "Escape"
 ) {
 
-```
 if (
   STATE.activeEmoji
 ) {
@@ -3605,7 +3392,6 @@ if (
 
 
 return;
-```
 
 }
 
@@ -3618,7 +3404,6 @@ event.key === "/" &&
 !isTypingInInput()
 ) {
 
-```
 event.preventDefault();
 
 
@@ -3626,7 +3411,6 @@ DOM.searchInput?.focus();
 
 
 return;
-```
 
 }
 
@@ -3640,12 +3424,10 @@ event.ctrlKey &&
 event.key === "Enter"
 ) {
 
-```
 event.preventDefault();
 
 
 openRandomEmoji();
-```
 
 }
 
@@ -3667,7 +3449,6 @@ active.tagName.toLowerCase();
 
 return (
 
-```
 tag === "input" ||
 
 tag === "textarea" ||
@@ -3675,7 +3456,6 @@ tag === "textarea" ||
 tag === "select" ||
 
 active.isContentEditable
-```
 
 );
 
@@ -3693,12 +3473,10 @@ Total emojis
 
 if (DOM.statsTotal) {
 
-```
 DOM.statsTotal.textContent =
   formatNumber(
     STATE.emojis.length
   );
-```
 
 }
 
@@ -3708,12 +3486,10 @@ Groups
 
 if (DOM.statsGroups) {
 
-```
 DOM.statsGroups.textContent =
   formatNumber(
     getGroups().length
   );
-```
 
 }
 
@@ -3723,12 +3499,10 @@ Favorites
 
 if (DOM.statsFavorites) {
 
-```
 DOM.statsFavorites.textContent =
   formatNumber(
     STATE.favorites.size
   );
-```
 
 }
 
@@ -3745,10 +3519,8 @@ false;
 
 if (DOM.loadingState) {
 
-```
 DOM.loadingState.hidden =
   true;
-```
 
 }
 
@@ -3762,10 +3534,8 @@ function showEmptyState() {
 
 if (DOM.emptyState) {
 
-```
 DOM.emptyState.hidden =
   false;
-```
 
 }
 
@@ -3775,10 +3545,8 @@ function hideEmptyState() {
 
 if (DOM.emptyState) {
 
-```
 DOM.emptyState.hidden =
   true;
-```
 
 }
 
@@ -3800,23 +3568,19 @@ false;
 
 if (DOM.loadingState) {
 
-```
 DOM.loadingState.hidden =
   true;
-```
 
 }
 
 if (DOM.errorState) {
 
-```
 DOM.errorState.hidden =
   false;
 
 
 DOM.errorState.textContent =
   message;
-```
 
 }
 
@@ -3850,7 +3614,6 @@ CONFIG.URL_SUBGROUP_PARAM
 
 if (query) {
 
-```
 STATE.searchQuery =
   query;
 
@@ -3873,25 +3636,20 @@ if (DOM.clearSearch) {
 
 
 }
-```
 
 }
 
 if (group) {
 
-```
 STATE.selectedGroup =
   group;
-```
 
 }
 
 if (subgroup) {
 
-```
 STATE.selectedSubgroup =
   subgroup;
-```
 
 }
 
@@ -3901,7 +3659,6 @@ function updateURL() {
 
 try {
 
-```
 const url =
   new URL(
     window.location.href
@@ -4004,18 +3761,15 @@ window.history.replaceState(
   url
 
 );
-```
 
 }
 
 catch (error) {
 
-```
 console.warn(
   "Unable to update URL:",
   error
 );
-```
 
 }
 
@@ -4038,7 +3792,6 @@ document.querySelector(
 
 if (!toast) {
 
-```
 toast =
   document.createElement(
     "div"
@@ -4052,7 +3805,6 @@ toast.className =
 document.body.appendChild(
   toast
 );
-```
 
 }
 
@@ -4071,7 +3823,6 @@ toastTimer =
 setTimeout(
 () => {
 
-```
     toast.classList.remove(
       "visible"
     );
@@ -4081,7 +3832,6 @@ setTimeout(
 
   CONFIG.TOAST_DURATION
 );
-```
 
 }
 
