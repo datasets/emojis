@@ -215,6 +215,7 @@ Animals-Nature,animal-marine,1F991,fully-qualified,🦑,squid,E3.0
 Animals-Nature,animal-marine,1F9AA,fully-qualified,🦪,oyster,E12.0
 Animals-Nature,animal-bug,1F40C,fully-qualified,🐌,snail,E0.6
 Animals-Nature,animal-bug,1F98B,fully-qualified,🦋,butterfly,E3.0
+Animals-Nature,animal-bug,1FACC,fully-qualified,🫌,monarch butterfly,E18.0
 Animals-Nature,animal-bug,1F41B,fully-qualified,🐛,bug,E0.6
 Animals-Nature,animal-bug,1F41C,fully-qualified,🐜,ant,E0.6
 Animals-Nature,animal-bug,1F41D,fully-qualified,🐝,honeybee,E0.6
@@ -386,7 +387,7 @@ Flags,country-flag,1F1EC 1F1FA,fully-qualified,🇬🇺,flag Guam,E2.0
 Flags,country-flag,1F1EC 1F1FC,fully-qualified,🇬🇼,flag Guinea-Bissau,E2.0
 Flags,country-flag,1F1EC 1F1FE,fully-qualified,🇬🇾,flag Guyana,E2.0
 Flags,country-flag,1F1ED 1F1F0,fully-qualified,🇭🇰,flag Hong Kong SAR China,E2.0
-Flags,country-flag,1F1ED 1F1F2,fully-qualified,🇭🇲,flag Heard  McDonald Islands,E2.0
+Flags,country-flag,1F1ED 1F1F2,fully-qualified,🇭🇲,flag Heard Island  McDonald Islands,E2.0
 Flags,country-flag,1F1ED 1F1F3,fully-qualified,🇭🇳,flag Honduras,E2.0
 Flags,country-flag,1F1ED 1F1F7,fully-qualified,🇭🇷,flag Croatia,E2.0
 Flags,country-flag,1F1ED 1F1F9,fully-qualified,🇭🇹,flag Haiti,E2.0
@@ -490,7 +491,7 @@ Flags,country-flag,1F1F8 1F1E8,fully-qualified,🇸🇨,flag Seychelles,E2.0
 Flags,country-flag,1F1F8 1F1E9,fully-qualified,🇸🇩,flag Sudan,E2.0
 Flags,country-flag,1F1F8 1F1EA,fully-qualified,🇸🇪,flag Sweden,E2.0
 Flags,country-flag,1F1F8 1F1EC,fully-qualified,🇸🇬,flag Singapore,E2.0
-Flags,country-flag,1F1F8 1F1ED,fully-qualified,🇸🇭,flag St Helena,E2.0
+Flags,country-flag,1F1F8 1F1ED,fully-qualified,🇸🇭,flag St Helena Ascension  Tristan da Cunha,E2.0
 Flags,country-flag,1F1F8 1F1EE,fully-qualified,🇸🇮,flag Slovenia,E2.0
 Flags,country-flag,1F1F8 1F1EF,fully-qualified,🇸🇯,flag Svalbard  Jan Mayen,E2.0
 Flags,country-flag,1F1F8 1F1F0,fully-qualified,🇸🇰,flag Slovakia,E2.0
@@ -508,7 +509,7 @@ Flags,country-flag,1F1F8 1F1FF,fully-qualified,🇸🇿,flag Eswatini,E2.0
 Flags,country-flag,1F1F9 1F1E6,fully-qualified,🇹🇦,flag Tristan da Cunha,E2.0
 Flags,country-flag,1F1F9 1F1E8,fully-qualified,🇹🇨,flag Turks  Caicos Islands,E2.0
 Flags,country-flag,1F1F9 1F1E9,fully-qualified,🇹🇩,flag Chad,E2.0
-Flags,country-flag,1F1F9 1F1EB,fully-qualified,🇹🇫,flag French Southern Territories,E2.0
+Flags,country-flag,1F1F9 1F1EB,fully-qualified,🇹🇫,flag French Southern and Antarctic Lands,E2.0
 Flags,country-flag,1F1F9 1F1EC,fully-qualified,🇹🇬,flag Togo,E2.0
 Flags,country-flag,1F1F9 1F1ED,fully-qualified,🇹🇭,flag Thailand,E2.0
 Flags,country-flag,1F1F9 1F1EF,fully-qualified,🇹🇯,flag Tajikistan,E2.0
@@ -576,6 +577,7 @@ Food-Drink,food-vegetable,1F336 FE0F,fully-qualified,🌶️,hot pepper,E0.7
 Food-Drink,food-vegetable,1F336,unqualified,🌶,hot pepper,E0.7
 Food-Drink,food-vegetable,1FAD1,fully-qualified,🫑,bell pepper,E13.0
 Food-Drink,food-vegetable,1F952,fully-qualified,🥒,cucumber,E3.0
+Food-Drink,food-vegetable,1FADD,fully-qualified,🫝,pickle,E18.0
 Food-Drink,food-vegetable,1F96C,fully-qualified,🥬,leafy green,E11.0
 Food-Drink,food-vegetable,1F966,fully-qualified,🥦,broccoli,E5.0
 Food-Drink,food-vegetable,1F9C4,fully-qualified,🧄,garlic,E12.0
@@ -867,6 +869,7 @@ Objects,writing,1F58C,unqualified,🖌,paintbrush,E0.7
 Objects,writing,1F58D FE0F,fully-qualified,🖍️,crayon,E0.7
 Objects,writing,1F58D,unqualified,🖍,crayon,E0.7
 Objects,writing,1F4DD,fully-qualified,📝,memo,E0.6
+Objects,writing,1FA8C,fully-qualified,🪌,eraser,E18.0
 Objects,office,1F4BC,fully-qualified,💼,briefcase,E0.6
 Objects,office,1F4C1,fully-qualified,📁,file folder,E0.6
 Objects,office,1F4C2,fully-qualified,📂,open file folder,E0.6
@@ -905,6 +908,7 @@ Objects,lock,1F510,fully-qualified,🔐,locked with key,E0.6
 Objects,lock,1F511,fully-qualified,🔑,key,E0.6
 Objects,lock,1F5DD FE0F,fully-qualified,🗝️,old key,E0.7
 Objects,lock,1F5DD,unqualified,🗝,old key,E0.7
+Objects,tool,1FA8D,fully-qualified,🪍,net with handle,E18.0
 Objects,tool,1F528,fully-qualified,🔨,hammer,E0.6
 Objects,tool,1FA93,fully-qualified,🪓,axe,E12.0
 Objects,tool,26CF FE0F,fully-qualified,⛏️,pick,E0.7
@@ -1173,6 +1177,18 @@ People-Body,hand-fingers-closed,1F44E 1F3FC,fully-qualified,👎🏼,thumbs down
 People-Body,hand-fingers-closed,1F44E 1F3FD,fully-qualified,👎🏽,thumbs down medium skin tone,E1.0
 People-Body,hand-fingers-closed,1F44E 1F3FE,fully-qualified,👎🏾,thumbs down medium-dark skin tone,E1.0
 People-Body,hand-fingers-closed,1F44E 1F3FF,fully-qualified,👎🏿,thumbs down dark skin tone,E1.0
+People-Body,hand-fingers-closed,1FAF9,fully-qualified,🫹,leftwards thumb sign,E18.0
+People-Body,hand-fingers-closed,1FAF9 1F3FB,fully-qualified,🫹🏻,leftwards thumb sign light skin tone,E18.0
+People-Body,hand-fingers-closed,1FAF9 1F3FC,fully-qualified,🫹🏼,leftwards thumb sign medium-light skin tone,E18.0
+People-Body,hand-fingers-closed,1FAF9 1F3FD,fully-qualified,🫹🏽,leftwards thumb sign medium skin tone,E18.0
+People-Body,hand-fingers-closed,1FAF9 1F3FE,fully-qualified,🫹🏾,leftwards thumb sign medium-dark skin tone,E18.0
+People-Body,hand-fingers-closed,1FAF9 1F3FF,fully-qualified,🫹🏿,leftwards thumb sign dark skin tone,E18.0
+People-Body,hand-fingers-closed,1FAFA,fully-qualified,🫺,rightwards thumb sign,E18.0
+People-Body,hand-fingers-closed,1FAFA 1F3FB,fully-qualified,🫺🏻,rightwards thumb sign light skin tone,E18.0
+People-Body,hand-fingers-closed,1FAFA 1F3FC,fully-qualified,🫺🏼,rightwards thumb sign medium-light skin tone,E18.0
+People-Body,hand-fingers-closed,1FAFA 1F3FD,fully-qualified,🫺🏽,rightwards thumb sign medium skin tone,E18.0
+People-Body,hand-fingers-closed,1FAFA 1F3FE,fully-qualified,🫺🏾,rightwards thumb sign medium-dark skin tone,E18.0
+People-Body,hand-fingers-closed,1FAFA 1F3FF,fully-qualified,🫺🏿,rightwards thumb sign dark skin tone,E18.0
 People-Body,hand-fingers-closed,270A,fully-qualified,✊,raised fist,E0.6
 People-Body,hand-fingers-closed,270A 1F3FB,fully-qualified,✊🏻,raised fist light skin tone,E1.0
 People-Body,hand-fingers-closed,270A 1F3FC,fully-qualified,✊🏼,raised fist medium-light skin tone,E1.0
@@ -4475,6 +4491,7 @@ Smileys-Emotion,face-smiling,1F602,fully-qualified,😂,face with tears of joy,E
 Smileys-Emotion,face-smiling,1F642,fully-qualified,🙂,slightly smiling face,E1.0
 Smileys-Emotion,face-smiling,1F643,fully-qualified,🙃,upside-down face,E1.0
 Smileys-Emotion,face-smiling,1FAE0,fully-qualified,🫠,melting face,E14.0
+Smileys-Emotion,face-smiling,1FAEB,fully-qualified,🫫,cracking face,E18.0
 Smileys-Emotion,face-smiling,1F609,fully-qualified,😉,winking face,E0.6
 Smileys-Emotion,face-smiling,1F60A,fully-qualified,😊,smiling face with smiling eyes,E0.6
 Smileys-Emotion,face-smiling,1F607,fully-qualified,😇,smiling face with halo,E1.0
@@ -5094,6 +5111,7 @@ Travel-Places,transport-ground,1F6A5,fully-qualified,🚥,horizontal traffic lig
 Travel-Places,transport-ground,1F6A6,fully-qualified,🚦,vertical traffic light,E1.0
 Travel-Places,transport-ground,1F6D1,fully-qualified,🛑,stop sign,E3.0
 Travel-Places,transport-ground,1F6A7,fully-qualified,🚧,construction,E0.6
+Travel-Places,transport-water,1F6D9,fully-qualified,🛙,lighthouse,E18.0
 Travel-Places,transport-water,2693,fully-qualified,⚓,anchor,E0.6
 Travel-Places,transport-water,1F6DF,fully-qualified,🛟,ring buoy,E14.0
 Travel-Places,transport-water,26F5,fully-qualified,⛵,sailboat,E0.6
@@ -5221,6 +5239,7 @@ Travel-Places,sky-weather,2603,unqualified,☃,snowman,E0.7
 Travel-Places,sky-weather,26C4,fully-qualified,⛄,snowman without snow,E0.6
 Travel-Places,sky-weather,2604 FE0F,fully-qualified,☄️,comet,E1.0
 Travel-Places,sky-weather,2604,unqualified,☄,comet,E1.0
+Travel-Places,sky-weather,1FA8B,fully-qualified,🪋,meteor,E18.0
 Travel-Places,sky-weather,1F525,fully-qualified,🔥,fire,E0.6
 Travel-Places,sky-weather,1F4A7,fully-qualified,💧,droplet,E0.6
 Travel-Places,sky-weather,1F30A,fully-qualified,🌊,water wave,E0.6
