@@ -3494,6 +3494,25 @@ DOM.statsGroups.textContent =
 }
 
 /* ----------------------------------------------------------
+Latest emoji version, computed from the data's Section column
+(E15.1 -> 15.1); nothing is printed that the data does not hold
+---------------------------------------------------------- */
+
+const versionEl = document.getElementById("statsVersion");
+
+if (versionEl) {
+
+const versions = STATE.emojis
+  .map((e) => parseFloat(String(e.section || "").replace(/^E/i, "")))
+  .filter((v) => Number.isFinite(v));
+
+versionEl.textContent = versions.length
+  ? "E" + Math.max(...versions).toFixed(1)
+  : "—";
+
+}
+
+/* ----------------------------------------------------------
 Favorites
 ---------------------------------------------------------- */
 

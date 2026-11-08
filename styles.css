@@ -35,8 +35,8 @@
 
   --text-primary: #171923;
   --text-secondary: #5d6472;
-  --text-tertiary: #7f8795;
-  --text-muted: #9da4b0;
+  --text-tertiary: #5f6675;
+  --text-muted: #667085;
   --text-disabled: #b7bcc5;
 
   --border: #e2e5eb;
@@ -44,7 +44,7 @@
   --border-strong: #d5d9e2;
 
   /* Primary */
-  --primary: #625cf5;
+  --primary: #5a54ee;
   --primary-hover: #514be6;
   --primary-active: #443ed2;
 
@@ -1467,7 +1467,7 @@ kbd {
   border-radius: 8px;
 
   background: transparent;
-  color: #c7cbd4;
+  color: var(--text-muted);
 
   font-size: 15px;
   line-height: 1;
@@ -2161,7 +2161,7 @@ kbd {
 }
 
 .footer-separator {
-  color: #d0d3da;
+  color: var(--text-muted);
 }
 
 
@@ -3483,3 +3483,73 @@ kbd {
    END
    ============================================================ */
 
+
+
+/* ============================================================
+   POLISH RUN (dada, Polish): measured fixes only, concept frozen
+   P1 --text-muted was 2.34:1 on the page background; now >= 4.5:1.
+   P2 no text under 11px (was 6.5 to 10px at 375px).
+   P3 touch targets reach 44px on coarse pointers; the favorite
+      star gets a 44px hit area without moving its 27px glyph box.
+   P4 active filter count: primary-active on primary-light >= 4.5:1.
+   ============================================================ */
+
+.brand-subtitle,
+.stat-label,
+.filter-count,
+.emoji-codepoint,
+.results-count,
+.sort-label,
+.footer-separator {
+  font-size: 11px;
+}
+
+.filter-button.active .filter-count {
+  color: var(--primary-active);
+}
+
+.emoji-favorite::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+}
+
+@media (pointer: coarse) {
+  .filter-button,
+  .search-example,
+  .header-button,
+  .sort-select,
+  .load-more-button {
+    min-height: 44px;
+  }
+
+  .header-button {
+    min-width: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* P2b: the mobile breakpoints set the emoji name, chips and sidebar
+   labels at 9 to 10px. Floors, applied last so they win at equal
+   specificity. */
+.emoji-name { font-size: 12px; }
+.search-example,
+.hero-badge,
+.sidebar-heading span,
+.filter-button span,
+.keyboard-help *,
+kbd,
+.site-footer *,
+footer * { font-size: 11px !important; }
+.load-more-button,
+.load-more-button * { font-size: 12px; }
