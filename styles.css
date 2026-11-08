@@ -410,7 +410,7 @@ p {
 
   color: var(--text-muted);
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 550;
   line-height: 1;
 
@@ -572,7 +572,7 @@ p {
     0 2px 7px rgba(30, 35, 50, 0.035),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
 
   backdrop-filter: blur(8px);
@@ -791,7 +791,7 @@ p {
 
   color: var(--text-muted);
 
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .search-example {
@@ -803,7 +803,7 @@ p {
   background: rgba(255, 255, 255, 0.62);
   color: var(--text-secondary);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 550;
 
   transition:
@@ -869,7 +869,7 @@ p {
 
   color: var(--text-muted);
 
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.2;
 
@@ -941,7 +941,7 @@ p {
 
   color: var(--text-secondary);
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 760;
   line-height: 1.2;
 
@@ -1040,7 +1040,7 @@ p {
   background: rgba(20, 25, 40, 0.035);
   color: var(--text-muted);
 
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 650;
 
   line-height: 1;
@@ -1100,7 +1100,7 @@ p {
 
   color: var(--text-secondary);
 
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 760;
 
   letter-spacing: 0.09em;
@@ -1117,7 +1117,7 @@ p {
 
   color: var(--text-muted);
 
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .keyboard-shortcut span:first-child {
@@ -1139,7 +1139,7 @@ kbd {
   color: var(--text-secondary);
 
   font-family: var(--font-sans);
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 650;
 
   line-height: 1.1;
@@ -1190,7 +1190,7 @@ kbd {
 .results-count {
   color: var(--text-muted);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -1211,7 +1211,7 @@ kbd {
 .sort-label {
   color: var(--text-muted);
 
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 550;
 }
 
@@ -1230,7 +1230,7 @@ kbd {
   background-color: var(--surface);
   color: var(--text-secondary);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 
   outline: none;
@@ -1436,7 +1436,7 @@ kbd {
   color: var(--text-muted);
 
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.3;
 
@@ -1526,7 +1526,7 @@ kbd {
 
   box-shadow: var(--shadow-xs);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 680;
 
   transition:
@@ -1689,7 +1689,7 @@ kbd {
   background: var(--primary-light);
   color: var(--primary);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 680;
 
   transition:
@@ -1948,7 +1948,7 @@ kbd {
 .emoji-metadata-label {
   color: var(--text-muted);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
   line-height: 1.45;
 }
@@ -1959,7 +1959,7 @@ kbd {
   color: var(--text-secondary);
 
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.65;
 }
@@ -1995,7 +1995,7 @@ kbd {
 
   box-shadow: var(--shadow-xs);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 680;
 
   transition:
@@ -2056,7 +2056,7 @@ kbd {
   box-shadow:
     0 10px 28px rgba(0, 0, 0, 0.18);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 650;
 
   white-space: nowrap;
@@ -2125,7 +2125,7 @@ kbd {
 
   color: var(--text-secondary);
 
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -2137,7 +2137,7 @@ kbd {
 
   color: var(--text-muted);
 
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .footer-links {
@@ -2149,7 +2149,7 @@ kbd {
 
   color: var(--text-muted);
 
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .footer-links a {
@@ -2530,7 +2530,7 @@ kbd {
       5px
       9px;
 
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .hero-badge-icon {
@@ -2553,7 +2553,7 @@ kbd {
   .hero-description {
     max-width: 430px;
 
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.62;
   }
 
@@ -2639,7 +2639,7 @@ kbd {
       4px
       8px;
 
-    font-size: 9px;
+    font-size: 12px;
   }
 
 
@@ -2679,7 +2679,7 @@ kbd {
   .stat-label {
     margin-top: 4px;
 
-    font-size: 7px;
+    font-size: 12px;
     letter-spacing: 0.055em;
   }
 
@@ -2716,7 +2716,7 @@ kbd {
 
     padding-left: 1px;
 
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .filter-list {
@@ -2741,7 +2741,7 @@ kbd {
 
     border-radius: 9px;
 
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 620;
   }
 
@@ -2752,7 +2752,7 @@ kbd {
       3px
       5px;
 
-    font-size: 8px;
+    font-size: 12px;
   }
 
 
@@ -2782,7 +2782,7 @@ kbd {
   }
 
   .results-count {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .results-controls {
@@ -2812,7 +2812,7 @@ kbd {
 
     border-radius: 9px;
 
-    font-size: 10px;
+    font-size: 12px;
   }
 
 
@@ -2879,14 +2879,14 @@ kbd {
   }
 
   .emoji-name {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.3;
   }
 
   .emoji-codepoint {
     margin-top: 4px;
 
-    font-size: 7px;
+    font-size: 12px;
   }
 
   .emoji-favorite {
@@ -2917,7 +2917,7 @@ kbd {
 
     border-radius: 10px;
 
-    font-size: 10px;
+    font-size: 12px;
   }
 
 
@@ -2952,7 +2952,7 @@ kbd {
   }
 
   .empty-state p {
-    font-size: 11px;
+    font-size: 12px;
   }
 
 
@@ -3092,7 +3092,7 @@ kbd {
   .emoji-modal-category {
     margin-top: 5px;
 
-    font-size: 10px;
+    font-size: 12px;
   }
 
 
@@ -3111,11 +3111,11 @@ kbd {
   }
 
   .emoji-metadata-label {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .emoji-metadata-value {
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.55;
   }
 
@@ -3138,7 +3138,7 @@ kbd {
 
     border-radius: 10px;
 
-    font-size: 10px;
+    font-size: 12px;
   }
 
 
@@ -3161,7 +3161,7 @@ kbd {
       9px
       14px;
 
-    font-size: 10px;
+    font-size: 12px;
   }
 
 
@@ -3187,7 +3187,7 @@ kbd {
   .footer-links {
     gap: 7px;
 
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 
@@ -3208,7 +3208,7 @@ kbd {
   }
 
   .hero-description {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .content-container {
@@ -3247,18 +3247,18 @@ kbd {
   }
 
   .emoji-name {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .emoji-codepoint {
-    font-size: 6.5px;
+    font-size: 12px;
   }
 
   .emoji-favorite {
     width: 21px;
     height: 21px;
 
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .stats-container {
@@ -3486,23 +3486,14 @@ kbd {
 
 
 /* ============================================================
-   POLISH RUN (dada, Polish): measured fixes only, concept frozen
-   P1 --text-muted was 2.34:1 on the page background; now >= 4.5:1.
-   P2 no text under 11px (was 6.5 to 10px at 375px).
-   P3 touch targets reach 44px on coarse pointers; the favorite
-      star gets a 44px hit area without moving its 27px glyph box.
-   P4 active filter count: primary-active on primary-light >= 4.5:1.
+   MOBILE FLOOR (dada references/mobile-standard.md), measured
+   with: python3 skills/dada/scripts/check_floor.py --web .
+   M3 touch targets >= 44px on touch screens; the favorite star
+      keeps its 27px glyph box and gets a 44px hit area.
+   M4 no text under 12px: the floor is applied to the source
+      declarations above, not stacked on top of them.
+   M5 inputs at 16px, or iOS zooms the page on focus.
    ============================================================ */
-
-.brand-subtitle,
-.stat-label,
-.filter-count,
-.emoji-codepoint,
-.results-count,
-.sort-label,
-.footer-separator {
-  font-size: 11px;
-}
 
 .filter-button.active .filter-count {
   color: var(--primary-active);
@@ -3514,17 +3505,33 @@ kbd {
   inset: -9px;
 }
 
+.search-input,
+.sort-select {
+  font-size: 16px;
+}
+
 @media (pointer: coarse) {
+  .brand,
   .filter-button,
   .search-example,
   .header-button,
   .sort-select,
-  .load-more-button {
+  .load-more-button,
+  .search-box,
+  .clear-search {
     min-height: 44px;
   }
 
   .header-button {
     min-width: 44px;
+  }
+
+  .emoji-favorite::after {
+    inset: -11px;
+  }
+
+  .search-input {
+    min-height: 44px;
   }
 }
 
@@ -3539,17 +3546,51 @@ kbd {
   }
 }
 
-/* P2b: the mobile breakpoints set the emoji name, chips and sidebar
-   labels at 9 to 10px. Floors, applied last so they win at equal
-   specificity. */
-.emoji-name { font-size: 12px; }
-.search-example,
-.hero-badge,
-.sidebar-heading span,
-.filter-button span,
-.keyboard-help *,
-kbd,
-.site-footer *,
-footer * { font-size: 11px !important; }
-.load-more-button,
-.load-more-button * { font-size: 12px; }
+/* ------------------------------------------------------------
+   Phone layout (M4): the grid changes, the type does not shrink.
+   Two columns of vertical cards: a large symbol, a name that
+   wraps to two lines instead of truncating, the codepoint below.
+   ------------------------------------------------------------ */
+@media (max-width: 600px) {
+  .emoji-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .emoji-card {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    min-height: 140px;
+    padding: 16px 10px 12px;
+    text-align: center;
+  }
+
+  .emoji-symbol {
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+    font-size: 36px;
+  }
+
+  .emoji-info {
+    width: 100%;
+    flex: 0 0 auto;
+    padding-right: 0;
+  }
+
+  .emoji-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    font-size: 13px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .emoji-codepoint {
+    margin-top: 4px;
+    text-align: center;
+  }
+}
