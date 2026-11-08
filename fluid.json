@@ -1,0 +1,5 @@
+{
+  "project": "emojis-encyclopedia",
+  "static_dir": ".",
+  "routes": [{ "pattern": "/", "target": "static" }]
+}
